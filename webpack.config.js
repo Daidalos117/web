@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 var ExtractPlugin = require('extract-text-webpack-plugin');
 var production = process.env.NODE_ENV === 'production';
+var CleanPlugin = require('clean-webpack-plugin');
 
 var plugins = [
     new ExtractPlugin('bundle.css'), // <=== where should content be piped
@@ -23,6 +24,24 @@ var plugins = [
 if (production) {
     plugins = plugins.concat([
 
+        // This plugin looks for similar chunks and files
+        // and merges them for better caching by the user
+        new webpack.optimize.DedupePlugin(),
+
+        // This plugins optimizes chunks and modules by
+        // how much they are used in your app
+        new webpack.optimize.OccurenceOrderPlugin(),
+
+        // This plugin prevents Webpack from creating chunks
+        // that would be too small to be worth loading separately
+        new webpack.optimize.MinChunkSizePlugin({
+            minChunkSize: 5200, // ~50kb
+        }),
+
+        // Cleanup the builds/ folder before
+        // compiling our final assets
+        new CleanPlugin('builds'),
+
         // This plugin minifies all the Javascript code of the final bundle
         new webpack.optimize.UglifyJsPlugin({
             mangle:   true,
@@ -40,8 +59,9 @@ if (production) {
 module.exports = {
     entry:  './src',
     output: {
-        path:     'builds',
-        filename: 'bundle.js',
+        path:          'builds',
+        filename:       production ? '[name]-[hash].js' : 'bundle.js',
+        chunkFilename: '[name]-[chunkhash].js',
     },
     plugins: plugins,
     module: {
@@ -53,9 +73,9 @@ module.exports = {
             },
             {
                 test:   /\.scss/,
-                loader: ExtractPlugin.extract('style', 'css!sass?outputStyle=compressed'),
+                loader: ExtractPlugin.extract('style', production ?  'css!sass?outputStyle=compressed' : 'css!sass'),
             },
-            { test: /\.css$/, loader: ExtractPlugin.extract('style', 'css?outputStyle=compressed!sass') },
+            { test: /\.css$/, loader: ExtractPlugin.extract('style', production ?  'css!sass?outputStyle=compressed' : 'css!sass') },
             {
                 test:   /\.html/,
                 loader: 'html',

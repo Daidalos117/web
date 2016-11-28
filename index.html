@@ -1,19 +1,19 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
     <title>Hey there :)</title>
 
-    <!-- Bootstrap core CSS -->
+    <!-- Core CSS -->
     <link href="builds/bundle.css" rel="stylesheet">
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700&amp;subset=latin-ext" rel="stylesheet">
 
@@ -24,46 +24,67 @@
 
 <nav class="navbar navbar-static-top  ">
 
-    <a class="navbar-brand" href="#">Roman design</a>
-    <ul class="nav navbar-nav">
-        <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-        </li>
-    </ul>
+    <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header" aria-expanded="false" aria-label="Toggle navigation"></button>
+
+    <div class="collapse navbar-toggleable-xs" id="navbar-header">
+        <div class="container">
+            <a class="navbar-brand" href="#">Roman</a>
+            <ul class="nav navbar-nav float-xs-right">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
 </nav>
 
-<!-- Main jumbotron for a primary marketing message or call to action -->
+<!-- Header -->
 
 <header>
-    <div class="background"></div>
-    <div class="content flex-items-xs-middle">
-        <div class="col-xs">
-            <h3>Hey</h3>
-            <h1>I am Roman.</h1>
-            <p>Freelancing webdesigner who wants to save the world!</p>
+    <div class="content row flex-items-xs-middle">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-10">
+                    <h3>Hey,</h3>
+                    <h1>I am <span class="name">Roman.</span></h1>
+                    <p>Freelancing webdesigner who wants to save the world!</p>
+                </div>
+                <div class="col-xs-2 offset-xs-5 text-xs-center">
+                    <a class="btn btn-primary">Say Hi!</a>
+                </div>
+            </div>
         </div>
-
     </div>
 
 </header>
 
 <div class="container">
 
-
+    <section id="portfolio">
+        <h1>Portfolio</h1>
+    </section>
 
 
     <footer>
         <p>&copy; Company 2016</p>
+        <a href="">Odkaz</a>
     </footer>
 </div> <!-- /container -->
 
 
 <script src="builds/bundle.js"></script>
+
+
+
 </body>
 </html>

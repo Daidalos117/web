@@ -54,9 +54,7 @@
 
 	__webpack_require__(3);
 
-	__webpack_require__(7);
-
-	__webpack_require__(8);
+	__webpack_require__(4);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12101,15 +12099,6 @@
 
 /***/ },
 /* 3 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(jQuery, __webpack_provided_window_dot_Tether, Tether) {/*!
@@ -12122,7 +12111,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(2), __webpack_require__(2)))
 
 /***/ },
-/* 8 */
+/* 4 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
