@@ -22,7 +22,7 @@
 <body>
 
 
-<nav class="navbar navbar-static-top  ">
+<nav class="navbar navbar-fixed-top ">
 
     <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header" aria-expanded="false" aria-label="Toggle navigation"></button>
 
@@ -49,38 +49,85 @@
 </nav>
 
 <!-- Header -->
-
 <header>
-    <div class="content row flex-items-xs-middle">
+    <div class="content row flex-items-xs-bottom">
         <div class="container">
             <div class="row">
                 <div class="col-xs-10">
                     <h3>Hey,</h3>
-                    <h1>I am <span class="name">Roman.</span></h1>
+                    <h1 class="heading"></h1>
                     <p>Freelancing webdesigner who wants to save the world!</p>
                 </div>
-                <div class="col-xs-2 offset-xs-5 text-xs-center">
+                <div class="col-md-2 offset-md-5 col-xs3 text-md-center">
                     <a class="btn btn-primary">Say Hi!</a>
                 </div>
+
             </div>
         </div>
     </div>
 
 </header>
 
-<div class="container">
 
-    <section id="portfolio">
+<!-- Portfolio start -->
+<section id="portfolio">
+    <div class="container">
         <h1>Portfolio</h1>
-    </section>
+        <div class="row">
+            <div class="col-xs">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="img/caravans.png" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="img/caravans.png" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="img/caravans.png" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Portfolio end -->
+
+<!-- About me start -->
+<section id="about">
+    <div class="container">
+        <h1>About me</h1>
+        <div class="row">
+            <div class="col-md-5 col-xs-12">
+                <p> I am 22 year old guy that loves technology and nature. I love doing all kind of internet stuff, and websites are one ofy my passions. I do it for happier people for 3 years now.</p>
+                <p>If you want websites, mobile app or not sure, I am right guy for you. Just leave me a message and we will figure out something fabulous.  </p>
+            </div>
+            <div id="particles-js" class="col-md-7  col-xs-12"></div>
+        </div>
+    </div>
+</section>
 
 
-    <footer>
-        <p>&copy; Company 2016</p>
-        <a href="">Odkaz</a>
-    </footer>
-</div> <!-- /container -->
 
+<footer>
+    <p>&copy; Company 2016</p>
+</footer>
 
 <script src="builds/bundle.js"></script>
 

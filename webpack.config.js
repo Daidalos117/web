@@ -14,6 +14,7 @@ var plugins = [
     new webpack.ProvidePlugin({
         $: "jquery",
         jQuery: "jquery",
+        "window.jQuery": "jquery",
         "Tether": 'tether',
         "window.Tether": "tether"
     })
@@ -66,10 +67,12 @@ module.exports = {
     plugins: plugins,
     module: {
         loaders: [
+
             {
                 test:   /\.js/,
                 loader: 'babel',
                 include: __dirname + '/src',
+
             },
             {
                 test:   /\.scss/,

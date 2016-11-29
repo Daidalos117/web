@@ -1,16 +1,49 @@
+/** Variables */
 $color-primary: #30E3CA;
 $color-secondary: #2D4059;
 $color-danger: #EC5351;
-
+$color-secondary-dark: #2B2E4A;
+$color-grey: rgba(#000,.78);
+$color-light-grey: rgba(#F5F5F5,.7);
 $link-color: $color-secondary;
+
 
 $html-font-size-lg: 16px;
 $html-font-size-md: 15px;
 $html-font-size-sm: 14px;
 $html-font-size-xs: 13px;
 
-@import "../node_modules/bootstrap/scss/bootstrap-flex.scss";
+$standart-animaion-time: 0.4s;
 
+/** Imports */
+
+@import "../node_modules/bootstrap/scss/bootstrap-flex.scss";
+@import "typed";
+
+@mixin bg-transition($time){
+  -webkit-transition: background $time ease-in-out, padding $time ease-in-out;
+  -moz-transition: background $time ease-in-out, padding $time ease-in-out;
+  transition: background $time ease-in-out, padding $time ease-in-out;
+}
+
+@mixin border-transition($time){
+  -webkit-transition: border $time linear;
+  -moz-transition: border $time linear;
+  transition: border $time linear;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}
+
+
+
+
+
+/** Main */
 
 html{
   font-size: $html-font-size-lg;
@@ -32,26 +65,28 @@ html{
   }
 }
 
-
-
-
 body {
   width: 100%;
   height: 100%;
   font-family: 'Oxygen', sans-serif;
-  letter-spacing: 0.9px;
+  letter-spacing: 1px;
+  line-height: 2rem;
 }
 
 h1,h2,h3,h4,h5,h6{
   font-family: 'Montserrat', sans-serif;
 }
 
+p{
+  color: $color-grey;
+}
+
 /** MENU */
 
 .navbar{
-
-  padding: 1.2rem 1rem;
-
+  padding: 1.1rem 1rem;
+  border-radius: 0rem;
+  background-color: transparent;
 
   .navbar-toggler{
     background-color: lightgray;
@@ -61,51 +96,84 @@ h1,h2,h3,h4,h5,h6{
 
     .nav-item{
       text-align: center;
-      margin-left: 2.2rem;
+      margin-left: 2.4rem;
+
+    }
+    .nav-item.active{
+      border-bottom: 2px solid $color-primary;
     }
     a.nav-link{
         font-size: 1.1rem;
       //font-weight: 700;
+      color: white;
+      border: 1px solid transparent;
+      @include border-transition($standart-animaion-time);
+      padding: 0.6rem 1rem;
+      border-radius: 2px;
+      &:hover{
+        border: 1px solid white;
+
+      }
     }
 
+  }
+
+
+  &.navbar-dark{
+    background-color: $color-secondary;
+
+  }
+
+
+}
+
+.navbar-fixed-top{
+  header{
 
   }
 }
 
 
-
-
 /** HEADER */
 header{
-  height: 70vh;
+  height: 75vh;
   background:  url("../img/20160912-img_1164_29606274736_o.png");
   background:{
     repeat: no-repeat;
     size: cover;
   }
-  /* Mask: */
 
+  /* Mask: */
   .content{
     //background-image: linear-gradient(-225deg, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 100%);
     height: 100%;
     color: white;
     position: relative;
+    margin: 0px;
+
     h3{
       font-size: 3rem;
     }
     h1{
-      font-size: 6rem;
+      font-size: 4.5rem;
+      white-space:pre;
+      display: inline;
       .name{
         color: $color-primary;
       }
     }
+    span.typed-cursor{
+      font-size: 4.5rem;
+    }
     p{
       font-size: 1.2rem;
       font-weight: 300;
+      display: none;
+      color: $color-light-grey;
     }
     &:before{
       content: "";
-      background-image: linear-gradient(-245deg, #30E3CA 0%, #283593 93%);
+      background-image: linear-gradient(-245deg, #283593 0%,#30E3CA 93%);
       opacity: 0.9;
       position: absolute;
       width: 100%;
@@ -116,14 +184,45 @@ header{
       border-radius: 3px;
       border: 1px solid white;
       background-color: transparent;
-      margin-top: 3rem;
+      margin: 20vh 0rem 3rem 0rem;
+      font-weight: 700;
+      padding: 0.7rem 1.5rem;
+     // background-color: rgba($color-danger,.8) ;
+      @include bg-transition($standart-animaion-time);
+      &:hover{
+        background-color: rgba(#fff,.1);
+      }
     }
+
   }
 
 }
 
 section{
   padding: 10% 0%;
+  h1{
+    margin-bottom: 5rem;
+    border-bottom: 5px solid $color-primary ;
+    width: 30%;
+    padding-bottom: 1rem;
+  }
+}
+
+#about{
+  z-index: 0;
+  background-color: $color-light-grey;
+  background-image: linear-gradient(-245deg, rgba($color-light-grey,.8) 50%,$color-primary 50%);
+  h1{
+    color: $color-secondary;
+  }
+  .container{
+    z-index: 1;
+
+  }
+  p {
+    margin-top: 3rem;
+  }
+
 }
 
 #portfolio{
@@ -131,8 +230,19 @@ section{
 
 }
 
+footer{
+  text-align: center;
+  background-color: $color-secondary-dark;
+  p{
+   color: white;
+  }
+  padding: 2rem 0rem 1rem 0rem;
+}
+
 @include media-breakpoint-down(sm) {
   header{
+    .btn-primary.btn{
 
+    }
   }
 }

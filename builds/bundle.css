@@ -1,3 +1,5 @@
+/** Variables */
+/** Imports */
 /*!
  * Bootstrap v4.0.0-alpha.5 (https://getbootstrap.com)
  * Copyright 2011-2016 The Bootstrap Authors
@@ -5077,6 +5079,37 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   .hidden-print {
     display: none !important; } }
 
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite; }
+
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/** Main */
 html {
   font-size: 16px; }
 
@@ -5096,25 +5129,44 @@ body {
   width: 100%;
   height: 100%;
   font-family: 'Oxygen', sans-serif;
-  letter-spacing: 0.9px; }
+  letter-spacing: 1px;
+  line-height: 2rem; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif; }
 
+p {
+  color: rgba(0, 0, 0, 0.78); }
+
 /** MENU */
 .navbar {
-  padding: 1.2rem 1rem; }
+  padding: 1.1rem 1rem;
+  border-radius: 0rem;
+  background-color: transparent; }
   .navbar .navbar-toggler {
     background-color: lightgray; }
   .navbar .navbar-nav .nav-item {
     text-align: center;
-    margin-left: 2.2rem; }
+    margin-left: 2.4rem; }
+  .navbar .navbar-nav .nav-item.active {
+    border-bottom: 2px solid #30E3CA; }
   .navbar .navbar-nav a.nav-link {
-    font-size: 1.1rem; }
+    font-size: 1.1rem;
+    color: white;
+    border: 1px solid transparent;
+    -webkit-transition: border 0.4s linear;
+    -moz-transition: border 0.4s linear;
+    transition: border 0.4s linear;
+    padding: 0.6rem 1rem;
+    border-radius: 2px; }
+    .navbar .navbar-nav a.nav-link:hover {
+      border: 1px solid white; }
+  .navbar.navbar-dark {
+    background-color: #2D4059; }
 
 /** HEADER */
 header {
-  height: 70vh;
+  height: 75vh;
   background: url(4c1538342ef7392a2cb1e81bfce30890.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -5122,19 +5174,26 @@ header {
   header .content {
     height: 100%;
     color: white;
-    position: relative; }
+    position: relative;
+    margin: 0px; }
     header .content h3 {
       font-size: 3rem; }
     header .content h1 {
-      font-size: 6rem; }
+      font-size: 4.5rem;
+      white-space: pre;
+      display: inline; }
       header .content h1 .name {
         color: #30E3CA; }
+    header .content span.typed-cursor {
+      font-size: 4.5rem; }
     header .content p {
       font-size: 1.2rem;
-      font-weight: 300; }
+      font-weight: 300;
+      display: none;
+      color: rgba(245, 245, 245, 0.7); }
     header .content:before {
       content: "";
-      background-image: linear-gradient(-245deg, #30E3CA 0%, #283593 93%);
+      background-image: linear-gradient(-245deg, #283593 0%, #30E3CA 93%);
       opacity: 0.9;
       position: absolute;
       width: 100%;
@@ -5144,7 +5203,37 @@ header {
       border-radius: 3px;
       border: 1px solid white;
       background-color: transparent;
-      margin-top: 3rem; }
+      margin: 20vh 0rem 3rem 0rem;
+      font-weight: 700;
+      padding: 0.7rem 1.5rem;
+      -webkit-transition: background 0.4s ease-in-out, padding 0.4s ease-in-out;
+      -moz-transition: background 0.4s ease-in-out, padding 0.4s ease-in-out;
+      transition: background 0.4s ease-in-out, padding 0.4s ease-in-out; }
+      header .content .btn.btn-primary:hover {
+        background-color: rgba(255, 255, 255, 0.1); }
 
 section {
   padding: 10% 0%; }
+  section h1 {
+    margin-bottom: 5rem;
+    border-bottom: 5px solid #30E3CA;
+    width: 30%;
+    padding-bottom: 1rem; }
+
+#about {
+  z-index: 0;
+  background-color: rgba(245, 245, 245, 0.7);
+  background-image: linear-gradient(-245deg, rgba(245, 245, 245, 0.8) 50%, #30E3CA 50%); }
+  #about h1 {
+    color: #2D4059; }
+  #about .container {
+    z-index: 1; }
+  #about p {
+    margin-top: 3rem; }
+
+footer {
+  text-align: center;
+  background-color: #2B2E4A;
+  padding: 2rem 0rem 1rem 0rem; }
+  footer p {
+    color: white; }
