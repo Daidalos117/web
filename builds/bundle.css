@@ -5136,13 +5136,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif; }
 
 p {
-  color: rgba(0, 0, 0, 0.78); }
+  color: rgba(0, 0, 0, 0.65); }
 
 /** MENU */
 .navbar {
   padding: 1.1rem 1rem;
   border-radius: 0rem;
-  background-color: transparent; }
+  background-color: #2D4059; }
   .navbar .navbar-toggler {
     background-color: lightgray; }
   .navbar .navbar-nav .nav-item {
@@ -5168,6 +5168,7 @@ p {
 header {
   height: 75vh;
   background: url(4c1538342ef7392a2cb1e81bfce30890.png);
+  padding-top: 4rem;
   background-repeat: no-repeat;
   background-size: cover;
   /* Mask: */ }
@@ -5202,15 +5203,15 @@ header {
     header .content .btn.btn-primary {
       border-radius: 3px;
       border: 1px solid white;
-      background-color: transparent;
       margin: 20vh 0rem 3rem 0rem;
       font-weight: 700;
       padding: 0.7rem 1.5rem;
+      background-color: rgba(45, 64, 89, 0.6);
       -webkit-transition: background 0.4s ease-in-out, padding 0.4s ease-in-out;
       -moz-transition: background 0.4s ease-in-out, padding 0.4s ease-in-out;
       transition: background 0.4s ease-in-out, padding 0.4s ease-in-out; }
       header .content .btn.btn-primary:hover {
-        background-color: rgba(255, 255, 255, 0.1); }
+        background-color: #2d4059; }
 
 section {
   padding: 10% 0%; }
@@ -5230,6 +5231,14 @@ section {
     z-index: 1; }
   #about p {
     margin-top: 3rem; }
+
+#portfolio .triangle {
+  margin: 7rem; }
+  #portfolio .triangle img {
+    position: relative; }
+
+#contact form textarea {
+  height: 10rem; }
 
 footer {
   text-align: center;

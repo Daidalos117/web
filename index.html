@@ -31,16 +31,16 @@
             <a class="navbar-brand" href="#">Roman</a>
             <ul class="nav navbar-nav float-xs-right">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Portfolio</a>
+                    <a class="nav-link" href="#portfolio">Portfolio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Me</a>
+                    <a class="nav-link" href="#about">Me</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="#contact">Contact</a>
                 </li>
             </ul>
         </div>
@@ -49,7 +49,7 @@
 </nav>
 
 <!-- Header -->
-<header>
+<header id="home">
     <div class="content row flex-items-xs-bottom">
         <div class="container">
             <div class="row">
@@ -59,7 +59,7 @@
                     <p>Freelancing webdesigner who wants to save the world!</p>
                 </div>
                 <div class="col-md-2 offset-md-5 col-xs3 text-md-center">
-                    <a class="btn btn-primary">Say Hi!</a>
+                    <a class="btn btn-primary" href="#contact">Say Hi!</a>
                 </div>
 
             </div>
@@ -73,6 +73,10 @@
 <section id="portfolio">
     <div class="container">
         <h1>Portfolio</h1>
+        <div class="triangle center">
+            <img src="img/triangle.svg" alt="triangle" class="img-triangle1">
+            <img src="img/triangle.svg" alt="triangle" class="img-triangle2">
+        </div>
         <div class="row">
             <div class="col-xs">
                 <div class="card">
@@ -109,6 +113,7 @@
 </section>
 <!-- Portfolio end -->
 
+
 <!-- About me start -->
 <section id="about">
     <div class="container">
@@ -119,6 +124,31 @@
                 <p>If you want websites, mobile app or not sure, I am right guy for you. Just leave me a message and we will figure out something fabulous.  </p>
             </div>
             <div id="particles-js" class="col-md-7  col-xs-12"></div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Contact start -->
+<section id="contact">
+    <div class="container">
+        <h1>Send me a message</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <form>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Example label</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Another label</label>
+                        <textarea type="text" class="form-control" id="formGroupExampleInput2" > Your hero message
+                            </textarea>
+                    </div>
+                    <input type="submit" value="Send" class="btn btn-danger">
+                </form>
+            </div>
+            <div class="col-md-6"></div>
         </div>
     </div>
 </section>
