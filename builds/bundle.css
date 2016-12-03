@@ -5140,7 +5140,7 @@ p {
 
 /** MENU */
 .navbar {
-  padding: 1.1rem 1rem;
+  padding: 0.7rem 1rem;
   border-radius: 0rem;
   background-color: #2D4059; }
   .navbar .navbar-toggler {
@@ -5168,7 +5168,7 @@ p {
 header {
   height: 75vh;
   background: url(4c1538342ef7392a2cb1e81bfce30890.png);
-  padding-top: 4rem;
+  margin-top: 4rem;
   background-repeat: no-repeat;
   background-size: cover;
   /* Mask: */ }
@@ -5201,12 +5201,12 @@ header {
       height: 100%;
       z-index: 0; }
     header .content .btn.btn-primary {
-      border-radius: 3px;
-      border: 1px solid white;
+      border-radius: 30px;
+      border: none;
       margin: 20vh 0rem 3rem 0rem;
       font-weight: 700;
-      padding: 0.7rem 1.5rem;
-      background-color: rgba(45, 64, 89, 0.6);
+      padding: 0.7rem 2.5rem;
+      background-color: #F57170;
       -webkit-transition: background 0.4s ease-in-out, padding 0.4s ease-in-out;
       -moz-transition: background 0.4s ease-in-out, padding 0.4s ease-in-out;
       transition: background 0.4s ease-in-out, padding 0.4s ease-in-out; }

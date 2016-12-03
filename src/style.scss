@@ -1,7 +1,7 @@
 /** Variables */
 $color-primary: #30E3CA;
 $color-secondary: #2D4059;
-$color-danger: #EC5351;
+$color-danger: #F57170;
 $color-secondary-dark: #2B2E4A;
 $color-grey: rgba(#000,.65);
 $color-light-grey: rgba(#F5F5F5,.7);
@@ -38,10 +38,6 @@ $standart-animaion-time: 0.4s;
   &::-moz-placeholder          {@content}
   &:-ms-input-placeholder      {@content}
 }
-
-
-
-
 
 /** Main */
 
@@ -84,7 +80,7 @@ p{
 /** MENU */
 
 .navbar{
-  padding: 1.1rem 1rem;
+  padding: 0.7rem 1rem;
   border-radius: 0rem;
   background-color: $color-secondary;
 
@@ -138,10 +134,11 @@ p{
 header{
   height: 75vh;
   background:  url("../img/20160912-img_1164_29606274736_o.png");
-  padding-top: 4rem;
+  margin-top: 4rem;
   background:{
     repeat: no-repeat;
     size: cover;
+   // position: bottom;
   }
 
   /* Mask: */
@@ -182,13 +179,15 @@ header{
       z-index: 0;
     }
     .btn.btn-primary{
-      border-radius: 3px;
-      border: 1px solid white;
+      border-radius: 30px;
+     // border: 1px solid white;
      // background-color: transparent;
+      border: none;
       margin: 20vh 0rem 3rem 0rem;
       font-weight: 700;
-      padding: 0.7rem 1.5rem;
-      background-color: rgba($color-secondary,.6) ;
+      padding: 0.7rem 2.5rem;
+     // background-color: rgba($color-danger,1) ;
+      background-color: $color-danger ;
       @include bg-transition($standart-animaion-time);
       &:hover{
         background-color: rgba($color-secondary,1);
