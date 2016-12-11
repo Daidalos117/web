@@ -92,24 +92,47 @@ module.exports = {
                 test:   /\.js/,
                 loader: 'babel',
                 include: __dirname + '/src',
-
             },
             {
                 test:   /\.scss/,
                 loader: ExtractPlugin.extract('style', production ?  'css!sass?outputStyle=compressed' : 'css!sass'),
             },
-            { test: /\.css$/, loader: ExtractPlugin.extract('style', production ?  'css!sass?outputStyle=compressed' : 'css!sass') },
+            {
+                test: /\.css$/,
+                loader: ExtractPlugin.extract('style', production ?  'css!sass?outputStyle=compressed' : 'css!sass')
+            },
             {
                 test:   /\.html/,
                 loader: 'html',
             },
-            {test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/font-woff" },
-            {test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/font-woff2" },
-            {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/octet-stream" },
-            {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file" },
-            {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=image/svg+xml" },
-            {test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/, loader: 'file', exclude: /node_modules/},
-            { test: /bootstrap\/dist\/js\/umd\//, loader: 'imports?jQuery=jquery' }
+            {
+                test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
+                loader: "url?limit=10000&mimetype=application/font-woff" },
+
+            {
+                test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
+                loader: "url?limit=10000&mimetype=application/font-woff2"
+            },
+            {
+                test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+                loader: "url?limit=10000&mimetype=application/octet-stream"
+            },
+            {
+                test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+                loader: "file"
+            },
+            {
+                test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+                loader: "url?limit=10000&mimetype=image/svg+xml"
+            },
+            {
+                test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
+                loader: 'file', exclude: /node_modules/
+            },
+            {
+                test: /bootstrap\/dist\/js\/umd\//,
+                loader: 'imports?jQuery=jquery'
+            }
         ],
     }
 };
