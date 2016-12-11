@@ -2,6 +2,7 @@ var webpack = require('webpack');
 var ExtractPlugin = require('extract-text-webpack-plugin');
 var production = process.env.NODE_ENV === 'production';
 var CleanPlugin = require('clean-webpack-plugin');
+var path = require('path');
 
 var plugins = [
     new ExtractPlugin('bundle.css'), // <=== where should content be piped
@@ -16,8 +17,21 @@ var plugins = [
         jQuery: "jquery",
         "window.jQuery": "jquery",
         "Tether": 'tether',
-        "window.Tether": "tether"
-    })
+        "window.Tether": "tether",
+        Alert: "exports-loader?Alert!bootstrap/js/dist/alert",
+        Button: "exports-loader?Button!bootstrap/js/dist/button",
+        Carousel: "exports-loader?Carousel!bootstrap/js/dist/carousel",
+        Collapse: "exports-loader?Collapse!bootstrap/js/dist/collapse",
+        Dropdown: "exports-loader?Dropdown!bootstrap/js/dist/dropdown",
+        Modal: "exports-loader?Modal!bootstrap/js/dist/modal",
+        Popover: "exports-loader?Popover!bootstrap/js/dist/popover",
+        Scrollspy: "exports-loader?Scrollspy!bootstrap/js/dist/scrollspy",
+        Tab: "exports-loader?Tab!bootstrap/js/dist/tab",
+        Tooltip: "exports-loader?Tooltip!bootstrap/js/dist/tooltip",
+        Util: "exports-loader?Util!bootstrap/js/dist/util",
+    }),
+
+    new webpack.HotModuleReplacementPlugin(),
 
 ];
 
@@ -60,11 +74,17 @@ if (production) {
 module.exports = {
     entry:  './src',
     output: {
-        path:          'builds',
+        path:           "builds",
+        publicPath:     "/builds/",
         filename:       production ? '[name]-[hash].js' : 'bundle.js',
         chunkFilename: '[name]-[chunkhash].js',
     },
     plugins: plugins,
+    devServer: {
+        hot: true,
+        inline: true,
+    },
+    devtool: 'eval-cheap-module-source-map',
     module: {
         loaders: [
 
@@ -88,7 +108,8 @@ module.exports = {
             {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/octet-stream" },
             {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file" },
             {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=image/svg+xml" },
-            {test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/, loader: 'file', exclude: /node_modules/}
+            {test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/, loader: 'file', exclude: /node_modules/},
+            { test: /bootstrap\/dist\/js\/umd\//, loader: 'imports?jQuery=jquery' }
         ],
     }
 };
