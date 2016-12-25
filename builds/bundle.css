@@ -6626,6 +6626,11 @@ p {
   background-color: lightgray;
 }
 
+.navbar .navbar-brand {
+  color: white;
+  opacity: .9;
+}
+
 .navbar .navbar-nav .nav-item {
   text-align: center;
   margin-left: 2.4rem;
@@ -6660,7 +6665,9 @@ header {
   height: 75vh;
   background: url(/builds/0a7d6991a62e66b4b1caab9e7a5508fa.jpg);
   background-repeat: no-repeat;
+  background-size: contain;
   background-position: bottom right;
+  background-color: #000000;
   /* Mask: */
 }
 
@@ -6707,11 +6714,13 @@ header .content:before {
 
 header .content .btn.btn-primary {
   border-radius: 30px;
+  font-size: 300;
   border: none;
   margin: 20vh 0rem 3rem 0rem;
   font-weight: 700;
   padding: 0.7rem 3rem;
   background-color: #F57170;
+  position: relative;
   -webkit-transition: background 0.4s ease-in-out, padding 0.4s ease-in-out;
   -moz-transition: background 0.4s ease-in-out, padding 0.4s ease-in-out;
   transition: background 0.4s ease-in-out, padding 0.4s ease-in-out;
@@ -6722,8 +6731,16 @@ header .content .btn.btn-primary:hover {
 }
 
 header .content .btn.btn-primary:before {
-  padding: 0.7rem 3rem;
-  background-color: #30E3CA;
+  content: "";
+  position: absolute;
+  display: none;
+  left: 7%;
+  top: 4%;
+  border-radius: 30px;
+  width: 86%;
+  height: 92%;
+  z-index: 0;
+  border: 3px solid white;
 }
 
 section {

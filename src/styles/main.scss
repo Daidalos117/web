@@ -1,0 +1,43 @@
+html{
+  font-size: $html-font-size-lg;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  // font-family: 'Oxygen', sans-serif;
+  //font-family: 'Slabo 27px', serif;
+  font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing: 1.5px;
+  line-height: 2rem;
+  position: relative;
+  margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Montserrat', sans-serif;
+}
+
+p{
+  color: $color-grey;
+}
+
+
+.angle{
+  @include angle(after);
+}
+
+section{
+  position: relative;
+  padding: 10% 0%;
+  h1{
+    margin-bottom: 5rem;
+
+    padding-bottom: 1rem;
+  }
+}
+.btn{
+  @include transition(all,$standart-animaion-time);
+
+
+}

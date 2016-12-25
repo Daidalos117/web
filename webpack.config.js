@@ -83,6 +83,7 @@ module.exports = {
     devServer: {
         hot: true,
         inline: true,
+        open: true
     },
     devtool: 'eval-cheap-module-source-map',
     module: {
@@ -107,8 +108,8 @@ module.exports = {
             },
             {
                 test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
-                loader: "url?limit=10000&mimetype=application/font-woff" },
-
+                loader: "url?limit=10000&mimetype=application/font-woff"
+            },
             {
                 test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
                 loader: "url?limit=10000&mimetype=application/font-woff2"
@@ -127,11 +128,12 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
-                loader: 'file', exclude: /node_modules/
+                loader: 'file',
+                exclude: /node_modules/
             },
             {
                 test: /bootstrap\/dist\/js\/umd\//,
-                loader: 'imports?jQuery=jquery'
+                loader: 'imports'
             }
         ],
     }

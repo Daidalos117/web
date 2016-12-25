@@ -1,0 +1,62 @@
+/** Variables */
+$color-primary: #30E3CA;
+$color-secondary: #2D4059;
+$color-danger: #E84545;
+$color-secondary-dark: #2B2E4A;
+$color-grey: rgba(#000,.70);
+$color-light-grey: rgba(#F5F5F5,.7);
+$link-color: $color-secondary;
+
+
+$html-font-size-lg: 16px;
+$html-font-size-md: 15px;
+$html-font-size-sm: 14px;
+$html-font-size-xs: 13px;
+
+$standart-animaion-time: 0.4s;
+
+/** Imports */
+@import "typed";
+@import "angled";
+
+@mixin bg-transition($time){
+  -webkit-transition: background $time ease-in-out, padding $time ease-in-out;
+  -moz-transition: background $time ease-in-out, padding $time ease-in-out;
+  transition: background $time ease-in-out, padding $time ease-in-out;
+}
+
+@mixin transition($what,$time){
+  -webkit-transition: $what $time linear;
+  -moz-transition: $what $time linear;
+  transition: $what $time linear;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}
+
+/** Main */
+
+
+@import "menu";
+@import "main";
+@import "header";
+@import "about";
+@import "portfolio";
+@import "contact";
+@import "footer";
+@import "respons";
+
+
+
+
+
+
+
+
+
+
+

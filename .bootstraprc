@@ -11,6 +11,7 @@ useFlexbox: true
 styleLoaders:
   - style
   - css
+  - postcss
   - sass
 
 # Extract styles to stand-alone css file
@@ -43,7 +44,7 @@ extractStyles: true
 # Import your custom styles here
 # Usually this endpoint-file contains list of @imports of your application styles
 #
-appStyles: ./src/style.scss
+appStyles: ./src/styles/style.scss
 
 ### Bootstrap styles
 styles:

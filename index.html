@@ -16,7 +16,7 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700&amp;subset=latin-ext" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px|Source+Sans+Pro:300,400,700&amp;subset=latin-ext" rel="stylesheet">
 </head>
 
 <body >
@@ -50,13 +50,17 @@
 
 <!-- Header -->
 <header id="home">
-    <div class="content row flex-items-xs-bottom">
+    <div class="background" id="particles"></div>
+    <div class="background-image" ></div>
+    <div class="content row ">
         <div class="container">
             <div class="row">
                 <div class="col-xs-10">
-                    <h3>Hey,</h3>
+                    <h3>Hello, I am</h3>
                     <h1 class="heading"></h1>
-                    <p>Freelancing webdesigner who wants to save the world!</p>
+                    <p>Pleasure to meet you. Look at some of my <a href="#portfolio">works</a> <br>
+                        or call me straight aways co we can get some coffee<br>
+                        and chat about cool stuff.</p>
                 </div>
                 <div class="col-md-2 offset-md-5 col-xs3 text-md-center">
                     <a class="btn btn-primary" href="#contact">Say Hi!</a>
@@ -72,44 +76,77 @@
 <!-- Portfolio start -->
 <section id="portfolio">
     <div class="container">
-        <h1>Portfolio</h1>
-        <div class="triangle center">
+        <h1>What I've been up to</h1>
+<!--        <div class="triangle center">
             <img src="img/triangle.svg" alt="triangle" class="img-triangle1">
             <img src="img/triangle.svg" alt="triangle" class="img-triangle2">
-        </div>
-        <div class="row">
-            <div class="col-xs">
-                <div class="card">
-                    <img class="card-img-top img-fluid" src="img/caravans.png" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>-->
+
+
+            <div class="col-md-8 float-md-left">
+                <div class="card first">
+                    <div class="row">
+                        <div class="card-block col-xs-6 ">
+                            <h4 class="card-title">LN Trenér</h4>
+                            <p class="card-text">Want to be healthier? Why don't hire best personal trainer?</p>
+                            <span class="label">Nette</span><span class="label">Bootstrap</span><span class="label">Sass</span>
+                        </div>
+                        <div class="col-xs-6">
+                            <img class="card-img-left img-fluid" src="img/ln_trener.png" alt="Card image cap">
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xs">
-                <div class="card">
-                    <img class="card-img-top img-fluid" src="img/caravans.png" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+
+            <div class="col-md-4 float-md-right">
+                <div class="card second">
+                    <div class="row">
+                        <div class="card-block col-xs-11 ">
+                            <h4 class="card-title">Caravans</h4>
+                            <p class="card-text">Website for company that sells the best caravans in whole area.</p>
+                            <span class="label">Photoshop</span><span class="label">Nette</span><span class="label">Bootstrap</span>
+                        </div>
+                        <div class="col-xs-10">
+                            <img class="card-img-left img-fluid" src="img/caravanas2.png" alt="Card image cap">
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xs">
-                <div class="card">
-                    <img class="card-img-top img-fluid" src="img/caravans.png" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+
+            <div class="col-md-4 float-md-left">
+                <div class="card third">
+                    <div class="row">
+                        <div class="card-block col-xs-11 ">
+                            <h4 class="card-title">Ten stories</h4>
+                            <p class="card-text">Website for high school class friend of mine.</p>
+                            <span class="label">Template</span><span class="label">LowBudget</span>
+                        </div>
+                        <div class="col-xs-10">
+                            <img class="card-img-left img-fluid" src="img/10_ref.png" alt="Card image cap">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="col-md-4">
+                    <div class="card fourth">
+                        <div class="row">
+                            <div class="card-block col-xs-11 ">
+                                <h4 class="card-title">Health nine</h4>
+                                <p class="card-text">Website for health project of Prague 9. </p>
+                                <span class="label">Bootstrap</span><span class="label">CMS</span>
+                            </div>
+                            <div class="col-xs-10">
+                               <!-- <img class="card-img-left img-fluid" src="img/10_ref.png" alt="Card image cap">-->
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+        <div class="clearfix"></div>
     </div>
+
+
+
 </section>
 <!-- Portfolio end -->
 
@@ -118,14 +155,45 @@
 <section id="about">
     <div class="container">
         <h1>About me</h1>
-        <div class="row">
-            <div class="col-md-5 col-xs-12">
-                <p> I am 22 year old guy that loves technology and nature. I love doing all kind of internet stuff, and websites are one ofy my passions. I do it for happier people for 3 years now.</p>
-                <p>If you want websites, mobile app or not sure, I am right guy for you. Just leave me a message and we will figure out something fabulous.  </p>
+            <div class="col-md-10 col-xs-12 offset-md-1">
+
+                <div class="row">
+                    <div class="col-xs-4"><h4>Who I am?</h4></div>
+                    <div class="col-xs-8">
+                        <p> I am 22 year old guy that loves creating websites and many more.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4"><h4>Why I do it?</h4></div>
+                    <div class="col-xs-8">
+                        <p> Because it's one of my passions. And I also like money.</p>
+                    </div>
+                </div>
+                <div class="row caaan-do">
+                    <div class="col-md-12"></div>
+                    <div class="col-md-12 ">
+                        <div class="row">
+                            <div class="col-md">
+                                <h6>HTML</h6>
+                                <div class="progress" id="progress"></div>
+                            </div>
+                            <div class="col-md">
+                                <h6>HTML</h6>
+                                <progress class="progress progress-striped " value="70" max="100"></progress>
+                            </div>
+                            <div class="col-md">
+                                <h6>HTML</h6>
+                                <progress class="progress progress-striped " value="70" max="100"></progress>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
             </div>
-            <div id="particles-js" class="col-md-7  col-xs-12"></div>
+
         </div>
-    </div>
 </section>
 
 

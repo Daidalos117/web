@@ -13,7 +13,7 @@ import 'bootstrap-loader';
 import 'tether';
 import 'particles.js';
 
-
+var ProgressBar = require('progressbar.js')
 
 
 
@@ -21,14 +21,14 @@ import 'particles.js';
 require("imports-loader?this=>window!./typed.min.js");
 $(function(){
     $("header .heading").typed({
-        strings: ["My name is <span class='name'>Roman.</span>", "I am <span class='name'>webdesigner.</span>","I am here to help <span class='name'>you.</span>"],
-        typeSpeed: 60,
+        strings: ["<span class='name'>Roman</span>", "<span class='name'>webdesigner</span>","<span class='name last'>here to help</span>"],
+        typeSpeed: 65,
         // time before typing starts
-        startDelay: 1,
+        startDelay: 10,
         // backspacing speed
-        backSpeed: 1,
+        backSpeed: 10,
         contentType: 'html',
-        backDelay: 2000,
+        backDelay: 1500,
     });
 
 
@@ -37,7 +37,7 @@ $(function(){
 
 
     /* ParticlesJS */
-    particlesJS.load('particles-js', 'assets/particles.json', function() {
+    particlesJS.load('particles', 'assets/particles.json', function() {
 
     });
 
@@ -60,7 +60,7 @@ $(function(){
 
     var controller = new ScrollMagic.Controller();
 
-    var tw1 = new TweenMax.to(".navbar", 0.5, { padding: ".5rem", force3D:true, backgroundColor: "#2D4059"});
+    var tw1 = new TweenMax.to(".navbar", 0.5, { padding: ".5rem", force3D:true, backgroundColor: "#000"});
     var tw2 = new TweenMax.to(".nav-item a", 0.5, {padding: "0.4rem 0.6rem",force3D:true } );
 
 
@@ -104,5 +104,68 @@ $(function(){
         .setTween(tween )
         .addIndicators() // add indicators (requires plugin)
         .addTo(controller);
+
+
+
+
+
+    var scene = new ScrollMagic.Scene({
+        triggerElement: "#about",
+        offset: 200
+    })
+
+        .on('start', function () {
+
+            $("#progress").html(" ");
+            var bar = new ProgressBar.Line("#progress", {
+                strokeWidth: 4,
+                easing: 'easeInOut',
+                duration: 1400,
+                color: '#E84545',
+                trailColor: '#eee',
+                trailWidth: 1,
+                svgStyle: {width: '100%', height: '100%'},
+                text: {
+                    style: {
+                        // Text color.
+                        // Default: same as stroke color (options.color)
+                        color: '#999',
+                        position: 'absolute',
+                        right: '0',
+                        top: '30px',
+                        padding: 0,
+                        margin: 0,
+                        transform: null
+                    },
+                    autoStyleContainer: false
+                },
+                from: {color: '#FFEA82'},
+                to: {color: '#ED6A5A'},
+                step: (state, bar) => {
+                    bar.setText(Math.round(bar.value() * 100) + ' %');
+                }
+            });
+
+            bar.animate(0.8);  // Number from 0.0 to 1.0
+
+
+
+/*            var width = 1;
+            var interval = setInterval(function () {
+                if(width >= 100){
+                    clearInterval(interval);
+                }else {
+                    width ++;
+                    $(".progress.pro-1").attr("value",width);
+                }
+            },10)*/
+        })
+        .addTo(controller);
+
+
+
+
+
+
 
 });
