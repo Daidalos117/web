@@ -4,9 +4,9 @@ $color-secondary: #2D4059;
 $color-danger: #E84545;
 $color-secondary-dark: #2B2E4A;
 $color-grey: rgba(#000,.70);
-$color-light-grey: rgba(#F5F5F5,.7);
+$color-light-grey: #f8f8f8;
 $link-color: $color-secondary;
-
+$color-dark: #1c1e26;
 
 $html-font-size-lg: 16px;
 $html-font-size-md: 15px;
@@ -41,6 +41,7 @@ $standart-animaion-time: 0.4s;
 /** Main */
 
 
+
 @import "menu";
 @import "main";
 @import "header";
@@ -49,7 +50,7 @@ $standart-animaion-time: 0.4s;
 @import "contact";
 @import "footer";
 @import "respons";
-
+@import "animation";
 
 
 

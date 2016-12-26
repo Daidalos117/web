@@ -15,7 +15,7 @@ import 'particles.js';
 
 var ProgressBar = require('progressbar.js')
 
-
+import 'animate.css';
 
 /* Typed JS */
 require("imports-loader?this=>window!./typed.min.js");
@@ -36,11 +36,14 @@ $(function(){
     $('body').scrollspy({ target: '#navbar-complete' });
 
 
-    /* ParticlesJS */
-    particlesJS.load('particles', 'assets/particles.json', function() {
 
+    particlesJS.load('particles', 'assets/particles.json', function () {
     });
-
+    $( window ).resize(function() {
+        /* ParticlesJS */
+        particlesJS.load('particles', 'assets/particles.json', function () {
+        });
+    });
 
     /** Smooth scroll */
     $('a[href*="#"]:not([href="#"])').click(function() {
@@ -60,7 +63,7 @@ $(function(){
 
     var controller = new ScrollMagic.Controller();
 
-    var tw1 = new TweenMax.to(".navbar", 0.5, { padding: ".5rem", force3D:true, backgroundColor: "#000"});
+    var tw1 = new TweenMax.to(".navbar", 0.5, { padding: ".5rem", force3D:true, backgroundColor: "#1c1e26"});
     var tw2 = new TweenMax.to(".nav-item a", 0.5, {padding: "0.4rem 0.6rem",force3D:true } );
 
 
@@ -95,15 +98,67 @@ $(function(){
 
         });*/
 
-    var tween = new TimelineMax ()
+
+
+
+/*    var tween = new TimelineMax ()
         .add([
-            TweenMax.fromTo(".img-triangle2", 1, {scale: 3, autoAlpha: 0.05, top: 300}, {top: -350}),
+            TweenMax.fromTo("h3.secondary", 1, {scale: 1.5, autoAlpha: 0.42, left:200}, {left:0,scale:1, autoAlpha: 0}),
+            TweenMax.fromTo(".line", 1, {scale: 1, autoAlpha: .8, top: 35}, {top: 0, autoAlpha: .9}),
         ]);
 
-    var scene = new ScrollMagic.Scene({triggerElement: "#portfolio h1", duration: $(window).height()})
+    var scene = new ScrollMagic.Scene({triggerElement: "#portfolio h2",offset:-400, duration: $(window).height()})
         .setTween(tween )
         .addIndicators() // add indicators (requires plugin)
+        .addTo(controller);*/
+
+
+
+     new ScrollMagic.Scene({triggerElement: ".card", duration: 1})
+        .setTween(TweenMax.to(".navbar", 0.5, { padding: ".5rem", force3D:true, backgroundColor: "#000"}) )
+        .addIndicators() // add indicators (requires plugin)
         .addTo(controller);
+
+
+
+    $(".card").each(function () {
+        var height= $(window).height();
+        console.log(height,"offset")
+        new ScrollMagic.Scene({triggerElement: this, duration: 100 , offset: -(height/2)})
+            //.setTween(TweenMax.fromTo(this, 0.5,{top: -5, autoAlpha:.8}, { top: 0, autoAlpha:1,force3D:true}) )
+            .addIndicators("cards") // add indicators (requires plugin)
+            .on('start',() => {;
+                $(this).addClass("animated slideInUp");
+            })
+            .on('end',() => {
+                $(this).removeClass("slideInUp");
+                $(this).removeClass("animated");
+
+            })
+            .addTo(controller);
+    })
+
+
+
+
+    var controller = new ScrollMagic.Controller({
+        globalSceneOptions: {
+            triggerHook: 'onLeave'
+        }
+    });
+
+
+        new ScrollMagic.Scene({
+            triggerElement: "header ",
+            duration: $("header").height()
+        })
+            .setPin("header",{ pushFollowers: false,})
+            .on("end",function () {
+                $("header").css("z-index",0);
+    })
+            .addIndicators({name: 200}) // add indicators (requires plugin)
+            .addTo(controller);
+
 
 
 
@@ -113,7 +168,6 @@ $(function(){
         triggerElement: "#about",
         offset: 200
     })
-
         .on('start', function () {
 
             $("#progress").html(" ");
