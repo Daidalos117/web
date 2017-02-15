@@ -20,15 +20,25 @@
 </head>
 
 <body >
-
-
+<div class="loader shown row align-items-center ">
+    <div class="col">
+        <div class ="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+        <p>Page will load soonly</p>
+    </div>
+</div>
 <nav class="navbar navbar-fixed-top" id="navbar-complete">
 
     <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header" aria-expanded="false" aria-label="Toggle navigation"></button>
 
     <div class="collapse navbar-toggleable-xs" id="navbar-header">
         <div class="container">
-            <a class="navbar-brand" href="#">Roman</a>
+            <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo"></a>
             <ul class="nav navbar-nav float-xs-right">
                 <li class="nav-item">
                     <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
@@ -53,19 +63,24 @@
 <!-- Header -->
 <header id="home">
     <div class="background" id="particles"></div>
-    <div class="background-image" ></div>
+    <div class="background-image">
+        <img src="img/header2_edited.png" alt="Foto about me">
+    </div>
     <div class="content row ">
         <div class="container">
             <div class="row">
-                <div class="col-xs-10">
+                <div class="col-xs-6 content-div">
                     <h3><span class="light">Hello</span>, I am</h3>
                     <h1 class="heading"></h1>
                     <p>Pleasure to meet you. Look at some of my <a href="#portfolio">works</a> <br>
                         or call me straight aways co we can get some coffee<br>
                         and chat about cool stuff.</p>
+                    <div class="btn-container">
+                        <a class="btn btn-primary hvr-ripple-out content-btn " href="#contact">Say Hi!</a>
+                    </div>
                 </div>
-                <div class="col-md-2 offset-md-5 col-xs3 text-md-center">
-                    <a class="btn btn-primary hvr-ripple-out" href="#contact">Say Hi!</a>
+                <div class="col-xs-12 text-md-center">
+
                 </div>
 
             </div>
@@ -78,13 +93,17 @@
 <section id="about">
     <div class="container">
         <div class="header-section">
-            <h2 class="primary">About me</h2>
+            <h2 class="primary">Human</h2>
             <div class="line"></div>
-            <h3 class="secondary">About me</h3>
+            <h3 class="secondary">Webdesigner</h3>
         </div>
 
         <div class="col-md-10 col-xs-12 offset-md-1">
 
+            <p class="slideInUp ">Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're </p>
+            <p class="slideInUp slideInUp2">Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're </p>            <p class="slideInUp slideInUp3">Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're </p>
+
+            <!--
             <div class="row">
                 <div class="col-xs-4"><h4>Who I am?</h4></div>
                 <div class="col-xs-8">
@@ -115,6 +134,7 @@
                         </div>
                     </div>
                 </div>
+                !-->
             </div>
         </div>
     </div>
@@ -147,7 +167,7 @@
                             <span class="label">Nette</span><span class="label">Bootstrap</span><span class="label">Sass</span>
                         </div>
                         <div class="col-xs-6">
-                            <img class="card-img-left img-fluid" src="img/ln_trener.png" alt="Card image cap">
+                            <img class="card-img-left card-img img-fluid" src="img/ln_trener.png" alt="Card image cap">
                         </div>
                     </div>
                 </div>
@@ -162,7 +182,7 @@
                             <span class="label">Photoshop</span><span class="label">Nette</span><span class="label">Bootstrap</span>
                         </div>
                         <div class="col-xs-10">
-                            <img class="card-img-left img-fluid" src="img/caravanas2.png" alt="Card image cap">
+                            <img class="card-img-left card-img img-fluid" src="img/caravanas2.png" alt="Card image cap">
                         </div>
                     </div>
                 </div>
@@ -177,7 +197,7 @@
                             <span class="label">Template</span><span class="label">LowBudget</span>
                         </div>
                         <div class="col-xs-10">
-                            <img class="card-img-left img-fluid" src="img/10_ref.png" alt="Card image cap">
+                            <img class="card-img-left card-img img-fluid" src="img/10_ref.png" alt="Card image cap">
                         </div>
                     </div>
                 </div>
@@ -225,19 +245,28 @@
             <h3 class="secondary">Have question?</h3>
         </div>
         <div class="row">
-            <div class="col-md-6 card">
-                <div class="contact">
-                    <span>+420 720 290 359</span>
+            <div class="col-md-8 card">
+                <div class="row">
+                    <div class="col-md-8">
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Your name">
+                                <div class="line"></div>
+                            </div>
+                            <div class="form-group">
+                                <textarea type="text" class="form-control" id="formGroupExampleInput2">What do you want to say?</textarea>
+                                <div class="line"></div>
+                            </div>
+                            <a class="btn btn-primary float-md-right hvr-ripple-out">Send</a>
+                        </form>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="contact">
+
+                            <span>+420 720 290 359</span>
+                        </div>
+                    </div>
                 </div>
-                <form>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Your name">
-                    </div>
-                    <div class="form-group">
-                        <textarea type="text" class="form-control" id="formGroupExampleInput2">What do you want to say?</textarea>
-                    </div>
-                    <a class="btn btn-primary float-md-right hvr-ripple-out">Send</a>
-                </form>
             </div>
         </div>
     </div>

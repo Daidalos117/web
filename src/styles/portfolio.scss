@@ -26,9 +26,15 @@
     background: #000000;
     border: none;
    // @include transition(all, $standart-animaion-time);
-    box-shadow:  0px 2px 10px 0px rgba(0,0,0,0.16);
+
+    @include transition(all,.2s);
     &:hover{
       //margin-top: -4px;
+      box-shadow:  0px 2px 10px 0px rgba(0,0,0,0.16);
+      transform: scale(1.01);
+      .card-img-left{
+        transform: translateY(-4%);
+      }
     }
     .card-block{
       padding-top: 3rem;
@@ -69,10 +75,17 @@
         }
       }
     }
-    
+    &-img{
 
+      @include transition(all,.3s,ease-in-out);
+      -webkit-transition-delay: .1s; /* Safari */
+      transition-delay: .1s;
+    }
+
+    border: 1px solid $color-light-grey;
     &.first{
       background: $color-light-grey;
+      border-color: darken($color-light-grey,4%);
       color: $color-grey;
       p{
         color: $color-grey;
@@ -84,7 +97,8 @@
     }
 
     &.second{
-      background: $color-secondary;;
+      background: $color-secondary;
+      border-color: darken($color-secondary,4%);
       img{
         position: relative;
         top: 1rem;
@@ -92,6 +106,7 @@
     }
     &.third{
       background: lighten($color-danger,10%);
+      border-color: lighten($color-danger,6%);
       img{
         position: relative;
         top: .3rem;
@@ -99,6 +114,7 @@
     }
     &.fourth{
       background: $color-light-grey;
+      border-color: darken($color-light-grey,4%);
       color: $color-grey;
       p{
         color: $color-grey;
@@ -135,7 +151,8 @@
   h3{
     text-transform: uppercase;
     color: $color-primary;
-    font-size: 2.5rem;
+    font-size: 3rem;
+    font-weight: 700;
   }
   margin: 0 auto;
   color: white;

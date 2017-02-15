@@ -1,4 +1,11 @@
 /** HEADER */
+
+body.loaded{
+  .background-image{
+
+  }
+}
+
 header{
   height: 90vh;
   width: 100%;
@@ -20,18 +27,16 @@ header{
   }
 
   .background-image{
-    position: absolute;
+   position: absolute;
+    right: 0;
+    bottom: 0rem;
     width: 100%;
-    right: 10rem;
-    height: 110%;
-    bottom: -5rem;
-    background:  url("../../img/header2_edited.png");
-    background:{
-      repeat: no-repeat;
-      size: contain;
-      position: bottom right;
-    }
+    img{
+      float: right;
+      margin-right: 15%;
 
+      width: 30vw;
+    }
   }
 
   //-webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
@@ -101,9 +106,17 @@ header{
         left: 0;
         height: 2px;
         width: 30px;
-        background-color: white;
+        background-color: $color-danger;
       }
     }
+    .btn-container{
+      text-align: right;
+    }
+    &-btn{
+      margin-top: 2rem;
+      margin-right: auto;
+    }
+
     &:before{
       content: "";
       //background-image: linear-gradient(-245deg, #283593 0%,#30E3CA 99%);

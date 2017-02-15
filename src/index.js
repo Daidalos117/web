@@ -16,9 +16,16 @@ import 'particles.js';
 var ProgressBar = require('progressbar.js')
 
 import 'animate.css';
-
 /* Typed JS */
 require("imports-loader?this=>window!./typed.min.js");
+
+window.onload = function () {
+    $(".loader").removeClass("shown");
+    $("body").addClass("loaded");
+    $(".background-image").addClass("animated fadeInUp");
+}
+
+
 $(function(){
     $("header .heading").typed({
         strings: ["<span class='name'>Roman</span>", "<span class='name'>webdesigner</span>","<span class='name last'>here to help</span>"],
@@ -63,20 +70,20 @@ $(function(){
 
     var controller = new ScrollMagic.Controller();
 
-    var tw1 = new TweenMax.to(".navbar", 0.5, { padding: ".5rem", force3D:true, backgroundColor: "#1c1e26"});
-    var tw2 = new TweenMax.to(".nav-item a", 0.5, {padding: "0.4rem 0.6rem",force3D:true } );
-
-
+    /* Navbar */
+    var tw1 = new TweenMax.to(".navbar", 1, { padding: ".5rem", force3D:true, backgroundColor: "#1c1e26"});
+    var tw2 = new TweenMax.to(".nav-item a", 1, {padding: "0.4rem 0.6rem",force3D:true } );
     var timeline = new TimelineLite()
         .add([tw1,tw2], '+=0', 'start');
 
     var scene = new ScrollMagic.Scene({
         offset: 200, // start scene after scrolling for 100px
+        duration: 50,
         //duration: 400 // pin the element for 400px of scrolling
     })  //.setClassToggle(".navbar", "scrolled")
         .setTween(timeline)
 
-        .addIndicators()
+        .addIndicators({name: "navbar"})
         .addTo(controller);
 
     /*var scene = new ScrollMagic.Scene({ duration: 200})
@@ -98,41 +105,70 @@ $(function(){
 
         });*/
 
+        /* Nadpisy */
+            $("h3.secondary").each(function (i) {
+                var height= $(window).height();
+                var newHeight = -(height/2);
+                var tween = new TimelineMax ()
+                    .add([
+                        TweenMax.fromTo(this, 1, {scale: 1.3, autoAlpha: 0.1, top:100}, {top:-300,  autoAlpha: 0, ease: Linear.easeNone} ),
+                        TweenMax.fromTo($(this).siblings(".line").get(0), 1, {scale: 1, autoAlpha: .8, left: 35,zIndex:10}, {left: 0, autoAlpha: .9, ease: Linear.easeNone}),
+                    ]);
+                var h2 = $(this).siblings("h2");
+                var scene = new ScrollMagic.Scene({triggerElement:  $(this).siblings("h2").get(0),offset: -200, duration: height})
+                    .setTween(tween )
+                    .addIndicators({name: "h3.secondary"+i}) // add indicators (requires plugin)
+                    .addTo(controller);
+            });
+
+            $(".slideInUp").each(function (i) {
+                var height= $(window).height();
+                var newHeight = -(height/2);
+                new ScrollMagic.Scene({triggerElement: this, duration: 100 , offset: newHeight})
+                //.setTween(TweenMax.fromTo(this, 0.5,{top: -5, autoAlpha:.8}, { top: 0, autoAlpha:1,force3D:true}) )
+                    .addIndicators({name: "slideInUp"+i}) // add indicators (requires plugin)
+                    //.setClassToggle(this,"is-active")
+                    .on('start',() => {;
+                        $(this).addClass("is-active");
+                    })
+                    .on('end',() => {
+                        //$(this).removeClass("slideInUp");
+                        //$(this).removeClass("animated");
+
+                    })
+                    .addTo(controller);
+            });
 
 
 
-/*    var tween = new TimelineMax ()
-        .add([
-            TweenMax.fromTo("h3.secondary", 1, {scale: 1.5, autoAlpha: 0.42, left:200}, {left:0,scale:1, autoAlpha: 0}),
-            TweenMax.fromTo(".line", 1, {scale: 1, autoAlpha: .8, top: 35}, {top: 0, autoAlpha: .9}),
-        ]);
-
-    var scene = new ScrollMagic.Scene({triggerElement: "#portfolio h2",offset:-400, duration: $(window).height()})
-        .setTween(tween )
-        .addIndicators() // add indicators (requires plugin)
-        .addTo(controller);*/
 
 
-
-     new ScrollMagic.Scene({triggerElement: ".card", duration: 1})
-        .setTween(TweenMax.to(".navbar", 0.5, { padding: ".5rem", force3D:true, backgroundColor: "#000"}) )
-        .addIndicators() // add indicators (requires plugin)
+    /* Header scale */
+    var twe1 = new TweenMax.to("header .content-div", 1, { scale: 0.7, force3D:false,  top: -150 });
+    var twe2 = new TweenMax.to("header .btn", 1, { scale: 0.7, force3D:false, });
+    var twe3 = new TweenMax.to("header .background-image", 1, { scale: 0.5,top: -150, force3D:false,  } );
+    var timeline = new TimelineLite()
+        .add([twe1,twe2,twe3], '+=0', 'start');
+    new ScrollMagic.Scene({ duration: $(window).height(), offset: 0})
+        .setTween(timeline)
+        .addIndicators({name: "header scale"}) // add indicators (requires plugin)
         .addTo(controller);
 
 
 
-    $(".card").each(function () {
+
+    $(".card").each(function (i) {
         var height= $(window).height();
-        console.log(height,"offset")
-        new ScrollMagic.Scene({triggerElement: this, duration: 100 , offset: -(height/2)})
+        var newHeight = -(height/2);
+        new ScrollMagic.Scene({triggerElement: this, duration: 100 , offset: newHeight})
             //.setTween(TweenMax.fromTo(this, 0.5,{top: -5, autoAlpha:.8}, { top: 0, autoAlpha:1,force3D:true}) )
-            .addIndicators("cards") // add indicators (requires plugin)
+            .addIndicators({name: "cards"+i}) // add indicators (requires plugin)
             .on('start',() => {;
                 $(this).addClass("animated slideInUp");
             })
             .on('end',() => {
-                $(this).removeClass("slideInUp");
-                $(this).removeClass("animated");
+                //$(this).removeClass("slideInUp");
+                //$(this).removeClass("animated");
 
             })
             .addTo(controller);
@@ -141,7 +177,7 @@ $(function(){
 
 
 
-    var controller = new ScrollMagic.Controller({
+    var controller2 = new ScrollMagic.Controller({
         globalSceneOptions: {
             triggerHook: 'onLeave'
         }
@@ -157,13 +193,13 @@ $(function(){
                 $("header").css("z-index",0);
     })
             .addIndicators({name: 200}) // add indicators (requires plugin)
-            .addTo(controller);
+            .addTo(controller2);
 
 
 
 
 
-
+/*
     var scene = new ScrollMagic.Scene({
         triggerElement: "#about",
         offset: 200
@@ -212,9 +248,9 @@ $(function(){
                     width ++;
                     $(".progress.pro-1").attr("value",width);
                 }
-            },10)*/
+            },10)
         })
-        .addTo(controller);
+        .addTo(controller);*/
 
 
 

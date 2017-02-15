@@ -7,29 +7,76 @@
   }
   .card{
     margin: 0 auto;
-    background-color: lighten($color-dark,5%);
+    background-color: lighten($color-dark,0%);
     padding: 2rem;
     //box-shadow:  0px 2px 10px 0px rgba(255,255,255,255.16);
   }
 
   form{
+    .form-group{
+      position: relative;
+      &:before{
+        content: "{";
+        color: white;
+        font-size: 1.5rem;
+        width: 2px;
+        position: absolute;
+        left: 0;
+        top: .3rem;
+       // background-color: white;
+        opacity: .4;
+       // transform: rotate(45deg);
+      }
+      &:after{
+        content: "}";
+        color: white;
+        font-size: 1.5rem;
+        width: 2px;
+        position: absolute;
+        right: 0;
+        bottom: .3rem;
+       // background-color: white;
+        opacity: .4;
+       // transform: rotate(45deg);
+      }
+      .line{
+        height: 1px;
+        background-color: $color-primary;
+        opacity: .5;
+        width: 30%;
+        margin-left: 1.9rem ;
+      }
+    }
+
+
     input[type="text"],textarea{
       background-color: transparent;
       color: white;
       letter-spacing: 1px;
       font-size: 1.2rem;
+      margin-left: 1rem;
       //font-style: italic;
-
+      @include transition(all,.3s);
       @include placeholder {
         color: white;
       }
-      border: {
+
+
+
+/*      border: {
         color: $color-primary;
         top:none;
         right: none;
         left: none;
         radius: 0;
-      };
+      };*/
+      &:focus {
+        outline: none;
+        border-color: transparent;
+       // border-color: darken($color-primary,10%);
+        //border-width: 2px;
+      }
+
     }
     textarea{
       height: 10rem;

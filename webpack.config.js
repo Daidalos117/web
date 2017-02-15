@@ -70,7 +70,6 @@ if (production) {
 }
 
 
-
 module.exports = {
     entry:  './src',
     output: {
@@ -85,7 +84,7 @@ module.exports = {
         inline: true,
         open: true
     },
-    devtool: 'eval-cheap-module-source-map',
+    devtool: 'source-map',
     module: {
         loaders: [
 
@@ -96,11 +95,11 @@ module.exports = {
             },
             {
                 test:   /\.scss/,
-                loader: ExtractPlugin.extract('style', production ?  'css!sass?outputStyle=compressed' : 'css!sass'),
+                loader: ExtractPlugin.extract('style', production ?  'css!sass?outputStyle=compressed' : 'css?sourceMap!sass?sourceMap'),
             },
             {
                 test: /\.css$/,
-                loader: ExtractPlugin.extract('style', production ?  'css!sass?outputStyle=compressed' : 'css!sass')
+                loader: ExtractPlugin.extract('style', production ?  'css!sass?outputStyle=compressed' : 'css?sourceMap!sass?sourceMap')
             },
             {
                 test:   /\.html/,

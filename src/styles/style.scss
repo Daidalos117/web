@@ -25,10 +25,10 @@ $standart-animaion-time: 0.4s;
   transition: background $time ease-in-out, padding $time ease-in-out;
 }
 
-@mixin transition($what,$time){
-  -webkit-transition: $what $time linear;
-  -moz-transition: $what $time linear;
-  transition: $what $time linear;
+@mixin transition($what,$time,$how:ease-out){
+  -webkit-transition: $what $time $how;
+  -moz-transition: $what $time $how;
+  transition: $what $time $how;
 }
 
 @mixin placeholder {
@@ -42,6 +42,7 @@ $standart-animaion-time: 0.4s;
 
 
 
+@import "loader";
 @import "menu";
 @import "main";
 @import "header";

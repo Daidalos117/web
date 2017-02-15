@@ -12,6 +12,9 @@
   .navbar-brand{
     color: white;
     opacity: .9;
+    img{
+      width: 130px;
+    }
   }
   .navbar-nav{
 
@@ -23,8 +26,8 @@
     }
     a.nav-link{
       position: relative;
-      font-size: 1.1rem;
-      //font-weight: 700;
+      //font-size: 1.1rem;
+      font-weight: 300;
       color: white;
       border: 1px solid transparent;
       @include transition(border,$standart-animaion-time);
