@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="44px" viewBox="0 0 70 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch -->
+    <title>ikona</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M34.9997845,0.0853228433 C45.223736,0.0853228433 57.0017004,3.88009314 63.736015,8.99293446 C68.5286042,12.6315747 70,18 70,18 L6.22891078e-12,18 C6.22891078e-12,18 -0.147211185,12.8757858 5,9.04266142 C11.732347,4.02908754 25.0822379,0.0853228433 34.9997845,0.0853228433 Z" id="path-1"></path>
+        <rect id="path-2" x="1" y="25" width="68" height="5" rx="2"></rect>
+        <path d="M0,37 L70,37 L70,41.9940809 C70,43.1019194 69.1021838,44 67.9992008,44 L2.00079916,44 C0.895788296,44 0,43.1134452 0,41.9940809 L0,37 Z" id="path-3"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="loga" transform="translate(-753.000000, -1053.000000)">
+            <g id="menu2" transform="translate(735.000000, 1032.000000)">
+                <g id="ikona" transform="translate(18.000000, 21.000000)">
+                    <g id="vrsek">
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        <path stroke="#FFFFFF" stroke-width="1" d="M69.3088037,17.5 L0.518644298,17.5 C0.552837256,17.0890073 0.635652492,16.5638954 0.792039588,15.9551822 C1.15911896,14.526381 1.83102521,13.1025879 2.88349306,11.7716471 C3.54892826,10.9301441 4.35005088,10.1500914 5.29863782,9.44367944 C11.9072857,4.5222242 25.1358749,0.585322843 34.9997845,0.585322843 C44.9552476,0.585322843 56.6749431,4.25978928 63.4336697,9.39116472 C64.4971752,10.1986018 65.4459086,11.1341102 66.2860816,12.1729418 C67.3439784,13.480978 68.1787345,14.8841803 68.8131756,16.2868452 C69.0101417,16.7223109 69.1746545,17.1295159 69.3088037,17.5 Z"></path>
+                    </g>
+                    <g id="maso">
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
+                        <rect stroke="#FFFFFF" stroke-width="1" x="1.5" y="25.5" width="67" height="4" rx="2"></rect>
+                    </g>
+                    <g id="spodek">
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                        <path stroke="#FFFFFF" stroke-width="1" d="M0.5,37.5 L69.5,37.5 L69.5,41.9940809 C69.5,42.8252829 68.8265339,43.5 67.9992008,43.5 L2.00079916,43.5 C1.16778541,43.5 0.5,42.8331629 0.5,41.9940809 L0.5,37.5 Z"></path>
+                    </g>
+                    <circle id="Oval-6" stroke="#FFFFFF" fill="#000000" cx="15.5" cy="10.5" r="1.5"></circle>
+                    <circle id="Oval-6" stroke="#FFFFFF" fill="#000000" cx="49.5" cy="5.5" r="1.5"></circle>
+                    <circle id="Oval-6" stroke="#FFFFFF" fill="#000000" cx="36.5" cy="15.5" r="1.5"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

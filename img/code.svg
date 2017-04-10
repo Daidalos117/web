@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="982" height="681" viewBox="0 0 982 681">
+  <g fill="none" fill-rule="evenodd" transform="translate(0 1)">
+    <path stroke="#6C6D6E" stroke-linecap="square" d="M200.5,42.5 L200.5,678.5"/>
+    <rect width="980.071" height="679" x=".929" stroke="#9B9B9B" rx="6"/>
+    <path stroke="#9B9B9B" stroke-linecap="square" d="M980.535622,42 L1.39335574,42"/>
+    <g transform="translate(15 16)">
+      <circle cx="6" cy="6" r="6" fill="#FF6159"/>
+      <circle cx="26" cy="6" r="6" fill="#FFBE2F"/>
+      <circle cx="46" cy="6" r="6" fill="#29CB42"/>
+    </g>
+    <text font-family="Montserrat-Regular, Montserrat" font-size="14">
+      <tspan x="235" y="79" fill="#C0A75C">&lt;html&gt;</tspan> <tspan x="235" y="97" fill="#C0A75C">&lt;head&gt;</tspan> <tspan x="235" y="115" fill="#C0A75C"> &lt;meta </tspan> <tspan x="314.73" y="115" fill="#9B9B9B">charset=</tspan> <tspan x="375.938" y="115" fill="#A3C459">&quot;utf-8&quot;</tspan> <tspan x="422.278" y="115" fill="#C0A75C">&gt;</tspan> <tspan x="235" y="133" fill="#C0A75C"> &lt;meta </tspan> <tspan x="314.73" y="133" fill="#9B9B9B">http-equiv=</tspan> <tspan x="399.234" y="133" fill="#A3C459">&quot;X-UA-Compatible&quot;</tspan> <tspan x="536.434" y="133" fill="#C0A75C"> </tspan> <tspan x="540.27" y="133" fill="#9B9B9B">content=</tspan> <tspan x="604.642" y="133" fill="#A3C459">&quot;IE=edge&quot;</tspan> <tspan x="673.242" y="133" fill="#C0A75C">&gt;</tspan> <tspan x="235" y="151" fill="#C0A75C"> &lt;meta </tspan> <tspan x="314.73" y="151" fill="#9B9B9B">name=</tspan> <tspan x="363.576" y="151" fill="#A3C459">&quot;viewport&quot; </tspan> <tspan x="441.094" y="151" fill="#9B9B9B">content=</tspan> <tspan x="505.466" y="151" fill="#A3C459">&quot;width=device-width, initial-scale=1&quot;</tspan> <tspan x="762.59" y="151" fill="#C0A75C">&gt;</tspan>  <tspan x="235" y="187" fill="#C0A75C"> &lt;meta </tspan> <tspan x="312.042" y="187" fill="#9B9B9B">name=</tspan> <tspan x="360.888" y="187" fill="#A3C459">&quot;description&quot; </tspan> <tspan x="455.066" y="187" fill="#9B9B9B">content=</tspan> <tspan x="519.438" y="187" fill="#A3C459">&quot;&quot;</tspan> <tspan x="529.91" y="187" fill="#C0A75C">&gt;</tspan> <tspan x="235" y="205" fill="#C0A75C"> &lt;meta </tspan> <tspan x="310.894" y="205" fill="#9B9B9B">name=</tspan> <tspan x="359.74" y="205" fill="#A3C459">&quot;author&quot;</tspan> <tspan x="417.056" y="205" fill="#C0A75C"> </tspan> <tspan x="420.892" y="205" fill="#9B9B9B">content=</tspan> <tspan x="485.264" y="205" fill="#A3C459">&quot;&quot;</tspan> <tspan x="495.736" y="205" fill="#C0A75C">&gt;</tspan> <tspan x="235" y="223" fill="#C0A75C"> &lt;link </tspan> <tspan x="299.974" y="223" fill="#9B9B9B">rel=</tspan> <tspan x="326.756" y="223" fill="#A3C459">&quot;icon&quot;</tspan> <tspan x="367.3" y="223" fill="#9B9B9B"> </tspan> <tspan x="371.136" y="223" fill="#C0A75C">href=</tspan> <tspan x="408.53" y="223" fill="#A3C459">&quot;../../favicon.ico&quot;</tspan> <tspan x="527.768" y="223" fill="#C0A75C">&gt;</tspan>  <tspan x="235" y="259" fill="#C0A75C"> &lt;title&gt;</tspan> <tspan x="310.292" y="259" fill="#4A4A4A">Hey there :)</tspan> <tspan x="392.038" y="259" fill="#C0A75C">&lt;/title&gt;</tspan> <tspan x="235" y="277" fill="#C0A75C">&lt;/head&gt;</tspan> <tspan x="235" y="295" fill="#C0A75C">&lt;body&gt;</tspan> <tspan x="235" y="313" fill="#C0A75C"> &lt;header&gt;</tspan> <tspan x="235" y="331" fill="#C0A75C"> &lt;div </tspan> <tspan x="324.376" y="331" fill="#9B9B9B">class=</tspan> <tspan x="367.398" y="331" fill="#A3C459">“column-3”</tspan> <tspan x="445.812" y="331" fill="#C0A75C">&gt;</tspan> <tspan x="235" y="349" fill="#C0A75C"> &lt;h1&gt;</tspan> <tspan x="350.346" y="349" fill="#4A4A4A">The best cupcake</tspan> <tspan x="474.75" y="349" fill="#C0A75C">&lt;/h1&gt;</tspan> <tspan x="235" y="367" fill="#C0A75C"> &lt;p&gt; </tspan> <tspan x="347" y="367" fill="#4A4A4A">Croissant brownie topping I love chocolate bar halvah I love </tspan> <tspan x="235" y="385" fill="#4A4A4A"> chocolate sugar plum…</tspan> <tspan x="509.974" y="385" fill="#C0A75C">&lt;/p&gt;</tspan> <tspan x="235" y="403" fill="#C0A75C"> &lt;div </tspan> <tspan x="352.376" y="403" fill="#9B9B9B">class=</tspan> <tspan x="395.398" y="403" fill="#A3C459">“column-12 ”</tspan> <tspan x="483.136" y="403" fill="#C0A75C">&gt;</tspan> <tspan x="235" y="421" fill="#C0A75C"> &lt;img </tspan> <tspan x="386.312" y="421" fill="#9B9B9B">src=</tspan> <tspan x="415.754" y="421" fill="#A3C459">“header-image-full”</tspan> <tspan x="555.138" y="421" fill="#C0A75C"> </tspan> <tspan x="558.974" y="421" fill="#9B9B9B">alt=</tspan> <tspan x="585.616" y="421" fill="#A3C459">“Header”</tspan> <tspan x="647.328" y="421" fill="#C0A75C"> </tspan> <tspan x="651.164" y="421" fill="#9B9B9B">class=</tspan> <tspan x="694.186" y="421" fill="#A3C459">“img-fluid</tspan> <tspan x="764.746" y="421" fill="#A3C459" font-family="LucidaGrande, Lucida Grande">”</tspan> <tspan x="770.31" y="421" fill="#C0A75C">&gt;</tspan> <tspan x="235" y="439" fill="#C0A75C"> &lt;/div&gt; </tspan> <tspan x="235" y="457" fill="#C0A75C"> &lt;/div&gt;</tspan> <tspan x="235" y="475" fill="#C0A75C"> &lt;/header&gt;</tspan> <tspan x="235" y="493" fill="#C0A75C"> </tspan> <tspan x="235" y="511" fill="#C0A75C"> &lt;section</tspan> <tspan x="322.948" y="511" fill="#9B9B9B"> id=</tspan> <tspan x="348.764" y="511" fill="#A3C459">&quot;about&quot;</tspan> <tspan x="400.886" y="511" fill="#C0A75C">&gt;</tspan>  <tspan x="235" y="529" fill="#CBB473"> &lt;/div&gt;</tspan>  <tspan x="235" y="547" fill="#C0A75C"> &lt;div </tspan> <tspan x="352.376" y="547" fill="#9B9B9B">class=</tspan> <tspan x="395.398" y="547" fill="#A3C459">&quot;col-md-10 col-xs-12 offset-md-1&quot;</tspan> <tspan x="633.09" y="547" fill="#C0A75C">&gt;</tspan>
+    </text>
+    <text fill="#FF5370" font-family="Montserrat-Regular, Montserrat" font-size="14">
+      <tspan x="66" y="290.811">index.html</tspan>
+    </text>
+    <g transform="translate(24 87)">
+      <text fill="#979797" font-family="Montserrat-Regular, Montserrat" font-size="16">
+        <tspan x="15" y="15">Fabulous web</tspan>
+      </text>
+      <polygon fill="#D8D8D8" stroke="#979797" points="4 8.084 8 16.168 0 16.168" transform="matrix(1 0 0 -1 0 24.253)"/>
+      <g transform="translate(17 42.442)">
+        <polygon fill="#D8D8D8" stroke="#979797" points="4 5.053 8 13.137 0 13.137" transform="scale(1 -1) rotate(90 13.095 0)"/>
+        <text fill="#979797" font-family="Montserrat-Regular, Montserrat" font-size="14">
+          <tspan x="25" y="14">img</tspan>
+        </text>
+      </g>
+      <g transform="translate(17 80)">
+        <polygon fill="#D8D8D8" stroke="#C5C5C5" points="4 8.053 8 16.137 0 16.137" transform="matrix(1 0 0 -1 0 24.19)"/>
+        <text fill="#979797" font-family="Montserrat-Regular, Montserrat" font-size="14">
+          <tspan x="25" y="14">js</tspan>
+        </text>
+      </g>
+      <g transform="translate(16 157.81)">
+        <polygon fill="#D8D8D8" stroke="#979797" points="5 5.053 9 13.137 1 13.137" transform="scale(1 -1) rotate(90 14.095 0)"/>
+        <text fill="#979797" font-family="Montserrat-Regular, Montserrat" font-size="14">
+          <tspan x="26" y="14">css</tspan>
+        </text>
+      </g>
+      <g fill="#979797" font-family="Montserrat-Regular, Montserrat" font-size="13" transform="translate(52 111)">
+        <text>
+          <tspan x="0" y="13">app.js</tspan>
+        </text>
+        <text>
+          <tspan x="0" y="36">react.js</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>

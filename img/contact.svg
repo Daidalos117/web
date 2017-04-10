@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="38px" viewBox="0 0 44 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch -->
+    <title>contact</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="loga" transform="translate(-1036.000000, -1094.000000)">
+            <g id="contact" transform="translate(1036.000000, 1094.000000)">
+                <rect id="Rectangle-39" fill="#FFFFFF" x="0" y="0" width="44" height="27"></rect>
+                <g id="kolecka" transform="translate(10.000000, 12.000000)" fill="#E84545">
+                    <circle id="Oval-8" cx="1" cy="1" r="1"></circle>
+                    <circle id="Oval-8" cx="11" cy="1" r="1"></circle>
+                    <circle id="Oval-8" cx="21" cy="1" r="1"></circle>
+                </g>
+                <polygon id="Rectangle" fill="#FFFFFF" points="30.6604067 27 36.8708318 27 36.8708318 38"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

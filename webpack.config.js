@@ -82,7 +82,9 @@ module.exports = {
     devServer: {
         hot: true,
         inline: true,
-        open: true
+        open: true,
+        port: 9090,
+        host: "0.0.0.0"
     },
     devtool: 'source-map',
     module: {
@@ -122,11 +124,11 @@ module.exports = {
                 loader: "file"
             },
             {
-                test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-                loader: "url?limit=10000&mimetype=image/svg+xml"
+                test: /\.svg$/,
+                loader: 'url?limit=10000&mimetype=image/svg+xml'
             },
             {
-                test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
+                test: /\.(png|jpg|jpeg|gif|woff|woff2|ttf|eot)$/,
                 loader: 'file',
                 exclude: /node_modules/
             },
@@ -137,3 +139,19 @@ module.exports = {
         ],
     }
 };
+
+/*
+ loader: ExtractPlugin.extract({
+    fallback: 'style-loader',
+     use: [
+
+        {
+            loader: "css-loader",
+            options: {
+                sourceMap: true
+            }
+        }
+        "less-loader"
+        ]
+     })
+ */

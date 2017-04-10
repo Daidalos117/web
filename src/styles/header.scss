@@ -1,50 +1,49 @@
 /** HEADER */
 
-body.loaded{
-  .background-image{
+body.loaded {
+  .background-image {
 
   }
 }
 
-header{
+
+
+
+header {
   height: 90vh;
   width: 100%;
   position: relative;
-  //@include angle(after);
-  //margin-top: 4rem;
+  overflow: hidden;
+  background-color: red;
 
-
-
-  .background{
+  .background {
     position: absolute;
     width: 100%;
-    background-color:$color-dark;
+   // background-image: linear-gradient(120deg, $color-dark 100%, #000 0%);
+    background-color: $color-dark;
     left: 0;
     height: 100%;
-    /*    -webkit-transform: rotate(-4deg) ;
-        -ms-transform: rotate(-4deg) ;
-        transform: rotate(-4deg) ;*/
   }
+  transition: all 1s ease-out;
+  //-webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 
-  .background-image{
-   position: absolute;
-    right: 0;
-    bottom: 0rem;
-    width: 100%;
-    img{
-      float: right;
-      margin-right: 15%;
 
-      width: 30vw;
+  .my-img {
+    width: 45vw;
+    position: relative;
+    top: -20%;
+
+    @include media-breakpoint-down(sm) {
+      //display: none;
+      //position: absolute;
+      //bottom: 0;
+      width: 100vw;
+      top: -50%;
+      left: 50%;
     }
   }
 
-  //-webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-  // clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-
-
-
-  .background-picture{
+  .background-picture {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -53,82 +52,94 @@ header{
   }
 
   /* Mask: */
-  .content{
+  .content {
     z-index: 3;
     height: 100%;
     color: white;
     position: relative;
     margin: 0px;
     top: 25%;
-    h3{
-      font-size: 3rem;
-      span{
-        font-weight: 300;
-      }
+    font-size: 3rem;
+    @include media-breakpoint-down(sm) {
+      font-size: 2.5rem;
     }
-    h1{
-      font-size: 4.5rem;
-      white-space:pre;
-      display: inline;
-      &:after{
-        content: "";
-        display: inline;
-        position: relative;
-        width: 1px;
-        height: 4.5rem;
-        background-color: rebeccapurple;
-      }
-      .name{
-        color: $color-primary;
-        &.last{
-          font-size: 3.8rem;
-        }
-      }
-    }
-    span.typed-cursor{
-      font-size: 4.5rem;
-    }
-    p{
-      position: relative;
-      font-size: 1.1rem;
-      margin-top: 1rem;
+    span {
       font-weight: 300;
+    }
+  }
+  h1 {
+    font-size: $font-size-mega;
+    @include media-breakpoint-down(sm) {
+      font-size: 3.6rem;
+    }
+    white-space: pre;
+    display: inline-block;
+    height: 4rem;
+    z-index: 2;
+    max-width: 100%;
+    .name {
+      color: $color-primary;
+
+      &.last {
+        font-size: 3.8rem;
+      }
+    }
+  }
+  h3 {
+    font-size: $font-size-big;
+    @include media-breakpoint-down(sm) {
+      font-size: 2.3rem;
+    }
+  }
+  span.typed-cursor {
+    font-size: 4rem;
+  }
+  p {
+    position: relative;
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-weight: 300;
+    color: white;
+    opacity: .95;
+    z-index: 2;
+    text-align: justify;
+    width: 80%;
+    a {
       color: white;
-      opacity: .95;
-      a{
-        color: white;
-        font-weight: 700;
-      }
-      &:after{
-        content: "";
-        position: absolute;
-        top: -0.5rem;
-        left: 0;
-        height: 2px;
-        width: 30px;
-        background-color: $color-danger;
-      }
+      font-weight: 700;
     }
-    .btn-container{
-      text-align: right;
-    }
-    &-btn{
-      margin-top: 2rem;
-      margin-right: auto;
-    }
-
-    &:before{
+    &:after {
       content: "";
-      //background-image: linear-gradient(-245deg, #283593 0%,#30E3CA 99%);
-      // background-image: linear-gradient(-245deg, #30E3CA 0%, #283593 93%);
-      opacity: 0.9;
       position: absolute;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
+      top: -0.5rem;
+      left: 0;
+      height: 2px;
+      width: 30px;
+      background-color: $color-danger;
+      opacity: .9;
     }
-
-
+  }
+  .btn-container {
+    text-align: right;
+  }
+  &-btn {
+    margin-top: 2rem;
+    margin-right: auto;
   }
 
+  &:before {
+    // content: "";
+    //background-image: linear-gradient(-245deg, #283593 0%,#30E3CA 99%);
+    // background-image: linear-gradient(-245deg, #30E3CA 0%, #283593 93%);
+    opacity: 0.9;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+}
+
+body.loaded header{
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }

@@ -14,46 +14,37 @@
     <!-- Core CSS -->
     <link href="builds/bundle.css" rel="stylesheet">
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700&amp;subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Slabo+27px|Source+Sans+Pro:300,400,700&amp;subset=latin-ext" rel="stylesheet">
 </head>
 
 <body >
-<div class="loader shown row align-items-center ">
-    <div class="col">
-        <div class ="spinner">
-            <div class="rect1"></div>
-            <div class="rect2"></div>
-            <div class="rect3"></div>
-            <div class="rect4"></div>
-            <div class="rect5"></div>
-        </div>
-        <p>Page will load soonly</p>
-    </div>
-</div>
+
 <nav class="navbar navbar-fixed-top" id="navbar-complete">
+    <div class="container">
+    <a class="navbar-brand" href="#"><img src="img/logo.svg" alt="logo" class="inject-svg logo"></a>
 
-    <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header" aria-expanded="false" aria-label="Toggle navigation"></button>
+    <button class="navbar-toggler hidden-sm-up" type="button"  >
+        <img src="img/hamburger-icon.svg" class="menu-icon inject-svg">
+    </button>
 
-    <div class="collapse navbar-toggleable-xs" id="navbar-header">
-        <div class="container">
-            <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo"></a>
-            <ul class="nav navbar-nav float-xs-right">
-                <li class="nav-item">
-                    <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#portfolio">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">Me</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-            </ul>
-        </div>
+    <div class="navbar-toggleable-xs" id="navbar-header">
+        <ul class="nav navbar-nav float-xs-right">
+            <li class="nav-item">
+                <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#about">Me</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+            </li>
+        </ul>
+    </div>
     </div>
 </nav>
 
@@ -63,24 +54,22 @@
 <!-- Header -->
 <header id="home">
     <div class="background" id="particles"></div>
-    <div class="background-image">
-        <img src="img/header2_edited.png" alt="Foto about me">
-    </div>
+
     <div class="content row ">
         <div class="container">
             <div class="row">
-                <div class="col-xs-6 content-div">
+                <div class="col-xs-12 col-md-6 content-div">
                     <h3><span class="light">Hello</span>, I am</h3>
                     <h1 class="heading"></h1>
-                    <p>Pleasure to meet you. Look at some of my <a href="#portfolio">works</a> <br>
-                        or call me straight aways co we can get some coffee<br>
-                        and chat about cool stuff.</p>
+                    <p class="animate fadeInLeft" data-animate="fadeInLeft">Look at some of my <a href="#portfolio">works</a>
+                        or call me straight aways co we can get some coffee
+                        and chat about cool stuff.
                     <div class="btn-container">
-                        <a class="btn btn-primary hvr-ripple-out content-btn " href="#contact">Say Hi!</a>
+
                     </div>
                 </div>
-                <div class="col-xs-12 text-md-center">
-
+                <div class="col-xs-12 col-md-6 text-md-center text-xs-right">
+                    <img src="img/header2_edited.png" alt="Foto about me" class="img-fluid my-img animate popUp"  data-animate="popUp">
                 </div>
 
             </div>
@@ -91,50 +80,37 @@
 
 <!-- About me start -->
 <section id="about">
-    <div class="container">
-        <div class="header-section">
-            <h2 class="primary">Human</h2>
-            <div class="line"></div>
-            <h3 class="secondary">Webdesigner</h3>
+    <div class="about-content">
+        <div class="message-me">
+            <a href="#contact" class="btn-circle"><img src="img/contact-icon.svg" alt="mail" class="inject-svg contact-icon"></a>
         </div>
-
-        <div class="col-md-10 col-xs-12 offset-md-1">
-
-            <p class="slideInUp ">Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're </p>
-            <p class="slideInUp slideInUp2">Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're </p>            <p class="slideInUp slideInUp3">Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're </p>
-
-            <!--
-            <div class="row">
-                <div class="col-xs-4"><h4>Who I am?</h4></div>
-                <div class="col-xs-8">
-                    <p> I am 22 year old guy that loves creating websites and many more.</p>
-                </div>
+        <img src="img/corner-1.svg" class="corner corner-1">
+        <img src="img/corner-2.svg" class="corner corner-2">
+        <div class="container">
+            <div class="header-section">
+                <h2 class="primary">Human</h2>
+                <div class="line"></div>
+                <h3 class="secondary">Webdesigner</h3>
             </div>
-            <div class="row">
-                <div class="col-xs-4"><h4>Why I do it?</h4></div>
-                <div class="col-xs-8">
-                    <p> Because it's one of my passions. And I also like money.</p>
+            <div class="flex-items-md-center">
+                <div class="col-md-8 col-xs-12 offset-md-2 text-md-center">
+
+                    <p class="animate fadeInUp" data-animate="fadeInUp">I am tech and scifi lover curently working as frontend developer.
+                        Coding and programming is part what I am and what I am good at.</p>
+
+                    <p class="animate fadeInUp" data-animate="fadeInUp" data-animate-delay="300">Let me help you with your project and you see. </p>
+
                 </div>
-            </div>
-            <div class="row caaan-do">
-                <div class="col-md-12"></div>
-                <div class="col-md-12 ">
-                    <div class="row">
-                        <div class="col-md">
-                            <h6>Frontend</h6>
-                            <div class="progress" id="progress"></div>
-                        </div>
-                        <div class="col-md">
-                            <h6>Backend</h6>
-                            <progress class="progress progress-striped " value="70" max="100"></progress>
-                        </div>
-                        <div class="col-md">
-                            <h6>Design</h6>
-                            <progress class="progress progress-striped " value="70" max="100"></progress>
-                        </div>
-                    </div>
+                <div class="col-md-12 svg-headings">
+                    <h3 class="1 active">Design</h3>
+                    <h3 class="2">Coding</h3>
+                    <h3 class="3">Testing</h3>
                 </div>
-                !-->
+                <div class="col-md-12 webdesign">
+                    <img src="img/design.svg" class="inject-svg webdesign-svg animate-svg design">
+                    <img src="img/code.svg" class="inject-svg webdesign-svg animate-svg is-hidden code">
+                    <img src="img/test.svg" class="inject-svg webdesign-svg animate-svg is-hidden test">
+                </div>
             </div>
         </div>
     </div>
@@ -158,28 +134,32 @@
         </div>-->
 
 
-            <div class="col-md-8 float-md-left">
+            <div class="col-md-8 card-work float-md-left">
                 <div class="card first">
+
                     <div class="row">
-                        <div class="card-block col-xs-6 ">
+
+                        <div class="card-block col-xs-12 col-md-6">
                             <h4 class="card-title">LN Trenér</h4>
                             <p class="card-text">Want to be healthier? Why don't hire best personal trainer?</p>
                             <span class="label">Nette</span><span class="label">Bootstrap</span><span class="label">Sass</span>
                         </div>
-                        <div class="col-xs-6">
+                        <div class="col-xs-12 col-md-6">
                             <img class="card-img-left card-img img-fluid" src="img/ln_trener.png" alt="Card image cap">
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-4 float-md-right">
+            <div class="col-md-4 card-work float-md-right">
                 <div class="card second">
                     <div class="row">
-                        <div class="card-block col-xs-11 ">
+                        <div class="card-block col-xs-12 ">
                             <h4 class="card-title">Caravans</h4>
                             <p class="card-text">Website for company that sells the best caravans in whole area.</p>
-                            <span class="label">Photoshop</span><span class="label">Nette</span><span class="label">Bootstrap</span>
+                            <div class="labels">
+                                <span class="label">Photoshop</span><span class="label">Nette</span><span class="label">Bootstrap</span>
+                            </div>
                         </div>
                         <div class="col-xs-10">
                             <img class="card-img-left card-img img-fluid" src="img/caravanas2.png" alt="Card image cap">
@@ -188,7 +168,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 float-md-left">
+            <div class="col-md-4 card-work float-md-left">
                 <div class="card third">
                     <div class="row">
                         <div class="card-block col-xs-11 ">
@@ -202,7 +182,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 card-work">
                     <div class="card fourth">
                         <div class="row">
                             <div class="card-block col-xs-11 ">
@@ -221,19 +201,6 @@
     </div>
 
 </section>
-<div class="mini-section">
-    <div class="container">
-        <div class=" row flex-items-md-middle">
-            <div class="col-md-6 body">
-                <h3>Not enough?</h3>
-                <p>Checkout my other projects on github: </p>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Portfolio end -->
-
-
 
 
 <!-- Contact start -->
@@ -244,31 +211,40 @@
             <div class="line"></div>
             <h3 class="secondary">Have question?</h3>
         </div>
-        <div class="row">
-            <div class="col-md-8 card">
-                <div class="row">
-                    <div class="col-md-8">
-                        <form>
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Your name">
-                                <div class="line"></div>
-                            </div>
-                            <div class="form-group">
-                                <textarea type="text" class="form-control" id="formGroupExampleInput2">What do you want to say?</textarea>
-                                <div class="line"></div>
-                            </div>
-                            <a class="btn btn-primary float-md-right hvr-ripple-out">Send</a>
-                        </form>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="contact">
 
-                            <span>+420 720 290 359</span>
+        <div class="col-md-10 offset-md-1 content animate fadeInUp col-xs-12">
+            <form class="form">
+            <div class="row align-items-end">
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="input-contact">Contact</label>
+                            <input type="text" class="form-control" id="input-contact" placeholder="">
+                            <div class="line"></div>
                         </div>
                     </div>
-                </div>
+                    <div class="col-md-5">
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea type="text" class="form-control" id="message" rows="1" cols="1"></textarea>
+                                <div class="line"></div>
+                            </div>
+
+                    </div>
+                    <div class="col-md-3 btn-block">
+                            <a class="btn btn-primary hvr-ripple-out">Send</a>
+                    </div>
+
+<!--                    <div class="col-md-4">
+                    <div class="contact">
+
+                        <span>+420 720 290 359</span>
+                    </div>
+                </div>-->
             </div>
+            </form>
         </div>
+
     </div>
 </section>
 
@@ -278,7 +254,9 @@
     <p>&copy; Company 2016</p>
 </footer>
 
+
 <script src="builds/bundle.js"></script>
+
 
 
 

@@ -1,22 +1,58 @@
 #contact{
 
-  background-color: lighten($color-dark,1%);
+  //background: rgba($color-secondary-dark,.4) url("../../img/macbook-work.jpg");
+
+  background-image: url("../img/computer_code.png");
+  //background-image: linear-gradient(120deg, $color-secondary-dark 100%, $color-secondary 0%);
+  background-size: cover;
+  //background-blend-mode: multiply;
+  position: relative;
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba($color-secondary,.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
   h2{
-    color: white;
+    color: $color-primary;
     opacity: .9;
   }
   .card{
     margin: 0 auto;
-    background-color: lighten($color-dark,0%);
+    background-color: rgba(255,255,255,.2);
+    background-color: rgba(0,0,0,.2);
     padding: 2rem;
     //box-shadow:  0px 2px 10px 0px rgba(255,255,255,255.16);
   }
-
+  .content {
+    position: relative;
+    z-index: 1;
+    @include media-breakpoint-down(sm) {
+      padding: 0;
+    }
+  }
   form{
+    background: rgba(white, .1);
+    padding: 3rem;
+
+    @include media-breakpoint-down(sm) {
+      padding: 1.5rem;
+    }
+
     .form-group{
       position: relative;
+
+      label {
+        color: #7AAEF2;
+        font-weight: 400;
+        opacity: 1;
+      }
       &:before{
-        content: "{";
+        //content: "{";
         color: white;
         font-size: 1.5rem;
         width: 2px;
@@ -28,7 +64,7 @@
        // transform: rotate(45deg);
       }
       &:after{
-        content: "}";
+        //content: "}";
         color: white;
         font-size: 1.5rem;
         width: 2px;
@@ -42,44 +78,54 @@
       .line{
         height: 1px;
         background-color: $color-primary;
-        opacity: .5;
-        width: 30%;
-        margin-left: 1.9rem ;
+        opacity: .4;
+        @include transition(all,.3s, ease-in-out);
+        width: 100%;
+       // margin-left: 1.9rem ;
       }
     }
-
+    .form-control {
+      border: none;
+    }
 
     input[type="text"],textarea{
       background-color: transparent;
       color: white;
-      letter-spacing: 1px;
-      font-size: 1.2rem;
-      margin-left: 1rem;
+     // letter-spacing: 1px;
+      font-size: 1rem;
+     // margin-left: 1rem;
+      font-weight: 300;
       //font-style: italic;
       @include transition(all,.3s);
       @include placeholder {
         color: white;
       }
-
-
-
-/*      border: {
-        color: $color-primary;
-        top:none;
-        right: none;
-        left: none;
-        radius: 0;
-      };*/
+      @include media-breakpoint-down(sm) {
+        font-size: 1.9rem;
+      }
       &:focus {
         outline: none;
         border-color: transparent;
        // border-color: darken($color-primary,10%);
         //border-width: 2px;
       }
-
+      &:focus+.line{
+        opacity: 1;
+      }
+    }
+    .btn-block {
+      position: relative;
+      text-align: center;
+      .btn {
+        //position: absolute;
+        bottom: 0;
+        min-width: 8rem;
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+      }
     }
     textarea{
-      height: 10rem;
+
     }
 
     input[type="submit"]{

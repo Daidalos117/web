@@ -1,9 +1,21 @@
 
 #portfolio{
-  background-color: white;
+  //background: url("../../img/geometric.svg");
+  background-size: contain;
+ // background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+
+  background: linear-gradient(to top right, #EEE 55%,white 50%);
   h2 {
     position: relative;
     z-index: 5;
+  }
+
+  .card-work {
+    //padding-left: 0;
+    //padding-right: 0;
+    @include media-breakpoint-down(sm) {
+      padding: 0;
+    }
   }
 
   .triangle{
@@ -25,13 +37,18 @@
   .card{
     background: #000000;
     border: none;
+    border-radius: 0;
    // @include transition(all, $standart-animaion-time);
+    -webkit-font-smoothing: subpixel-antialiased;
 
     @include transition(all,.2s);
     &:hover{
       //margin-top: -4px;
       box-shadow:  0px 2px 10px 0px rgba(0,0,0,0.16);
-      transform: scale(1.01);
+      //transform: scale(1.02) translateZ(0);
+      backface-visibility: hidden;
+      -webkit-filter: blur(0);
+     // zoom: 101%;
       .card-img-left{
         transform: translateY(-4%);
       }
@@ -64,8 +81,12 @@
         opacity: 0.9;
         font-weight: 300;
       }
+      .labels {
+
+      }
       .label{
         padding-right: 0.4rem;
+        display: inline-block;
         &::before{
           content: "#";
           display: inline;
@@ -93,19 +114,25 @@
       img{
         position: relative;
         top: 5.5rem;
+        @include media-breakpoint-down(sm) {
+          top:0;
+        }
       }
     }
 
     &.second{
       background: $color-secondary;
       border-color: darken($color-secondary,4%);
+      .label{
+        color: #5477A5;
+      }
       img{
         position: relative;
         top: 1rem;
       }
     }
     &.third{
-      background: lighten($color-danger,10%);
+      background: lighten($color-danger,8%);
       border-color: lighten($color-danger,6%);
       img{
         position: relative;
@@ -114,6 +141,7 @@
     }
     &.fourth{
       background: $color-light-grey;
+
       border-color: darken($color-light-grey,4%);
       color: $color-grey;
       p{

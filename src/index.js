@@ -5,18 +5,21 @@
 
 
 import $ from 'jquery';
-import TweenMax from 'gsap/src/uncompressed/TweenMax';
-import ScrollMagic from 'scrollmagic';
+//import TweenMax from 'gsap/src/uncompressed/TweenMax';
+//import ScrollMagic from 'scrollmagic';
 import 'imports?define=>false!scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap';
 import 'imports?define=>false!scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
 import 'bootstrap-loader';
 import 'tether';
 import 'particles.js';
+import Vivus from 'vivus';
+import inView from 'in-view';
+import SVGInjector from 'svg-injector';
+import './BetterOnScroll';
+import Rellax from 'rellax';
 
-var ProgressBar = require('progressbar.js')
+var ProgressBar = require('progressbar.js');
 
-import 'animate.css';
-/* Typed JS */
 require("imports-loader?this=>window!./typed.min.js");
 
 window.onload = function () {
@@ -27,8 +30,9 @@ window.onload = function () {
 
 
 $(function(){
+    /* Typed */
     $("header .heading").typed({
-        strings: ["<span class='name'>Roman</span>", "<span class='name'>webdesigner</span>","<span class='name last'>here to help</span>"],
+        strings: [ "<span class='name'>webdesigner</span>", "<span class='name'>Roman</span>"],
         typeSpeed: 65,
         // time before typing starts
         startDelay: 10,
@@ -39,20 +43,24 @@ $(function(){
     });
 
 
-    /* Scroll spy */
+    /!* Scroll spy *!/
     $('body').scrollspy({ target: '#navbar-complete' });
 
 
-
+    /!* Particles Js*!/
     particlesJS.load('particles', 'assets/particles.json', function () {
     });
     $( window ).resize(function() {
-        /* ParticlesJS */
+        /!* ParticlesJS *!/
         particlesJS.load('particles', 'assets/particles.json', function () {
         });
     });
 
-    /** Smooth scroll */
+    document.onload = function () {
+            $("body").addClass("loaded");
+        }
+
+    /* Smooth scroll */
     $('a[href*="#"]:not([href="#"])').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
             var target = $(this.hash);
@@ -67,24 +75,191 @@ $(function(){
         }
     });
 
+    // menu open
+    $(".navbar-toggler").on("click", function () {
+        $(".navbar-toggleable-xs").toggleClass("is-opened");
+    })
 
-    var controller = new ScrollMagic.Controller();
 
-    /* Navbar */
-    var tw1 = new TweenMax.to(".navbar", 1, { padding: ".5rem", force3D:true, backgroundColor: "#1c1e26"});
-    var tw2 = new TweenMax.to(".nav-item a", 1, {padding: "0.4rem 0.6rem",force3D:true } );
-    var timeline = new TimelineLite()
-        .add([tw1,tw2], '+=0', 'start');
+    //svg injection
+    var mySVGsToInject = $('img.inject-svg');
+    SVGInjector(mySVGsToInject,{
+        each: function (svg) {
+            $(svg).removeAttr("width");
+            $(svg).removeAttr("height");
+        }
+    }, function () {
+        inViewDesigns();
+    });
+/*
 
-    var scene = new ScrollMagic.Scene({
-        offset: 200, // start scene after scrolling for 100px
-        duration: 50,
-        //duration: 400 // pin the element for 400px of scrolling
-    })  //.setClassToggle(".navbar", "scrolled")
-        .setTween(timeline)
+    $(window).scrolled(function() {
+        var scrolled = $(".navbar").offset().top;
+        console.log("scolled:",scrolled);
+        if(scrolled > 50){
+            $(".navbar").addClass("scrolled");
+        }else{
+            $(".navbar").removeClass("scrolled");
+        }
+    });
 
-        .addIndicators({name: "navbar"})
-        .addTo(controller);
+*/
+    // menu scroll
+    $(window).scroll(function () {
+        menuScrolled();
+    });
+    menuScrolled();
+    function menuScrolled() {
+        var $navbar = $(".navbar");
+        if ($navbar.offset().top > 50) {
+            $navbar.addClass("scrolled");
+        } else {
+            $navbar.removeClass("scrolled");
+        }
+    }
+
+    //
+/*    new Vivus('webdesign-svg', {duration: 200,
+        onReady: function (myVivus) {
+            var textElement = document.getElementById("webdesign-svg");
+            var texts = textElement.contentDocument.getElementsByTagName("tspan");
+
+            for (var i = 0, len = texts.length; i < len; i++) {
+
+                var element = texts[i];
+                var text = element.innerHTML;
+                element.innerHTML = "";
+
+                $(element).typed({
+                    strings: [text],
+                    typeSpeed: 0,
+                    // time before typing starts
+                    startDelay: 10,
+                    // backspacing speed
+                    backSpeed: 10,
+                    contentType: 'html',
+                    backDelay: 1500,
+                });
+            }
+
+
+
+        }}, function () {
+        console.log("done");
+    });*/
+
+
+    /* Animate elements */
+    inView(".animate")
+        .on('enter', function (el) {
+            var delay = $(el).data("animate-delay") || 0;
+            //console.log(el,delay);
+
+            setTimeout(function () {
+                //$(el).addClass($(el).data("animate") + " animated");
+                $(el).addClass("is-active");
+            },delay);
+
+        })
+        .on('exit', el => {
+            //el.style.opacity = 0.5;
+        });
+
+
+    var svgCount = 0;
+        /* Animate svg */
+        function inViewDesigns() {
+            var vivus = null;
+            inView(".webdesign")
+                .on('enter', function (el) {
+                    el = $(el).find(".animate-svg").get(0);
+
+                    vivus = animateSvg(el);
+                    //on vivus animation end
+
+
+                })
+
+                .on('exit', el => {
+                    vivus.stop();
+                });
+        }
+
+    function animateSvg(el) {
+
+        console.log(el);
+        var vivus = new Vivus(el, {duration: 200, start: "autostart"});
+        var svgs = ["design","code","test"];
+
+        vivus.play(1, function () {
+
+            svgCount++;
+            if (svgCount === 3) return 0;
+                setTimeout(function () {
+                var height = $("#about").outerHeight();
+                console.log("height",height);
+/*                $("#about").css("height",height);*/
+                el.classList.add("is-hidden");
+                $(".svg-headings " + "."+(svgCount) ).removeClass("active");
+                $(".svg-headings " + "."+(svgCount+1) ).addClass("active");
+
+                var svg = $(".webdesign").find("." + svgs[svgCount]).get(0);
+                svg.classList.remove("is-hidden");
+                 animateSvg(svg);
+                 return vivus;
+            },200 );
+
+        })
+        // animate texts
+        var texts = el.getElementsByTagName("tspan");
+        for (var i = 0, len = texts.length; i < len; i++) {
+            var element = texts[i];
+            var text = element.innerHTML;
+            element.innerHTML = "";
+            $(element).typed({
+                strings: [text],
+                typeSpeed: 1,
+                // time before typing starts
+                startDelay: 10,
+                // backspacing speed
+                backSpeed: 10,
+                contentType: 'html',
+                backDelay: 1500,
+            });
+        }
+        return vivus;
+    }
+
+
+
+    //parallax
+    
+
+
+
+
+
+    /*
+
+
+        var controller = new ScrollMagic.Controller();
+
+        /!* Navbar *!/
+        var tw1 = new TweenMax.to(".navbar", 1, { padding: ".5rem", force3D:true, backgroundColor: "#1c1e26"});
+        var tw2 = new TweenMax.to(".nav-item a", 1, {padding: "0.4rem 0.6rem",force3D:true } );
+        var timeline = new TimelineLite()
+            .add([tw1,tw2], '+=0', 'start');
+
+        var scene = new ScrollMagic.Scene({
+            offset: 200, // start scene after scrolling for 100px
+            duration: 50,
+            //duration: 400 // pin the element for 400px of scrolling
+        })  //.setClassToggle(".navbar", "scrolled")
+            .setTween(timeline)
+
+            .addIndicators({name: "navbar"})
+            .addTo(controller);
+    */
 
     /*var scene = new ScrollMagic.Scene({ duration: 200})
         .addTo(controller)
@@ -106,6 +281,7 @@ $(function(){
         });*/
 
         /* Nadpisy */
+        /*
             $("h3.secondary").each(function (i) {
                 var height= $(window).height();
                 var newHeight = -(height/2);
@@ -119,14 +295,15 @@ $(function(){
                     .setTween(tween )
                     .addIndicators({name: "h3.secondary"+i}) // add indicators (requires plugin)
                     .addTo(controller);
-            });
+            });*/
 
-            $(".slideInUp").each(function (i) {
+/*
+            $(".slideInUpC").each(function (i) {
                 var height= $(window).height();
                 var newHeight = -(height/2);
                 new ScrollMagic.Scene({triggerElement: this, duration: 100 , offset: newHeight})
                 //.setTween(TweenMax.fromTo(this, 0.5,{top: -5, autoAlpha:.8}, { top: 0, autoAlpha:1,force3D:true}) )
-                    .addIndicators({name: "slideInUp"+i}) // add indicators (requires plugin)
+                    .addIndicators({name: "slideInUpC"+i}) // add indicators (requires plugin)
                     //.setClassToggle(this,"is-active")
                     .on('start',() => {;
                         $(this).addClass("is-active");
@@ -141,9 +318,11 @@ $(function(){
 
 
 
+*/
 
 
-    /* Header scale */
+/*
+    /!* Header scale *!/
     var twe1 = new TweenMax.to("header .content-div", 1, { scale: 0.7, force3D:false,  top: -150 });
     var twe2 = new TweenMax.to("header .btn", 1, { scale: 0.7, force3D:false, });
     var twe3 = new TweenMax.to("header .background-image", 1, { scale: 0.5,top: -150, force3D:false,  } );
@@ -173,10 +352,12 @@ $(function(){
             })
             .addTo(controller);
     })
+*/
 
 
+/*
 
-
+    /* Přišpendlení headeru
     var controller2 = new ScrollMagic.Controller({
         globalSceneOptions: {
             triggerHook: 'onLeave'
@@ -196,6 +377,7 @@ $(function(){
             .addTo(controller2);
 
 
+*/
 
 
 

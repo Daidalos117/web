@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="982" height="681" viewBox="0 0 982 681">
+  <defs>
+    <rect id="design-a" width="16" height="16" x="14" y="105"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(0 1)">
+    <rect width="980.071" height="679" x=".929" stroke="#9B9B9B" rx="6"/>
+    <path stroke="#9B9B9B" stroke-linecap="square" d="M980.535622,42 L1.39335574,42"/>
+    <g transform="translate(15 16)">
+      <circle cx="6" cy="6" r="6" fill="#FF6159"/>
+      <circle cx="26" cy="6" r="6" fill="#FFBE2F"/>
+      <circle cx="46" cy="6" r="6" fill="#29CB42"/>
+    </g>
+    <text fill="#000" font-family="Montserrat-Regular, Montserrat" font-size="40" letter-spacing="1.287">
+      <tspan x="79.181" y="189">The best you can get</tspan>
+    </text>
+    <g stroke="#4990E2" transform="translate(86 426)">
+      <rect width="454" height="144" x=".5" y=".5"/>
+      <path stroke-linecap="square" d="M.309555557.929546464L454.886072 144.426344M.525826036 145.067146L454.5.5"/>
+    </g>
+    <text fill="#1C1E26" font-family="Montserrat-Regular, Montserrat" font-size="13" letter-spacing=".418" opacity=".944">
+      <tspan x="86" y="268">Croissant brownie topping I love chocolate bar halvah I love </tspan> <tspan x="86" y="284">chocolate sugar plum. Donut jelly icing donut jelly beans. Cake </tspan> <tspan x="86" y="300">biscuit dragée chocolate bar gummies. Cheesecake soufflé </tspan> <tspan x="86" y="316">chocolate marshmallow candy jelly beans fruitcake dragée. </tspan> <tspan x="86" y="332">Candy chocolate bar lemon drops I love sugar plum dessert </tspan> <tspan x="86" y="348">liquorice sesame snaps..</tspan>
+    </text>
+    <g stroke="#50E3C2" transform="rotate(-90 623.5 -47)">
+      <rect width="318.5" height="144" x=".5" y=".5"/>
+      <path stroke-linecap="square" d="M.217369232.929546464L319.42 144.426344M.369233887 145.067146L319.148901.5"/>
+    </g>
+    <g transform="translate(908 91)">
+      <rect width="40" height="181" stroke="#C9C9C9" rx="6"/>
+      <g stroke="#979797" transform="translate(15 143)">
+        <ellipse cx="3.529" cy="3.467" fill="#D8D8D8" rx="3.529" ry="3.467"/>
+        <path stroke-linecap="square" d="M5.73529412,5.63333333 L14.5588235,12.5666667"/>
+      </g>
+      <g fill-rule="nonzero" opacity=".757">
+        <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#design-a"/>
+        <rect width="15" height="15" x="14.5" y="105.5" stroke="#979797"/>
+      </g>
+      <path fill="#2D4059" stroke="#2D4059" stroke-linecap="square" d="M26.5 34.5L17.5 18.5M17.5 18.5L20.1800948 29.3837995 25.409548 26.4422321 17.5 18.5z"/>
+      <text fill="#979797" font-family="Montserrat-Regular, Montserrat" font-size="22" letter-spacing=".708">
+        <tspan x="15" y="78">T</tspan>
+      </text>
+    </g>
+  </g>
+</svg>

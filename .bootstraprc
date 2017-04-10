@@ -100,10 +100,10 @@ scripts:
   alert: false
   button: true
   carousel: false
-  collapse: false
+  collapse: true
   dropdown: true
-  modal: true
-  popover: true
+  modal: false
+  popover: false
   scrollspy: true
   tab: false
   tooltip: true
