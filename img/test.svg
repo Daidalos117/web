@@ -1,12 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="982" height="681" viewBox="0 0 982 681">
   <defs>
-    <rect id="test-a" width="980" height="35"/>
-    <rect id="test-b" width="350" height="24" x="315" y="6" rx="6"/>
-    <rect id="test-c" width="220" height="434" rx="17"/>
-    <rect id="test-d" width="204" height="310" x="8" y="65"/>
-    <rect id="test-e" width="50" height="8" x="85" y="43" rx="4"/>
+    <rect id="test-a" width="350" height="24" x="315" y="6" rx="6"/>
+    <rect id="test-b" width="220" height="434" rx="17"/>
+    <rect id="test-c" width="204" height="310" x="8" y="65"/>
+    <rect id="test-d" width="50" height="8" x="85" y="43" rx="4"/>
   </defs>
   <g fill="none" fill-rule="evenodd" transform="translate(0 1)">
+    <g transform="translate(1 42)">
+      <rect width="980" height="35" fill="#ECECEC"/>
+      <use fill="#FFF" xlink:href="#test-a"/>
+      <rect width="349" height="23" x="315.5" y="6.5" stroke="#9B9B9B" rx="6"/>
+      <text fill="#9B9B9B" font-family="Montserrat-Regular, Montserrat" font-size="14">
+        <tspan x="425" y="23">fabulousWeb.com</tspan>
+      </text>
+    </g>
     <rect width="980.071" height="679" x=".929" stroke="#9B9B9B" rx="6"/>
     <path stroke="#9B9B9B" stroke-linecap="square" d="M980.535622,42 L1.39335574,42"/>
     <g transform="translate(15 16)">
@@ -14,28 +21,19 @@
       <circle cx="26" cy="6" r="6" fill="#FFBE2F"/>
       <circle cx="46" cy="6" r="6" fill="#29CB42"/>
     </g>
-    <g transform="translate(1 42)">
-      <use fill="#ECECEC" xlink:href="#test-a"/>
-      <rect width="979" height="34" x=".5" y=".5" stroke="#979797"/>
-      <use fill="#FFF" xlink:href="#test-b"/>
-      <rect width="349" height="23" x="315.5" y="6.5" stroke="#9B9B9B" rx="6"/>
-      <text fill="#9B9B9B" font-family="Montserrat-Regular, Montserrat" font-size="14">
-        <tspan x="425" y="23">fabulousWeb.com</tspan>
-      </text>
-    </g>
     <g transform="translate(158 153)">
-      <use fill="#4A4A4A" xlink:href="#test-c"/>
+      <use fill="#4A4A4A" xlink:href="#test-b"/>
       <rect width="219" height="433" x=".5" y=".5" stroke="#9B9B9B" rx="17"/>
-      <use fill="#FFF" xlink:href="#test-d"/>
+      <use fill="#FFF" xlink:href="#test-c"/>
       <rect width="203" height="309" x="8.5" y="65.5" stroke="#979797"/>
       <circle cx="110" cy="404" r="20" fill="#333"/>
       <g>
-        <use fill="#A6A6A6" xlink:href="#test-e"/>
+        <use fill="#A6A6A6" xlink:href="#test-d"/>
         <rect width="49" height="7" x="85.5" y="43.5" stroke="#979797" rx="3.5"/>
       </g>
       <circle cx="110.5" cy="26.5" r="4.5" fill="#DCDCDC"/>
       <g transform="translate(18 81)">
-        <path stroke="#50E3C2" stroke-linecap="square" d="M4.5,28.5 L183.511173,28.5"/>
+        <path stroke="#9B9B9B" stroke-linecap="square" d="M4.5,28.5 L183.511173,28.5"/>
         <g stroke="#979797" stroke-linecap="square" transform="translate(162 5)">
           <path d="M.5 1.5L14.5 1.5M.5 7.5L14.5 7.5M.5 12.5L14.5 12.5"/>
         </g>
@@ -53,12 +51,6 @@
       </g>
     </g>
     <g transform="translate(591 76)">
-      <g transform="translate(2 33)">
-        <rect width="388" height="21" y="72" fill="#C78626" opacity=".8"/>
-        <text font-family="Montserrat-Regular, Montserrat" font-size="14">
-          <tspan x="24" y="14" fill="#5CAED4"> &lt;/li&gt;</tspan> <tspan x="24" y="32" fill="#5CAED4"> &lt;/ul&gt; </tspan> <tspan x="24" y="50" fill="#5CAED4">&lt;/nav&gt;rr</tspan>   <tspan x="24" y="86" fill="#000">&lt;header </tspan> <tspan x="85.656" y="86" fill="#4A4A4A">class</tspan> <tspan x="119.942" y="86" fill="#000">=“main”&gt;</tspan> <tspan x="24" y="104" fill="#C0A75C"> </tspan> <tspan x="80" y="104" fill="#5CAED4">&lt;div </tspan> <tspan x="113.376" y="104" fill="#9BBBDC">class</tspan> <tspan x="147.662" y="104" fill="#C0A75C">=</tspan> <tspan x="156.398" y="104" fill="#F29766">&quot;header-section&quot;</tspan> <tspan x="274.726" y="104" fill="#C0A75C">&gt;</tspan> <tspan x="24" y="122" fill="#C0A75C"> </tspan> <tspan x="108" y="122" fill="#5CAED4">&lt;h1 </tspan> <tspan x="134.502" y="122" fill="#9BBBDC">class</tspan> <tspan x="168.788" y="122" fill="#5CAED4">=</tspan> <tspan x="177.524" y="122" fill="#F29766">&quot;primary&quot;</tspan> <tspan x="242.806" y="122" fill="#C0A75C">&gt;</tspan> <tspan x="251.094" y="122" fill="#4A4A4A">Get it now</tspan> <tspan x="324.496" y="122" fill="#5CAED4">&lt;/h2&gt;</tspan> <tspan x="24" y="140" fill="#C0A75C"> </tspan> <tspan x="108" y="140" fill="#5CAED4">&lt;p</tspan> <tspan x="125.696" y="140" fill="#C0A75C"> </tspan> <tspan x="129.532" y="140" fill="#9BBBDC">class</tspan> <tspan x="163.818" y="140" fill="#5CAED4">=</tspan> <tspan x="172.554" y="140" fill="#F29766">“description”</tspan> <tspan x="262.77" y="140" fill="#5CAED4">&gt;</tspan> <tspan x="271.058" y="140" fill="#9B9B9B">…</tspan> <tspan x="280.83" y="140" fill="#5CAED4">&lt;/p&gt;</tspan>  <tspan x="24" y="158" fill="#C0A75C"> </tspan> <tspan x="80" y="158" fill="#5CAED4">&lt;/div&gt;</tspan>  <tspan x="24" y="176" fill="#5CAED4">&lt;/header&gt;</tspan>   <tspan x="24" y="212" fill="#5CAED4">&lt;section&gt;</tspan> <tspan x="24" y="230" fill="#C0A75C"> </tspan> <tspan x="52" y="230" fill="#5CAED4">&lt;h1&gt;</tspan> <tspan x="82.954" y="230" fill="#9B9B9B">…</tspan> <tspan x="92.726" y="230" fill="#5CAED4">&lt;/h1&gt;</tspan>
-        </text>
-      </g>
       <g transform="translate(214 327)">
         <rect width="164" height="129" fill="#F5A623" opacity=".8"/>
         <rect width="133" height="94" x="15" y="18" fill="#F8E71C" fill-opacity=".65"/>
@@ -69,20 +61,26 @@
         <path stroke="#979797" d="M196.5,485.5 L390.5,485.5" opacity=".4"/>
         <path stroke="#9B9B9B" stroke-opacity=".98" d="M196.5,292.5 L196.5,602.859985" opacity=".401"/>
       </g>
-      <g font-family="Montserrat-Regular, Montserrat" font-size="10" transform="translate(14 333)">
-        <text fill="#9B9B9B">
-          <tspan x="198" y="174">color: rgb(255, 255, 255);</tspan> <tspan x="198" y="187">display: block;</tspan> <tspan x="198" y="200">font-family: Montserrat, sans-serif;</tspan> <tspan x="198" y="213">font-size: 13px;</tspan> <tspan x="198" y="226">font-weight: 300;</tspan> <tspan x="198" y="239">height: 92px;</tspan> <tspan x="198" y="252">letter-spacing: 0.6px;</tspan>
+      <g transform="translate(2 33)">
+        <rect width="388" height="21" y="72" fill="#BEE77D" opacity=".8"/>
+        <text font-family="Montserrat-Regular, Montserrat" font-size="14">
+          <tspan x="24" y="14" fill="#5CAED4"> &lt;/li&gt;</tspan> <tspan x="24" y="32" fill="#5CAED4"> &lt;/ul&gt; </tspan> <tspan x="24" y="50" fill="#5CAED4">&lt;/nav&gt;rr</tspan>   <tspan x="24" y="86" fill="#000">&lt;header </tspan> <tspan x="85.656" y="86" fill="#4A4A4A">class</tspan> <tspan x="119.942" y="86" fill="#000">=“main”&gt;</tspan> <tspan x="24" y="104" fill="#C0A75C"> </tspan> <tspan x="80" y="104" fill="#5CAED4">&lt;div </tspan> <tspan x="113.376" y="104" fill="#9BBBDC">class</tspan> <tspan x="147.662" y="104" fill="#C0A75C">=</tspan> <tspan x="156.398" y="104" fill="#F29766">&quot;header-section&quot;</tspan> <tspan x="274.726" y="104" fill="#C0A75C">&gt;</tspan> <tspan x="24" y="122" fill="#C0A75C"> </tspan> <tspan x="108" y="122" fill="#5CAED4">&lt;h1 </tspan> <tspan x="134.502" y="122" fill="#9BBBDC">class</tspan> <tspan x="168.788" y="122" fill="#5CAED4">=</tspan> <tspan x="177.524" y="122" fill="#F29766">&quot;primary&quot;</tspan> <tspan x="242.806" y="122" fill="#C0A75C">&gt;</tspan> <tspan x="251.094" y="122" fill="#4A4A4A">Get it now</tspan> <tspan x="324.496" y="122" fill="#5CAED4">&lt;/h2&gt;</tspan> <tspan x="24" y="140" fill="#C0A75C"> </tspan> <tspan x="108" y="140" fill="#5CAED4">&lt;p</tspan> <tspan x="125.696" y="140" fill="#C0A75C"> </tspan> <tspan x="129.532" y="140" fill="#9BBBDC">class</tspan> <tspan x="163.818" y="140" fill="#5CAED4">=</tspan> <tspan x="172.554" y="140" fill="#F29766">“description”</tspan> <tspan x="262.77" y="140" fill="#5CAED4">&gt;</tspan> <tspan x="271.058" y="140" fill="#9B9B9B">…</tspan> <tspan x="280.83" y="140" fill="#5CAED4">&lt;/p&gt;</tspan>  <tspan x="24" y="158" fill="#C0A75C"> </tspan> <tspan x="80" y="158" fill="#5CAED4">&lt;/div&gt;</tspan>  <tspan x="24" y="176" fill="#5CAED4">&lt;/header&gt;</tspan>   <tspan x="24" y="212" fill="#5CAED4">&lt;section&gt;</tspan> <tspan x="24" y="230" fill="#C0A75C"> </tspan> <tspan x="52" y="230" fill="#5CAED4">&lt;h1&gt;</tspan> <tspan x="82.954" y="230" fill="#9B9B9B">…</tspan> <tspan x="92.726" y="230" fill="#5CAED4">&lt;/h1&gt;</tspan>
         </text>
-        <text>
-          <tspan x="0" y="10" fill="#4A4A4A">header.main {</tspan> <tspan x="69.49" y="10" fill="#9B9B9B"> main.css</tspan>
+        <text fill="#9B9B9B" font-family="Montserrat-Regular, Montserrat" font-size="10">
+          <tspan x="210" y="474">color: rgb(255, 255, 255);</tspan> <tspan x="210" y="487">display: block;</tspan> <tspan x="210" y="500">font-family: Montserrat, sans-serif;</tspan> <tspan x="210" y="513">font-size: 13px;</tspan> <tspan x="210" y="526">font-weight: 300;</tspan> <tspan x="210" y="539">height: 92px;</tspan> <tspan x="210" y="552">letter-spacing: 0.6px;</tspan>
         </text>
-        <text fill="#4A4A4A">
-          <tspan x="0" y="93">}</tspan>
-        </text>
-        <text>
-          <tspan x="24" y="27" fill="#35D4C7">break-word:</tspan> <tspan x="86.57" y="27" fill="#4A4A4A"> break-all;</tspan>  <tspan x="24" y="40" fill="#35D4C7">color: </tspan> <tspan x="55.18" y="40" fill="#4A4A4A">#eee;</tspan> <tspan x="24" y="53" fill="#35D4C7">display:</tspan> <tspan x="62.52" y="53" fill="#4A4A4A"> flex;</tspan> <tspan x="24" y="66" fill="#35D4C7">justify-content: </tspan> <tspan x="104.95" y="66" fill="#4A4A4A">center;</tspan> <tspan x="24" y="79" fill="#35D4C7">padding</tspan> <tspan x="65.77" y="79" fill="#4A4A4A">: 1rem;</tspan> 
-        </text>
-        <g transform="translate(0 110)">
+        <g font-family="Montserrat-Regular, Montserrat" font-size="10" transform="translate(12 300)">
+          <text>
+            <tspan x="0" y="10" fill="#4A4A4A">header.main {</tspan> <tspan x="69.49" y="10" fill="#9B9B9B"> main.css</tspan>
+          </text>
+          <text fill="#4A4A4A">
+            <tspan x="0" y="93">}</tspan>
+          </text>
+          <text>
+            <tspan x="24" y="27" fill="#35D4C7">break-word:</tspan> <tspan x="86.57" y="27" fill="#4A4A4A"> break-all;</tspan>  <tspan x="24" y="40" fill="#35D4C7">color: </tspan> <tspan x="55.18" y="40" fill="#4A4A4A">#eee;</tspan> <tspan x="24" y="53" fill="#35D4C7">display:</tspan> <tspan x="62.52" y="53" fill="#4A4A4A"> flex;</tspan> <tspan x="24" y="66" fill="#35D4C7">justify-content: </tspan> <tspan x="104.95" y="66" fill="#4A4A4A">center;</tspan> <tspan x="24" y="79" fill="#35D4C7">padding</tspan> <tspan x="65.77" y="79" fill="#4A4A4A">: 1rem;</tspan> 
+          </text>
+        </g>
+        <g font-family="Montserrat-Regular, Montserrat" font-size="10" transform="translate(12 410)">
           <text>
             <tspan x="0" y="10" fill="#4A4A4A">header {</tspan> <tspan x="41.48" y="10" fill="#9B9B9B"> resets.css</tspan>
           </text>

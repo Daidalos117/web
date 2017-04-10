@@ -75,9 +75,16 @@ $(function(){
         }
     });
 
+
+    $(".nav .nav-link").on("click", function () {
+        $(".navbar-toggleable-xs").removeClass("is-opened");
+    })
+
+
     // menu open
     $(".navbar-toggler").on("click", function () {
         $(".navbar-toggleable-xs").toggleClass("is-opened");
+        $(this).find(".menu-icon").toggleClass("is-opened");
     })
 
 
@@ -187,7 +194,7 @@ $(function(){
 
     function animateSvg(el) {
 
-        console.log(el);
+
         var vivus = new Vivus(el, {duration: 200, start: "autostart"});
         var svgs = ["design","code","test"];
 
@@ -197,7 +204,6 @@ $(function(){
             if (svgCount === 3) return 0;
                 setTimeout(function () {
                 var height = $("#about").outerHeight();
-                console.log("height",height);
 /*                $("#about").css("height",height);*/
                 el.classList.add("is-hidden");
                 $(".svg-headings " + "."+(svgCount) ).removeClass("active");
@@ -233,7 +239,10 @@ $(function(){
 
 
     //parallax
-    
+    var rellax = new Rellax('.rellax', {
+
+    });
+
 
 
 

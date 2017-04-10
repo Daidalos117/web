@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="805" height="326" viewBox="0 0 805 326">
+  <g fill="none" fill-rule="evenodd" opacity=".414" transform="translate(-64 -14)">
+    <ellipse cx="866.593" cy="39.5" stroke="#DB3936" stroke-width="3" rx="10.593" ry="9.5"/>
+    <path stroke="#2D4059" stroke-width="2" d="M76.7076677,338.612241 C76.7076677,338.612241 88.4153355,327.29899 88.4153355,321.5 C88.4153355,315.70101 83.1736341,311 76.7076677,311 C70.2417014,311 65,315.70101 65,321.5 C65,327.29899 76.7076677,338.612241 76.7076677,338.612241 Z"/>
+    <polyline stroke="#DB3936" stroke-width="2" points="585.565 325 580 337.053 586.69 337.158 580 347.751"/>
+    <g stroke="#3C4E65" transform="translate(781 280)">
+      <ellipse cx="8.363" cy="7.5" stroke-width="2" rx="8.363" ry="7.5"/>
+      <path stroke-linecap="square" d="M2.23003195 20L15.6102236 20M4.4600639 23L13.3801917 23M6.69009585 26L11.1501597 26"/>
+    </g>
+    <g stroke-width="2" transform="rotate(-15 98.468 -227.862)">
+      <path stroke="#5BE9D5" stroke-linecap="square" d="M.5 22.5L8.98528137 14.0147186M9.5 13.5L17.9852814 21.9852814"/>
+      <circle cx="9.5" cy="4.5" r="4.5" stroke="#19E0C3"/>
+    </g>
+  </g>
+</svg>
