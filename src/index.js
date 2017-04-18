@@ -76,16 +76,24 @@ $(function(){
     });
 
 
-    $(".nav .nav-link").on("click", function () {
-        $(".navbar-toggleable-xs").removeClass("is-opened");
-    })
-
-
     // menu open
     $(".navbar-toggler").on("click", function () {
         $(".navbar-toggleable-xs").toggleClass("is-opened");
         $(this).find(".menu-icon").toggleClass("is-opened");
     })
+
+
+    // clicked mobile menu
+    $(".nav .nav-link").on("click", function () {
+        $(".navbar-toggleable-xs").removeClass("is-opened");
+        $(".navbar").find(".menu-icon").removeClass("is-opened");
+        var $navitem = $(this).closest(".nav-item");
+        $navitem.addClass("clicked");
+        setTimeout(function () {
+            $navitem.removeClass("clicked");
+        },1000)
+    })
+
 
 
     //svg injection
@@ -244,6 +252,18 @@ $(function(){
     });
 
 
+
+    $("form.form input, form.form textarea").on("focus", function(){
+      console.log($(this).val() );
+      if($(this).val() === ""){
+        $(this).siblings("label").addClass("focused");
+      }
+    });
+    $("form.form input, form.form textarea").on("focusout", function(){
+      if($(this).val() === ""){
+        $(this).siblings("label").removeClass("focused");
+      }
+    });
 
 
 

@@ -49,4 +49,8 @@ $standart-animaion-time: 0.4s;
 @mixin shadow-2 {
   box-shadow: 0px 8px 17px 0px rgba(0,0,0,0.20);
 }
-
+@mixin transform($values) {
+  -webkit-transform: $values; /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+  -ms-transform: $values; /* IE 9 */
+  transform: $values;
+}

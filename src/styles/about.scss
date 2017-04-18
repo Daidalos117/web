@@ -54,17 +54,17 @@ $section-color: #BBC3CD;
       border-radius: 100%;
       text-align: center;
       @include shadow-1();
-      transform: translateY(-50%);
+      @include transform(translateY(-50%));
       @include transition(all,$standart-animaion-time,ease-in-out);
       @include flexbox();
       @include align-items(center);
       @include justify-content(center);
       .contact-icon {
-        width: 50%;
+        width: 45%;
       }
       &:hover{
         @include shadow-2();
-        transform: scale(1.2) translateY(-2rem);
+        @include transform(scale(1.2) translateY(-2rem));
       }
 
     }

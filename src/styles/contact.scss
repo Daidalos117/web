@@ -2,8 +2,8 @@
 
   //background: rgba($color-secondary-dark,.4) url("../../img/macbook-work.jpg");
 
-  background-image: url("../img/computer_code.png");
-  //background-image: linear-gradient(120deg, $color-secondary-dark 100%, $color-secondary 0%);
+  //background-image: url("../img/computer_code.png");
+  background-image: linear-gradient(120deg, $color-secondary-dark 100%, $color-secondary 0%);
   background-size: cover;
   //background-blend-mode: multiply;
   position: relative;
@@ -20,7 +20,11 @@
   h2{
     color: $color-primary;
     opacity: .9;
+    &:after {
+          background-color: darken($color-primary,40%);
+    }
   }
+
   .card{
     margin: 0 auto;
     background-color: rgba(255,255,255,.2);
@@ -45,12 +49,23 @@
 
     .form-group{
       position: relative;
-
+      //padding-top: 1rem;
       label {
-        color: #7AAEF2;
-        font-weight: 400;
-        opacity: 1;
+        font-weight: 300;
+        opacity: .7;
+        font-size: 1.4rem;
+        transition: 0.3s all ease-out;
+        color: #eee;
+        @include transform(translateY(100%));
+        &.focused {
+          font-size: 1rem;
+          color: #7AAEF2;
+          @include transform(translateY(30%));
+        }
+
       }
+
+
       &:before{
         //content: "{";
         color: white;
@@ -75,18 +90,23 @@
         opacity: .4;
        // transform: rotate(45deg);
       }
+
+
       .line{
         height: 1px;
         background-color: $color-primary;
         opacity: .4;
-        @include transition(all,.3s, ease-in-out);
-        width: 100%;
+        margin: 0 auto;
+        //width: 100%;
        // margin-left: 1.9rem ;
       }
     }
     .form-control {
       border: none;
     }
+
+
+
 
     input[type="text"],textarea{
       background-color: transparent;
