@@ -17,8 +17,9 @@ import inView from 'in-view';
 import SVGInjector from 'svg-injector';
 import './BetterOnScroll';
 import Rellax from 'rellax';
+import CountUp from 'countup.js';
 
-var ProgressBar = require('progressbar.js');
+
 
 require("imports-loader?this=>window!./typed.min.js");
 
@@ -97,7 +98,7 @@ $(function(){
 
 
     //svg injection
-    var mySVGsToInject = $('img.inject-svg');
+    var mySVGsToInject = $('img.inject-me');
     SVGInjector(mySVGsToInject,{
         each: function (svg) {
             $(svg).removeAttr("width");
@@ -119,6 +120,9 @@ $(function(){
     });
 
 */
+
+
+
     // menu scroll
     $(window).scroll(function () {
         menuScrolled();
@@ -181,6 +185,30 @@ $(function(){
         });
 
 
+    inView("#counts")
+            .on('enter', function(el){
+                var options = {
+                  useEasing : true, 
+                  useGrouping : true, 
+                  separator : ' ', 
+                  decimal : '.', 
+                };
+                var seconds = 2;
+                $.each($("#counts .number"),function(key, element){
+                    var number = parseInt($(element).data("number"));
+                    var count = new CountUp(element, 0, number, 0, seconds, options);
+                    count.start();
+                    seconds = seconds + 0.5;
+                })
+
+            });
+
+
+
+    /* Animate SVG */    
+    //list of svgs
+    var svgs = ["design","code","test"];
+    var stopAnimating = false;
     var svgCount = 0;
         /* Animate svg */
         function inViewDesigns() {
@@ -188,67 +216,90 @@ $(function(){
             inView(".webdesign")
                 .on('enter', function (el) {
                     el = $(el).find(".animate-svg").get(0);
+                    
 
-                    vivus = animateSvg(el);
+                    function animate(el) {
+                        animateSvg(el).then(function(m){
+                            svgCount++;
+                            if (svgCount === 3) return false;
+                            if (stopAnimating) return true;
+                            
+                                setTimeout(function () {
+                                el.classList.add("is-hidden");
+                                $(".svg-headings " + "."+(svgCount) ).removeClass("active");
+                                $(".svg-headings " + "."+(svgCount+1) ).addClass("active");
+
+                                var svg = $(".webdesign").find("." + svgs[svgCount]).get(0);
+                                svg.classList.remove("is-hidden");
+                                 animate(svg)
+                            },200 );
+                        });
+                    }
+                    animate(el);
                     //on vivus animation end
 
 
                 })
 
                 .on('exit', el => {
-                    vivus.stop();
+            
                 });
         }
 
-    function animateSvg(el) {
 
+    var animateSvg = function(el) {
 
-        var vivus = new Vivus(el, {duration: 200, start: "autostart"});
-        var svgs = ["design","code","test"];
+        return new Promise (
+            function(resolve) {
 
-        vivus.play(1, function () {
+                var vivus = new Vivus(el, {duration: 200, start: "autostart"});
+                // animate texts
+                var texts = el.getElementsByTagName("tspan");
+                for (var i = 0, len = texts.length; i < len; i++) {
+                    var element = texts[i];
+                    var text = element.innerHTML;
+                    element.innerHTML = "";
+                    $(element).typed({
+                        strings: [text],
+                        typeSpeed: 1,
+                        // time before typing starts
+                        startDelay: 10,
+                        // backspacing speed
+                        backSpeed: 10,
+                        contentType: 'html',
+                        backDelay: 1500,
+                    });
+                }
+                //return vivus;
 
-            svgCount++;
-            if (svgCount === 3) return 0;
-                setTimeout(function () {
-                var height = $("#about").outerHeight();
-/*                $("#about").css("height",height);*/
-                el.classList.add("is-hidden");
-                $(".svg-headings " + "."+(svgCount) ).removeClass("active");
-                $(".svg-headings " + "."+(svgCount+1) ).addClass("active");
+                vivus.play(1, function () {
+                    resolve("end animation");
+                });
+            }
+        );
 
-                var svg = $(".webdesign").find("." + svgs[svgCount]).get(0);
-                svg.classList.remove("is-hidden");
-                 animateSvg(svg);
-                 return vivus;
-            },200 );
-
-        })
-        // animate texts
-        var texts = el.getElementsByTagName("tspan");
-        for (var i = 0, len = texts.length; i < len; i++) {
-            var element = texts[i];
-            var text = element.innerHTML;
-            element.innerHTML = "";
-            $(element).typed({
-                strings: [text],
-                typeSpeed: 1,
-                // time before typing starts
-                startDelay: 10,
-                // backspacing speed
-                backSpeed: 10,
-                contentType: 'html',
-                backDelay: 1500,
-            });
-        }
-        return vivus;
     }
+
+    $(".svg-headings h3").on("click", function(){
+        stopAnimating = true;
+        var className = $(this).attr("class");
+        $(".svg-headings h3.active").removeClass("active");
+        $(this).addClass("active");
+        var svg = $(".webdesign").find("." + svgs[className - 1]).get(0);
+        $(".webdesign-svg:not(is-hidden)").addClass("is-hidden");
+        svg.classList.remove("is-hidden");
+
+        animateSvg(svg);
+    })
 
 
 
     //parallax
-    var rellax = new Rellax('.rellax', {
-
+    var rellax = new Rellax('.lvl-1', {
+        speed: 4
+    });
+    var rellax = new Rellax('.lvl-2', {
+        speed: 1
     });
 
 

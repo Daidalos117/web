@@ -21,10 +21,10 @@
 
 <nav class="navbar navbar-fixed-top" id="navbar-complete">
     <div class="container">
-    <a class="navbar-brand" href="#home"><img src="img/logo.svg" alt="logo" class="inject-svg logo"></a>
+    <a class="navbar-brand" href="#home"><img src="img/logo.svg" alt="logo" class="inject-me logo"></a>
 
-    <button class="navbar-toggler hidden-sm-up" type="button"  >
-        <img src="img/hamburger-icon.svg" class="menu-icon inject-svg">
+    <button class="navbar-toggler hidden-md-up" type="button"  >
+        <img src="img/hamburger-icon.svg" class="menu-icon inject-me">
     </button>
 
     <div class="navbar-toggleable-xs" id="navbar-header">
@@ -77,17 +77,25 @@
 
 </header>
 
+<div class="geometry-bkgrnd">
+    
+    <div class="home lvl-1">
+        <img src="img/home.svg" class="inject-me" />
+    </div>
+    <div class="oo lvl-2">
+        <img src="img/oo.svg" class="inject-me" />
+    </div>
+</div>
+
+
 <!-- About me start -->
 <section id="about">
-    <div class="background">
-        <img src="img/geometry.svg" class="inject-svg background-svg">
-    </div>
     <div class="about-content">
         <div class="message-me">
-            <a href="#contact" class="btn-circle"><img src="img/contact-icon.svg" alt="mail" class="inject-svg contact-icon"></a>
+            <a href="#contact" class="btn-circle"><img src="img/contact-icon.svg" alt="mail" class="inject-me contact-icon"></a>
         </div>
-        <img src="img/corner-1.svg" class="corner corner-1">
-        <img src="img/corner-2.svg" class="corner corner-2">
+        <img src="img/corner-2.svg" class="corner corner-1 inject-me">
+        <img src="img/corner-1.svg" class="corner corner-2 inject-me">
         <div class="container">
             <div class="header-section">
                 <h2 class="primary">Human</h2>
@@ -103,24 +111,66 @@
                     <p class="animate fadeInUp" data-animate="fadeInUp" data-animate-delay="300">Let me help you with your project and you see. </p>
 
                 </div>
-                <div class="col-md-12 svg-headings">
-                    <h3 class="1 active">Design</h3>
-                    <h3 class="2">Coding</h3>
-                    <h3 class="3">Testing</h3>
-                </div>
-                <div class="col-md-12 webdesign">
-                    <img src="img/design.svg" class="inject-svg webdesign-svg animate-svg design">
-
-                    <img src="img/code.svg" class="inject-svg webdesign-svg animate-svg is-hidden code">
-                    <img src="img/test.svg" class="inject-svg webdesign-svg animate-svg is-hidden test">
-
-
-                </div>
             </div>
         </div>
     </div>
 </section>
 
+<section id="counts">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-md-4 column">
+<!--                <div class="row">
+                    <div class="col-md-3 icon-wrapper">
+                        <img src="img/003-coding.svg" class="inject-me icon" alt=""/>
+                    </div>
+                    <div class="col-md-9">
+                        <span class="number" data-number="1258742"> </span> <span class="plus">+</span>
+                        <h4>Napsaných řádků kódu</h4>
+                    </div>
+                </div>-->
+                <div class="row">
+                    <div class="col-md-3 col-xs-5 icon-wrapper2">
+                        <img src="img/003-coding.svg" class="inject-me icon" alt=""/>
+                    </div>
+                    <div class="col-md-9 col-xs-7 number-wrapper2">
+                        <span class="number" data-number="1258742"> </span> <span class="plus">+</span>
+                    </div>
+                </div>
+            
+                <h4 class="margin">Lines of code</h4>
+            </div>
+            <div class="col-md-4 column">
+                <div class="row">
+                    <div class="col-md-3 col-xs-5 icon-wrapper2">
+                        <img src="img/002-computer-screen.svg" class="inject-me icon" alt=""/>
+                    </div>
+                    <div class="col-md-9 col-xs-7 number-wrapper2">
+                        <span class="number" data-number="158742"> </span> <span class="plus">+</span>
+                        
+                    </div>
+                </div>
+            
+                <h4 class="margin">Hours in front of PC</h4>
+            </div>
+            <div class="col-md-4 column">
+                
+                <div class="row">
+                    <div class="col-md-3 col-xs-5 icon-wrapper2">
+                        <img src="img/001-nose.svg" class="inject-me icon" alt=""/>
+                    </div>
+                    <div class="col-md-9 col-xs-7 number-wrapper2">
+                        <span class="number" data-number="67143"></span> <span class="plus">+</span>
+                        
+                    </div>
+                </div>
+                
+                <h4 class="margin">Lines of coke</h4>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- Portfolio start -->
 <section id="portfolio">
@@ -207,6 +257,24 @@
 
 </section>
 
+<section id="process">
+    <div class="container">
+        <div class="col-md-12 svg-headings">
+            <h3 class="1 active">Design</h3>
+            <h3 class="2">Coding</h3>
+            <h3 class="3">Testing</h3>
+        </div>
+        <div class="col-md-12 webdesign">
+            <img src="img/design.svg" class="inject-me webdesign-svg animate-svg design">
+
+            <img src="img/code.svg" class="inject-me webdesign-svg animate-svg is-hidden code">
+            <img src="img/test.svg" class="inject-me webdesign-svg animate-svg is-hidden test">
+
+
+        </div>
+    </div>
+
+</section>
 
 <!-- Contact start -->
 <section id="contact">
@@ -237,7 +305,7 @@
 
                     </div>
                     <div class="col-md-3 btn-block">
-                            <a class="btn btn-primary hvr-ripple-out">Send</a>
+                            <a class="btn btn-primary hvr-ripple-out">Send <img src="img/right-arrow.svg" class="inject-me"/> </a>
                     </div>
 
 <!--                    <div class="col-md-4">

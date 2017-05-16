@@ -12,15 +12,16 @@ $section-color: #BBC3CD;
   //background-image: linear-gradient(-245deg, rgba($color-light-grey,.8) 50%,$color-primary 50%);
   border-bottom: 1px solid $color-light-grey;
   padding-top: 0;
+  padding-bottom: 10rem;
   .about-content {
-    width: 80%;
+    width: 60%;
     max-width: 80rem;
     margin: 0 auto;
     @include shadow-1();
     position: relative;
     margin-top: -10rem;
     padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
     background: white;
 
     @include media-breakpoint-down(sm) {
@@ -42,6 +43,7 @@ $section-color: #BBC3CD;
 
   //background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
   .message-me {
+      display: none;
     .btn-circle {
       position: absolute;
       top: 0;
@@ -71,10 +73,10 @@ $section-color: #BBC3CD;
   }
 
   .corner{
-    display: none;
+    //display: none;
     position: absolute;
     width: 6rem;
-    opacity: .6;
+    //opacity: .8;
     &-1{
       left: 0;
       bottom: 0;
@@ -99,81 +101,21 @@ $section-color: #BBC3CD;
   .container{
     z-index: 1;
   }
-
-
-  .svg-headings {
-    @include flexbox();
-    @include justify-content(space-around);
-    @include align-items(center);
-    margin-top: 2rem;
-    h3 {
-      display: inline-block;
-      color: $color-grey;
-      opacity: .5;
-      transition: all .5s ease-in-out;
-      @include media-breakpoint-down(sm) {
-        font-size: 1.2rem;
-      }
-      &.active {
-        opacity: 1;
-        font-size: 3rem;
-        @include media-breakpoint-down(sm) {
-          font-size: 2rem;
-        }
-        color: $color-dark;
-      }
-
-    }
-  }
-
-
-  .webdesign{
-    text-align: center;
-    margin-top: 1rem;
-    &-svg {
-      width: 100%;
-      height: auto;
-      max-width: 40rem;
-      margin-top: 2rem;
-      transition: all .5 ease-in-out;
-      &.is-hidden {
-        opacity: 0;
-        visibility: hidden;
-        display: none;
-      }
-    }
-  }
-
-
-
-
-  .caaan-do{
+  .separator {
+    display: block;
+    width: 10rem;
+    margin: 0 auto;
     margin-top: 3rem;
-    h4{
-      text-align: center;
-      margin-bottom:  4rem;
-    }
+    border: none;
+    height: 1px;
+    background-color: $color-light-grey;
 
-    h6{
-      text-align: center;
-    }
-
-    progress[value]{
-      -webkit-appearance: none;
-      appearance: none;
-      width: 100%;
-      &::-webkit-progress-bar {
-        background-color: #eee;
-        border-radius: 2px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
-      }
-      &::-webkit-progress-value {
-        background-color: $color-danger;
-        -webkit-animation: animate-stripes 5s linear infinite;
-        animation: animate-stripes 5s linear infinite;
-      }
-    }
+    //background-image: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
   }
+
+
+
+
 
 
 }

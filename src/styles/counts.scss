@@ -1,0 +1,44 @@
+#counts {
+    background-color: $color-secondary;
+    color: white;
+    
+    svg {
+        fill: white;
+    }
+    
+    .column .row, {
+        
+    }
+    
+    .number {
+        font-size: 1.2rem;
+    }
+    .plus {
+        display: inline-block;
+        margin-left: 0.5rem;
+        opacity: .9;
+        font-size: .8rem;
+        margin-bottom: 0.3rem;
+        color: $color-primary;
+    }
+    .icon {
+        width: 3rem;
+        margin: 0 auto;
+        display: block;
+    }
+    
+
+    .icon-wrapper {
+        @include flexbox();
+        @include align-items(center);
+        padding: 0;
+    }
+    .number-wrapper2 {
+        @include flexbox();
+        @include align-items(flex-end);
+    }
+    .margin {
+        margin-top: .5rem;
+    }
+    
+}

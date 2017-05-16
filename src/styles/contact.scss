@@ -4,6 +4,8 @@
 
   //background-image: url("../img/computer_code.png");
   background-image: linear-gradient(120deg, $color-secondary-dark 100%, $color-secondary 0%);
+  background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+
   background-size: cover;
   //background-blend-mode: multiply;
   position: relative;
@@ -21,7 +23,7 @@
     color: $color-primary;
     opacity: .9;
     &:after {
-          background-color: darken($color-primary,40%);
+          background-color: $color-danger;
     }
   }
 
@@ -56,11 +58,11 @@
         font-size: 1.4rem;
         transition: 0.3s all ease-out;
         color: #eee;
-        @include transform(translateY(100%));
+        @include transform(translateY(140%));
         &.focused {
           font-size: 1rem;
           color: #7AAEF2;
-          @include transform(translateY(30%));
+          @include transform(translateY(60%));
         }
 
       }
@@ -136,12 +138,35 @@
     .btn-block {
       position: relative;
       text-align: center;
+      @include flexbox();
+      @include align-items(flex-end);
       .btn {
         //position: absolute;
         bottom: 0;
         min-width: 8rem;
         max-width: 100%;
         margin-bottom: 1.5rem;
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
+        position: relative;
+        svg {
+          height: .6rem;
+          overflow: visible;
+          position: absolute;
+          right: 1.5rem;
+          top: 50%;
+          @include transform(translate3d(0,-50%,0));
+          transition: inherit;
+        }
+        &:hover {
+
+          svg {
+            @include transform(translate3d(50%,-50%,0));
+            //opacity: .6;
+
+          }
+        }
       }
     }
     textarea{

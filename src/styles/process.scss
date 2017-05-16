@@ -1,0 +1,49 @@
+#process {
+    .svg-headings {
+      @include flexbox();
+      @include justify-content(space-around);
+      @include align-items(center);
+      margin-top: 2rem;
+      padding-top: 2rem;
+
+      h3 {
+        display: inline-block;
+        color: $color-grey;
+        opacity: .3;
+        transition: all .5s ease-in-out;
+        cursor: pointer;
+        @include media-breakpoint-down(sm) {
+          font-size: 1.2rem;
+        }
+        &.active {
+          opacity: 1;
+          font-size: 2.7rem;
+          color: $color-secondary-dark;
+          @include media-breakpoint-down(sm) {
+            font-size: 2rem;
+          }
+        }
+
+      }
+    }
+
+
+    .webdesign{
+      text-align: center;
+      margin-top: 1rem;
+      &-svg {
+        width: 100%;
+        height: auto;
+        max-width: 25rem;
+        margin-top: 2rem;
+        transition: all .5 ease-in-out;
+        &.is-hidden {
+          opacity: 0;
+          visibility: hidden;
+          display: none;
+        }
+      }
+    }
+
+
+}
