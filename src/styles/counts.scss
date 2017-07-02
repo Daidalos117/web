@@ -7,7 +7,21 @@
     }
     
     .column .row, {
+        margin: 0;
+        width: auto;
         
+    }
+    .column {
+        @include media-breakpoint-down(sm) {
+            margin-top: 3rem;
+            text-align: center; 
+            margin-bottom: 2rem;
+        }
+        .inner {
+            @include media-breakpoint-down(sm) {
+                display: inline-block;
+            }
+        }
     }
     
     .number {
@@ -23,19 +37,43 @@
     }
     .icon {
         width: 3rem;
-        margin: 0 auto;
+        //margin: 0 auto;
         display: block;
+        @include media-breakpoint-down(sm) {
+            margin-lef: auto;
+            margin-right: 1rem;
+            
+        }
     }
-    
+    .heading {
+        @include media-breakpoint-down(sm) {
+            text-align: left;
+        }
+    }
 
     .icon-wrapper {
         @include flexbox();
         @include align-items(center);
         padding: 0;
+        @include media-breakpoint-down(sm) {
+                text-align: right;
+                @include align-items(flex-end);
+                display: inline-block;
+                width: auto;
+                float: left;
+                flex: none;
+        }
     }
-    .number-wrapper2 {
+    .number-wrapper {
         @include flexbox();
         @include align-items(flex-end);
+        padding: 0;
+        @include media-breakpoint-down(sm) {
+            display: inline-block;
+            float: left;
+            width: auto;
+            flex: none;
+        }
     }
     .margin {
         margin-top: .5rem;

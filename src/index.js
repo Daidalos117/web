@@ -7,8 +7,8 @@
 import $ from 'jquery';
 //import TweenMax from 'gsap/src/uncompressed/TweenMax';
 //import ScrollMagic from 'scrollmagic';
-import 'imports?define=>false!scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap';
-import 'imports?define=>false!scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
+//import 'imports?define=>false!scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap';
+//import 'imports?define=>false!scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
 import 'bootstrap-loader';
 import 'tether';
 import 'particles.js';
@@ -18,13 +18,15 @@ import SVGInjector from 'svg-injector';
 import './BetterOnScroll';
 import Rellax from 'rellax';
 import CountUp from 'countup.js';
+import Expanding from 'expanding-textareas';
 
 
 
 require("imports-loader?this=>window!./typed.min.js");
+require("imports-loader?this=>window!../node_modules/jquery.ns-autogrow/dist/jquery.ns-autogrow.min.js");
 
 window.onload = function () {
-    $(".loader").removeClass("shown");
+    
     $("body").addClass("loaded");
     $(".background-image").addClass("animated fadeInUp");
 }
@@ -59,7 +61,7 @@ $(function(){
 
     document.onload = function () {
             $("body").addClass("loaded");
-        }
+    }
 
     /* Smooth scroll */
     $('a[href*="#"]:not([href="#"])').click(function() {
@@ -107,20 +109,6 @@ $(function(){
     }, function () {
         inViewDesigns();
     });
-/*
-
-    $(window).scrolled(function() {
-        var scrolled = $(".navbar").offset().top;
-        console.log("scolled:",scrolled);
-        if(scrolled > 50){
-            $(".navbar").addClass("scrolled");
-        }else{
-            $(".navbar").removeClass("scrolled");
-        }
-    });
-
-*/
-
 
 
     // menu scroll
@@ -136,36 +124,6 @@ $(function(){
             $navbar.removeClass("scrolled");
         }
     }
-
-    //
-/*    new Vivus('webdesign-svg', {duration: 200,
-        onReady: function (myVivus) {
-            var textElement = document.getElementById("webdesign-svg");
-            var texts = textElement.contentDocument.getElementsByTagName("tspan");
-
-            for (var i = 0, len = texts.length; i < len; i++) {
-
-                var element = texts[i];
-                var text = element.innerHTML;
-                element.innerHTML = "";
-
-                $(element).typed({
-                    strings: [text],
-                    typeSpeed: 0,
-                    // time before typing starts
-                    startDelay: 10,
-                    // backspacing speed
-                    backSpeed: 10,
-                    contentType: 'html',
-                    backDelay: 1500,
-                });
-            }
-
-
-
-        }}, function () {
-        console.log("done");
-    });*/
 
 
     /* Animate elements */
@@ -283,8 +241,9 @@ $(function(){
     $(".svg-headings h3").on("click", function(){
         stopAnimating = true;
         var className = $(this).attr("class");
-        $(".svg-headings h3.active").removeClass("active");
+        $(".svg-headings .active").removeClass("active");
         $(this).addClass("active");
+        $("p."+className).addClass("active");
         var svg = $(".webdesign").find("." + svgs[className - 1]).get(0);
         $(".webdesign-svg:not(is-hidden)").addClass("is-hidden");
         svg.classList.remove("is-hidden");
@@ -296,227 +255,90 @@ $(function(){
 
     //parallax
     var rellax = new Rellax('.lvl-1', {
-        speed: 4
+        speed: 3
     });
     var rellax = new Rellax('.lvl-2', {
+        speed: 2
+    });
+    var rellax = new Rellax('.lvl-3', {
         speed: 1
     });
 
 
-
-    $("form.form input, form.form textarea").on("focus", function(){
-      console.log($(this).val() );
+    //contact form labels
+    $("form.contactForm input, form.contactForm textarea").on("focus", function(){
       if($(this).val() === ""){
         $(this).siblings("label").addClass("focused");
       }
     });
-    $("form.form input, form.form textarea").on("focusout", function(){
+    $("form.contactForm input, form.contactForm textarea").on("focusout", function(){
       if($(this).val() === ""){
         $(this).siblings("label").removeClass("focused");
       }
     });
 
 
+   /**finn fidget */
+   $("#about h2").on("click", function(){
+       $(".finn-and-jake").addClass("is-shown");
+       var audio = new Audio('finn.mp3');
+       audio.play();
+   })
 
 
-    /*
+   //expendable textarea
+   new Expanding(document.querySelector('textarea'));
 
+   $(".contactForm").on("submit", function(e){
+       e.preventDefault();
+       var form = $(this).serialize();
+       $(this)[0].reset();
+       var settings = {
+           method: 'POST',
+           headers: new Headers({
+               'Content-Type' : 'application/x-www-form-urlencoded'
+           }),
+           body: form
+           
+       };
+       var body = {};
+       fetch("contact.php", settings).then(function(response) {
+          
+            return response.text();
+       }).then(function(text){
+           body = JSON.parse(text);
+           console.log("thenBody",body,"thenText",text);
+       }).catch(function(error){
+           var lang = $(".actualLanguage").val();
+           var cz = lang === "cz";
+           body.class = "danger";
+           body.message = "";
+           body.message += cz ? 'Něco se pokazilo.' : 'Something went wrong';
+           body.message += error;
+                 
+      }).then(function() {
+          console.log("replybody", body,"class",body.class);
+          var $alert = $("#alert");
+          $alert.removeAttr("class");
+          $alert.addClass("alert-" + body.class);
+          $alert.find(".body").html(body.message);
+          $alert.addClass("shown alert");
+          setTimeout(function(){
+              //$alert.removeClass("shown");
+          },10000);
+      })
 
-        var controller = new ScrollMagic.Controller();
+      
+   })
 
-        /!* Navbar *!/
-        var tw1 = new TweenMax.to(".navbar", 1, { padding: ".5rem", force3D:true, backgroundColor: "#1c1e26"});
-        var tw2 = new TweenMax.to(".nav-item a", 1, {padding: "0.4rem 0.6rem",force3D:true } );
-        var timeline = new TimelineLite()
-            .add([tw1,tw2], '+=0', 'start');
+   //analytics
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-        var scene = new ScrollMagic.Scene({
-            offset: 200, // start scene after scrolling for 100px
-            duration: 50,
-            //duration: 400 // pin the element for 400px of scrolling
-        })  //.setClassToggle(".navbar", "scrolled")
-            .setTween(timeline)
-
-            .addIndicators({name: "navbar"})
-            .addTo(controller);
-    */
-
-    /*var scene = new ScrollMagic.Scene({ duration: 200})
-        .addTo(controller)
-        .addIndicators() // add indicators (requires plugin)
-
-        .on("update", function (e) {
-           // $("#scrollDirection").text(e.target.controller().info("scrollDirection"));
-
-            var scrollDirection = e.target.controller().info("scrollDirection");
-            if(scrollDirection === "FORWARD" && $(window).scrollTop() > 200){
-                $(".navbar").slideUp(1000);
-            }else {
-                $(".navbar").slideDown(1000);
-            }
-        })
-
-        .on("progress", function (e) {
-
-        });*/
-
-        /* Nadpisy */
-        /*
-            $("h3.secondary").each(function (i) {
-                var height= $(window).height();
-                var newHeight = -(height/2);
-                var tween = new TimelineMax ()
-                    .add([
-                        TweenMax.fromTo(this, 1, {scale: 1.3, autoAlpha: 0.1, top:100}, {top:-300,  autoAlpha: 0, ease: Linear.easeNone} ),
-                        TweenMax.fromTo($(this).siblings(".line").get(0), 1, {scale: 1, autoAlpha: .8, left: 35,zIndex:10}, {left: 0, autoAlpha: .9, ease: Linear.easeNone}),
-                    ]);
-                var h2 = $(this).siblings("h2");
-                var scene = new ScrollMagic.Scene({triggerElement:  $(this).siblings("h2").get(0),offset: -200, duration: height})
-                    .setTween(tween )
-                    .addIndicators({name: "h3.secondary"+i}) // add indicators (requires plugin)
-                    .addTo(controller);
-            });*/
-
-/*
-            $(".slideInUpC").each(function (i) {
-                var height= $(window).height();
-                var newHeight = -(height/2);
-                new ScrollMagic.Scene({triggerElement: this, duration: 100 , offset: newHeight})
-                //.setTween(TweenMax.fromTo(this, 0.5,{top: -5, autoAlpha:.8}, { top: 0, autoAlpha:1,force3D:true}) )
-                    .addIndicators({name: "slideInUpC"+i}) // add indicators (requires plugin)
-                    //.setClassToggle(this,"is-active")
-                    .on('start',() => {;
-                        $(this).addClass("is-active");
-                    })
-                    .on('end',() => {
-                        //$(this).removeClass("slideInUp");
-                        //$(this).removeClass("animated");
-
-                    })
-                    .addTo(controller);
-            });
-
-
-
-*/
-
-
-/*
-    /!* Header scale *!/
-    var twe1 = new TweenMax.to("header .content-div", 1, { scale: 0.7, force3D:false,  top: -150 });
-    var twe2 = new TweenMax.to("header .btn", 1, { scale: 0.7, force3D:false, });
-    var twe3 = new TweenMax.to("header .background-image", 1, { scale: 0.5,top: -150, force3D:false,  } );
-    var timeline = new TimelineLite()
-        .add([twe1,twe2,twe3], '+=0', 'start');
-    new ScrollMagic.Scene({ duration: $(window).height(), offset: 0})
-        .setTween(timeline)
-        .addIndicators({name: "header scale"}) // add indicators (requires plugin)
-        .addTo(controller);
-
-
-
-
-    $(".card").each(function (i) {
-        var height= $(window).height();
-        var newHeight = -(height/2);
-        new ScrollMagic.Scene({triggerElement: this, duration: 100 , offset: newHeight})
-            //.setTween(TweenMax.fromTo(this, 0.5,{top: -5, autoAlpha:.8}, { top: 0, autoAlpha:1,force3D:true}) )
-            .addIndicators({name: "cards"+i}) // add indicators (requires plugin)
-            .on('start',() => {;
-                $(this).addClass("animated slideInUp");
-            })
-            .on('end',() => {
-                //$(this).removeClass("slideInUp");
-                //$(this).removeClass("animated");
-
-            })
-            .addTo(controller);
-    })
-*/
-
-
-/*
-
-    /* Přišpendlení headeru
-    var controller2 = new ScrollMagic.Controller({
-        globalSceneOptions: {
-            triggerHook: 'onLeave'
-        }
-    });
-
-
-        new ScrollMagic.Scene({
-            triggerElement: "header ",
-            duration: $("header").height()
-        })
-            .setPin("header",{ pushFollowers: false,})
-            .on("end",function () {
-                $("header").css("z-index",0);
-    })
-            .addIndicators({name: 200}) // add indicators (requires plugin)
-            .addTo(controller2);
-
-
-*/
-
-
-
-/*
-    var scene = new ScrollMagic.Scene({
-        triggerElement: "#about",
-        offset: 200
-    })
-        .on('start', function () {
-
-            $("#progress").html(" ");
-            var bar = new ProgressBar.Line("#progress", {
-                strokeWidth: 4,
-                easing: 'easeInOut',
-                duration: 1400,
-                color: '#E84545',
-                trailColor: '#eee',
-                trailWidth: 1,
-                svgStyle: {width: '100%', height: '100%'},
-                text: {
-                    style: {
-                        // Text color.
-                        // Default: same as stroke color (options.color)
-                        color: '#999',
-                        position: 'absolute',
-                        right: '0',
-                        top: '30px',
-                        padding: 0,
-                        margin: 0,
-                        transform: null
-                    },
-                    autoStyleContainer: false
-                },
-                from: {color: '#FFEA82'},
-                to: {color: '#ED6A5A'},
-                step: (state, bar) => {
-                    bar.setText(Math.round(bar.value() * 100) + ' %');
-                }
-            });
-
-            bar.animate(0.8);  // Number from 0.0 to 1.0
-
-
-
-/*            var width = 1;
-            var interval = setInterval(function () {
-                if(width >= 100){
-                    clearInterval(interval);
-                }else {
-                    width ++;
-                    $(".progress.pro-1").attr("value",width);
-                }
-            },10)
-        })
-        .addTo(controller);*/
-
-
-
-
+  ga('create', 'UA-45752042-3', 'auto');
+  ga('send', 'pageview');
 
 
 

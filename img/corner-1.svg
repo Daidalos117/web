@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="146" height="146" viewBox="0 0 146 146">
   <defs>
-    <linearGradient id="corner-1-a" x1="-6.14%" x2="46.091%" y1="66.644%" y2="66.644%">
-      <stop offset="0%" stop-color="#84FAB0"/>
-      <stop offset="100%" stop-color="#8FD3F4"/>
+    <linearGradient id="corner-1-a" x1="15.545%" x2="-39.579%" y1="100%" y2="20.517%">
+      <stop offset="0%" stop-color="#2D4059"/>
+      <stop offset="100%" stop-color="#E84545"/>
     </linearGradient>
   </defs>
   <path fill="url(#corner-1-a)" fill-rule="evenodd" d="M160.750661,143.750661 L141,124 L141,270 L287,270 L266.948389,249.948389 L160.750661,249.948389 L160.750661,143.750661 Z" transform="rotate(180 143.5 135)"/>

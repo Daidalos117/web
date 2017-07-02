@@ -55,7 +55,7 @@ body.loaded {
     @include transform(translate3d(0, 50px, 0));
   }
   .fadeInLeft {
-    transition: all 0.7s ease-out;
+    transition: all 1s ease-out;
     @include transform( translate3d(-50px, 0, 0));
   }
   .popUp {
@@ -69,8 +69,7 @@ body.loaded {
   }
 
   .contactLine {
-      transition: all .5s cubic-bezier(0.65, 0.05, 0.36, 1);
-      transition-delay: .5s;
+      transition: width 1s cubic-bezier(0.65, 0.05, 0.36, 1) .5s, opacity .5s ease-out ;
       width: 0;
       &.is-active {
         visibility: visible;

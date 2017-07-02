@@ -7,7 +7,7 @@
 
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="img/favicon2.ico">
 
     <title>Hey there :)</title>
 
@@ -15,6 +15,7 @@
     <link href="builds/bundle.css" rel="stylesheet">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Caveat:400,700&amp;subset=latin-ext" rel="stylesheet">
 </head>
 
 <body >
@@ -59,16 +60,19 @@
                 <div class="col-xs-12 col-md-6 content-div">
                     <h3><span class="light">Hello</span>, I am</h3>
                     <h1 class="heading"></h1>
-                    <p class="animate fadeInLeft" data-animate="fadeInLeft">Look at some of my <a href="#portfolio">works</a>
-                        or call me straight aways co we can get some coffee
-                        and chat about cool stuff.
+                    <p class="animate fadeInLeft" data-animate="fadeInLeft">Delam design, webovky a aplikace. Jsem pocitacocej kouzelnik. Vice o mne
                     </p>
                     <div class="btn-container">
 
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-6 text-md-center text-xs-right">
-                    <img src="img/header2_edited.png" alt="Foto about me" class="img-fluid my-img animate popUp"  data-animate="popUp">
+                
+                    <picture  class="img-fluid my-img animate popUp"  data-animate="popUp">
+                        <source srcset="img/header/mobile.png, img/header/mobile2x.png 2x" media="(max-width: 768px)">
+                        <source srcset="img/header/desktop.png, img/header/desktop2x.png 2x">
+                        <img srcset="img/header/desktop.png, img/header/desktop2x.png 2x" alt="My default image">
+                    </picture>
                 </div>
 
             </div>
@@ -77,19 +81,12 @@
 
 </header>
 
-<div class="geometry-bkgrnd">
-    
-    <div class="home lvl-1">
-        <img src="img/home.svg" class="inject-me" />
-    </div>
-    <div class="oo lvl-2">
-        <img src="img/oo.svg" class="inject-me" />
-    </div>
-</div>
-
 
 <!-- About me start -->
 <section id="about">
+    <div class="background">
+        
+    </div>
     <div class="about-content">
         <div class="message-me">
             <a href="#contact" class="btn-circle"><img src="img/contact-icon.svg" alt="mail" class="inject-me contact-icon"></a>
@@ -105,91 +102,110 @@
             <div class="flex-items-md-center">
                 <div class="col-md-8 col-xs-12 offset-md-2 text-md-center">
 
-                    <p class="animate fadeInUp" data-animate="fadeInUp">I am tech and scifi lover curently working as frontend developer.
+                    <p class="animate fadeInUp">I am tech and scifi lover curently working as frontend developer.
                         Coding and programming is part what I am and what I am good at.</p>
 
-                    <p class="animate fadeInUp" data-animate="fadeInUp" data-animate-delay="300">Let me help you with your project and you see. </p>
+                    <p class="animate fadeInUp" data-animate-delay="300">Let me help you with your project and you see. </p>
+                    <p>
+                        Hrani s pocitacem, vytvareni webovek a podobnych zalezitosti se venuji jiz pres 10 let, profesionalne jiz pres 3 roky a za tu dobu jsem pracoval pro velke klienty i pro male rodinne firmy.
+
+
+                    </p>
 
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<div class="geometry-bkgrnd">
+    
+    <div class="home lvl-1">
+        <img src="img/home.svg" class="inject-me" />
+    </div>
+    <div class="oo lvl-2">
+        <img src="img/oo.svg" class="inject-me" />
+    </div>
+</div>
+
 
 <section id="counts">
     <div class="container">
         <div class="row">
             
             <div class="col-md-4 column">
-<!--                <div class="row">
-                    <div class="col-md-3 icon-wrapper">
-                        <img src="img/003-coding.svg" class="inject-me icon" alt=""/>
+                <div class="inner">
+                    <div class="row">
+                        <div class="col-md-3 col-xs-5 icon-wrapper">
+                            <img src="img/003-coding.svg" class="inject-me icon" alt=""/>
+                        </div>
+                        <div class="col-md-9 col-xs-7 number-wrapper">
+                            <span class="number" data-number="1258742"> </span> <span class="plus">+</span>
+                        </div>
                     </div>
-                    <div class="col-md-9">
-                        <span class="number" data-number="1258742"> </span> <span class="plus">+</span>
-                        <h4>Napsaných řádků kódu</h4>
-                    </div>
-                </div>-->
-                <div class="row">
-                    <div class="col-md-3 col-xs-5 icon-wrapper2">
-                        <img src="img/003-coding.svg" class="inject-me icon" alt=""/>
-                    </div>
-                    <div class="col-md-9 col-xs-7 number-wrapper2">
-                        <span class="number" data-number="1258742"> </span> <span class="plus">+</span>
-                    </div>
+                
+                    <h4 class="heading margin">Lines of code</h4>
                 </div>
-            
-                <h4 class="margin">Lines of code</h4>
+
             </div>
             <div class="col-md-4 column">
-                <div class="row">
-                    <div class="col-md-3 col-xs-5 icon-wrapper2">
-                        <img src="img/002-computer-screen.svg" class="inject-me icon" alt=""/>
+                <div class="inner">
+                    <div class="row">
+                        <div class="col-md-3 col-xs-5 icon-wrapper">
+                            <img src="img/002-computer-screen.svg" class="inject-me icon" alt=""/>
+                        </div>
+                        <div class="col-md-9 col-xs-7 number-wrapper">
+                            <span class="number" data-number="158742"> </span> <span class="plus">+</span>
+                            
+                        </div>
                     </div>
-                    <div class="col-md-9 col-xs-7 number-wrapper2">
-                        <span class="number" data-number="158742"> </span> <span class="plus">+</span>
-                        
-                    </div>
-                </div>
             
-                <h4 class="margin">Hours in front of PC</h4>
+                    <h4 class="margin">Hours in front of PC</h4>
+                </div>
             </div>
             <div class="col-md-4 column">
-                
-                <div class="row">
-                    <div class="col-md-3 col-xs-5 icon-wrapper2">
-                        <img src="img/001-nose.svg" class="inject-me icon" alt=""/>
+                <div class="inner">
+                    <div class="row">
+                        <div class="col-md-3 col-xs-5 icon-wrapper">
+                            <img src="img/001-nose.svg" class="inject-me icon" alt=""/>
+                        </div>
+                        <div class="col-md-9 col-xs-7 number-wrapper">
+                            <span class="number" data-number="67143"></span> <span class="plus">+</span>
+                            
+                        </div>
                     </div>
-                    <div class="col-md-9 col-xs-7 number-wrapper2">
-                        <span class="number" data-number="67143"></span> <span class="plus">+</span>
-                        
-                    </div>
+                    <h4 class="margin">Lines of coke</h4>
                 </div>
-                
-                <h4 class="margin">Lines of coke</h4>
             </div>
         </div>
     </div>
 </section>
 
+
+
+
+
 <!-- Portfolio start -->
 <section id="portfolio">
+    <div class="geometry-bkgrnd">
+        <div class="triangle lvl-1">
+            <img src="img/triangle.svg" class="inject-me" />
+        </div>
+        <div class="rectangle lvl-3">
+            <img src="img/rectangle.svg" class="inject-me" />
+        </div>
+        <div class="ball lvl-2">
+            <img src="img/ball.svg" class="inject-me" />
+        </div>
+    </div>
+
     <div class="container">
         <div class="header-section">
             <h2 class="primary">My works</h2>
             <div class="line"></div>
             <h3 class="secondary">My works</h3>
         </div>
-
-
-
-<!--        <div class="triangle center">
-            <img src="img/triangle.svg" alt="triangle" class="img-triangle1">
-            <img src="img/triangle.svg" alt="triangle" class="img-triangle2">
-        </div>-->
-
-
-            <div class="col-md-8 card-work float-md-left" >
+            <div class="col-md-8 card-work float-md-left animate fadeInUp" >
                 <div class="card first">
 
                     <div class="row">
@@ -206,7 +222,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 card-work float-md-right">
+            <div class="col-md-4 card-work float-md-right animate fadeInUp">
                 <div class="card second">
                     <div class="row">
                         <div class="card-block col-xs-12 ">
@@ -223,7 +239,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 card-work float-md-left">
+            <div class="col-md-4 card-work float-md-left animate fadeInUp">
                 <div class="card third">
                     <div class="row">
                         <div class="card-block col-xs-11 ">
@@ -237,7 +253,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 card-work">
+            <div class="col-md-4 card-work animate fadeInUp">
                     <div class="card fourth">
                         <div class="row">
                             <div class="card-block col-xs-11 ">
@@ -253,27 +269,51 @@
             </div>
 
         <div class="clearfix"></div>
-    </div>
+        
 
+    </div>
+    <div class="geometry-bkgrnd">
+        <div class="potter lvl-2">
+            <img src="img/potter.svg" class="inject-me" />
+        </div>
+        <div class="rectangle-double lvl-1">
+            
+        </div>
+
+    </div>
 </section>
 
 <section id="process">
-    <div class="container">
-        <div class="col-md-12 svg-headings">
-            <h3 class="1 active">Design</h3>
-            <h3 class="2">Coding</h3>
-            <h3 class="3">Testing</h3>
-        </div>
-        <div class="col-md-12 webdesign">
-            <img src="img/design.svg" class="inject-me webdesign-svg animate-svg design">
+    <div class="container ">
+        <div class="row">
+                    
+            <div class="col-md-6 svg-headings">
+                <h3 class="1 active">Design</h3>
+                <span class="arrow"></span>
+                <h3 class="2">Coding</h3>
+                <span class="arrow"></span>
+                <h3 class="3">Testing</h3>
+                
+                <p class="1 active">
+                     "1Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                </p>
+                <p class="2">
+                     "2Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                </p>
+                <p class="3">
+                     "3Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                </p>
+            </div>
+            <div class="col-md-6 webdesign">
+                <img src="img/design.svg" class="inject-me webdesign-svg animate-svg design">
 
-            <img src="img/code.svg" class="inject-me webdesign-svg animate-svg is-hidden code">
-            <img src="img/test.svg" class="inject-me webdesign-svg animate-svg is-hidden test">
+                <img src="img/code.svg" class="inject-me webdesign-svg animate-svg is-hidden code">
+                <img src="img/test.svg" class="inject-me webdesign-svg animate-svg is-hidden test">
 
 
+            </div>
         </div>
     </div>
-
 </section>
 
 <!-- Contact start -->
@@ -284,38 +324,49 @@
             <div class="line"></div>
             <h3 class="secondary">Have question?</h3>
         </div>
+        <div class="col-md-12 contact-card col-lg-10 offset-lg-1">
+            <img src="img/mail-icon.svg" class="inject-me mail-icon" alt="icon"/>
+            <img src="img/contact-background2.svg" class="inject-me background" alt="background"/>
+            
+            <div class="row">
+                <div class="col-md-6 left">
+                    <h3>Hello Roman,</h3>
+                    <form class="contactForm">
+                    <div class="form-group nameGroup">
 
-        <div class="col-md-12  content animate fadeInUp col-xs-12">
-            <form class="form">
-            <div class="row align-items-end">
-
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <label for="input-contact">Contact</label>
-                            <input type="text" class="form-control" id="input-contact" placeholder="">
+                        <label for="" class="nameLabel ">get back to me at: </label>
+                        <div class="nameInput">                    
+                            <input type="text" class="form-control " name="name" id="input-contact" placeholder="(email@yellowsquirell.com)">
+                            <input type="hidden" class="form-control " name="language" value="cz" >
                             <div class="line animate contactLine"></div>
                         </div>
                     </div>
-                    <div class="col-md-5">
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea type="text" class="form-control" id="message" rows="1" cols="1"></textarea>
-                                <div class="line animate contactLine"></div>
-                            </div>
-
+                    <div class="form-group messageGroup">
+                        <label for="message">I just wanted to tell you:</label>
+                        <textarea type="text" class="form-control" name="message" id="message" rows="1" cols="1"></textarea>
+                        <div class="line animate contactLine"></div>
                     </div>
-                    <div class="col-md-3 btn-block">
-                            <a class="btn btn-primary hvr-ripple-out">Send <img src="img/right-arrow.svg" class="inject-me"/> </a>
+                    
+                    
+                    <div class="form-group submitGroup">
+                        <button type="submit" class="btn"><span class="text">Send</span><img src="img/sent-mail.svg" class="inject-me"/> </button>
                     </div>
-
-<!--                    <div class="col-md-4">
-                    <div class="contact">
-
-                        <span>+420 720 290 359</span>
+                    </form>
+                </div>
+                <div class="col-md-6 right">
+                    <img src="img/contact-photo.png" class="contact-photo " alt="me">
+                    <img src="img/phone-icon.svg" class="inject-me phone-icon" />
+                    <div class="contacts">
+                        
+                        <p class="name">Roman Rajchert</p>
+                        <p class="email">ahoj@jsemroman.cz</p>
+                        <p class="phone">+420 720 290 359 </p>
+                        
                     </div>
-                </div>-->
+                    
+                </div>
             </div>
-            </form>
+
         </div>
 
     </div>
@@ -324,8 +375,20 @@
 
 
 <footer>
-    <p>&copy; Company 2016</p>
+    <p> Coded by me</p>
 </footer>
+
+<img src="img/finn.png" class="finn-and-jake"/>
+
+<div class="container">
+    <div class="alert" role="alert" id="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        
+        <strong class="warn"></strong><span class="body"></span>
+    </div>    
+</div>
 
 
 <script src="builds/bundle.js"></script>

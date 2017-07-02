@@ -16,6 +16,7 @@ var plugins = [
         $: "jquery",
         jQuery: "jquery",
         "window.jQuery": "jquery",
+        "autogrow": "autogrow",
         "Tether": 'tether',
         "window.Tether": "tether",
         Alert: "exports-loader?Alert!bootstrap/js/dist/alert",
@@ -74,7 +75,7 @@ module.exports = {
     entry:  './src',
     output: {
         path:           "builds",
-        publicPath:     "/builds/",
+        publicPath:     production ? "./" :  "/builds/",
         filename:       production ? '[name]-[hash].js' : 'bundle.js',
         chunkFilename: '[name]-[chunkhash].js',
     },
@@ -84,7 +85,8 @@ module.exports = {
         inline: true,
         open: true,
         port: 9090,
-        host: "0.0.0.0"
+        host: "0.0.0.0",
+        
     },
     devtool: 'source-map',
     module: {

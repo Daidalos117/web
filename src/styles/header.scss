@@ -1,21 +1,14 @@
 /** HEADER */
-
-body.loaded {
-  .background-image {
-
-  }
-}
-
-
-
-
 header {
   height: 90vh;
   width: 100%;
   position: relative;
   overflow: hidden;
   background-color: $color-dark;
+  transition: all 1s ease-in-out;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 
+  
   .background {
     position: absolute;
     width: 100%;
@@ -29,17 +22,18 @@ header {
 
 
   .my-img {
-    width: 45vw;
+    
     position: relative;
     top: -20%;
-
+    max-width: 600px;
+    
     @include media-breakpoint-down(sm) {
       //display: none;
       //position: absolute;
       //bottom: 0;
       width: 100vw;
       top: -50%;
-      left: 50%;
+      left: 36%;
     }
   }
 
@@ -127,19 +121,6 @@ header {
     margin-right: auto;
   }
 
-  &:before {
-    // content: "";
-    //background-image: linear-gradient(-245deg, #283593 0%,#30E3CA 99%);
-    // background-image: linear-gradient(-245deg, #30E3CA 0%, #283593 93%);
-    opacity: 0.9;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-  }
 
-}
 
-body.loaded header{
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }

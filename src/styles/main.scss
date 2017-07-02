@@ -7,7 +7,7 @@ body {
   height: 100%;
   // font-family: 'Oxygen', sans-serif;
   //font-family: 'Slabo 27px', serif;
-  font-family: 'Montserrat', sans-serif;
+  font-family: $default-font-family;
   letter-spacing: 0.6px;
   line-height: 1.8rem;
   position: relative;
@@ -18,6 +18,7 @@ body {
   }
   -webkit-font-smoothing: antialiased;
   text-shadow: rgba(0,0,0,.01) 0 0 1px;
+  background: url("img/small_steps.png");
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -123,7 +124,7 @@ section{
   @include transition(all,$standart-animaion-time);
 }
 .btn.btn-primary{
-  color: white !important;
+  color: white ;
  // border-radius: 30px;
   font-weight: 300;
   border: 1px solid $color-danger;
@@ -163,18 +164,71 @@ section{
     svg {
         width: 100%;
         z-index: 10;
+        
     }
-    .home {
-        width: 6rem;
+    
+    div[class*="lvl"] {
         position: absolute;
+    }
+    
+    .lvl-1 {
+        width: 5rem;
+        opacity: .9;
+    }
+    .lvl-2 {
+        width: 4rem;
+        opacity: .7;
+    }
+    .lvl-3 {
+        width: 3rem;
+        opacity: .5;
+    }
+    
+    .home {
         left: 5%;
-        top:0;
+        top:10%;
     }
     .oo {
-        width: 3rem;
-        position: absolute;
-        opacity: .8;
+        top: 40%;
+        right: 10%;
+        @include transform(rotate(10deg));
+    }
+    .triangle {
+        left: 20%;
+        top: -30%;
+    }
+    .ball {
+        right: 2rem;
+        top: -20%;
+        
+    }
+    .rectangle {
+        top: -110%;
+        right: 30%;
+    }
+    .potter {
         top: 50%;
-        right: -2rem;
+        left: 5%;
+    }
+    .rectangle-double {
+        width: 10rem;
+        top: 150%;
+        right: 15%;
+    }
+}
+
+.finn-and-jake {
+    width: 30vw;
+    position: fixed;
+    bottom: -1rem;
+    right: 5%;
+    //display: none;
+    visibility: hidden;
+    @include transform(translateY(100%));
+    transition: all 1s ease-out;
+    &.is-shown {
+        //display: block;
+        visibility: visible;
+        @include transform(translateY(0%));
     }
 }

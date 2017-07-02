@@ -13,6 +13,7 @@
     "animate.css": "^3.5.2",
     "clean-webpack-plugin": "^0.1.14",
     "countup.js": "^1.8.5",
+    "expanding-textareas": "^1.0.2",
     "gsap": "^1.19.0",
     "in-view": "^0.6.1",
     "jquery": "^3.1.1",

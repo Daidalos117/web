@@ -11,7 +11,6 @@ useFlexbox: true
 styleLoaders:
   - style
   - css?sourceMap
-  - postcss
   - sass?sourceMap
 
 # Extract styles to stand-alone css file
@@ -78,7 +77,7 @@ styles:
   breadcrumb: false
   pagination: false
   jumbotron: false
-  alert: false
+  alert: true
   progress: false
   media: true
   list-group: true
@@ -97,7 +96,7 @@ styles:
 
 ### Bootstrap scripts
 scripts:
-  alert: false
+  alert: true
   button: true
   carousel: false
   collapse: true
@@ -108,6 +107,3 @@ scripts:
   tab: false
   tooltip: true
   util: true
-
-
-

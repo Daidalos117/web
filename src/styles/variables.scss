@@ -2,7 +2,6 @@
 $color-primary: #30E3CA;
 $color-secondary: #2D4059;
 $color-danger: #E84545;
-//$color-danger: #fc3565;
 $color-secondary-dark: #2B2E4A;
 $color-grey: rgba(#000,.70);
 $color-light-grey: #f8f8f8;
@@ -17,6 +16,8 @@ $html-font-size-xs: 13px;
 $font-size-mega: 3.998rem;
 $font-size-big: 2.827rem;
 
+$default-font-family: 'Montserrat', sans-serif;
+$handwrited-font-family: 'Caveat', cursive;
 
 $standart-animaion-time: 0.4s;
 
@@ -37,10 +38,10 @@ $standart-animaion-time: 0.4s;
 }
 
 @mixin placeholder {
-  &::-webkit-input-placeholder {@content}
-  &:-moz-placeholder           {@content}
-  &::-moz-placeholder          {@content}
-  &:-ms-input-placeholder      {@content}
+  &::-webkit-input-placeholder {@content};
+  &:-moz-placeholder           {@content};
+  &::-moz-placeholder          {@content};
+  &:-ms-input-placeholder      {@content};
 }
 
 @mixin shadow-1 {

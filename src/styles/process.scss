@@ -1,49 +1,107 @@
-#process {
-    .svg-headings {
-      @include flexbox();
-      @include justify-content(space-around);
-      @include align-items(center);
-      margin-top: 2rem;
-      padding-top: 2rem;
-
-      h3 {
-        display: inline-block;
-        color: $color-grey;
-        opacity: .3;
-        transition: all .5s ease-in-out;
-        cursor: pointer;
-        @include media-breakpoint-down(sm) {
-          font-size: 1.2rem;
-        }
-        &.active {
-          opacity: 1;
-          font-size: 2.7rem;
-          color: $color-secondary-dark;
-          @include media-breakpoint-down(sm) {
-            font-size: 2rem;
-          }
-        }
-
-      }
-    }
-
-
-    .webdesign{
-      text-align: center;
-      margin-top: 1rem;
-      &-svg {
-        width: 100%;
-        height: auto;
-        max-width: 25rem;
+#process
+{
+    //background: url("../img/small_steps.png");
+    background: white;
+    //background: url("../img/green_pattern.png");
+    .svg-headings
+    {
+        //@include flexbox();
+        //@include justify-content(space-around);
+        //@include align-items(center);
         margin-top: 2rem;
-        transition: all .5 ease-in-out;
-        &.is-hidden {
-          opacity: 0;
-          visibility: hidden;
-          display: none;
+        padding-top: 2rem;
+        p
+        {
+            display: none;
+            visibility: hidden;
+            margin-top: 2rem;
+            text-align: left;
+            transition: 1s all ease-out;
+
+            @include transform(translateX(-40%));
+            &.active
+            {
+                display: block;
+                visibility: visible;
+
+                @include transform(translateX(0%));
+            }
         }
-      }
+        h3
+        {
+            display: block;
+            color: $color-grey;
+            font-size: .8rem;
+            opacity: .3;
+            cursor: pointer;
+            transition: all .5s ease-in-out;
+
+            @include media-breakpoint-down(sm)
+            {
+                font-size: 1.2rem;
+            }
+            &:not(:last-child)::after
+            {
+                //content: " > ";
+            }
+            &.active
+            {
+                display: block;
+                padding-left: 1rem;
+                border-left: 5px solid $color-primary;
+                color: $color-secondary-dark;
+                font-size: 2.7rem;
+                opacity: 1;
+
+                @include media-breakpoint-down(sm)
+                {
+                    font-size: 2rem;
+                }
+            }
+        }
     }
 
+    &::before
+    {
+        content: '';
+        width: 50%;
+        background-color: $color-light-grey;
+        //background: url("img/geometry2.png");
+        opacity: .7;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        bottom: -4rem;
+    }
 
+    .webdesign
+    {
+        margin-top: 1rem;
+        text-align: center;
+        //@include transform(translateY(30%));
+
+        &-svg
+        {
+            background-color: white;
+            position: relative;
+            right: -2rem;
+            margin-top: 2rem;
+            //max-width: 25rem;
+            width: 40vw;
+            height: auto;
+            transition: all .5 ease-in-out;
+            @include shadow-1;
+            @include media-breakpoint-down(sm)
+            {
+                width: 100%;
+                left: 0;
+            }
+            &.is-hidden
+            {
+                display: none;
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+    }
 }
