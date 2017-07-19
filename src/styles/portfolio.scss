@@ -1,188 +1,313 @@
 
-#portfolio{
-  //background: url("../../img/geometric.svg");
-  background-size: contain;
- // background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+#portfolio
+{
+	//background: url("../../img/geometric.svg");
+	background-size: contain;
+	// background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 
-  background: linear-gradient(to top right, #EEE 55%,white 50%);
-  h2 {
-    position: relative;
-    z-index: 5;
-  }
+	background: linear-gradient(to top right, #EEE 55%,white 50%);
+	h2
+	{
+		position: relative;
+		z-index: 5;
+	}
 
-  .card-work {
-    //padding-left: 0;
-    //padding-right: 0;
-    @include media-breakpoint-down(sm) {
-      padding: 0;
-    }
-  }
+	.card-work
+	{
+		//padding-left: 0;
+		//padding-right: 0;
+		
+		@include media-breakpoint-down(sm)
+		{
+			padding: 0;
+		}
+	}
 
-  .col-xs-10,.col-xs-8{
-    margin: 0 auto;
-    /* Mask: */
+	.col-xs-10, .col-xs-8
+	{
+		margin: 0 auto;
+		/* Mask: */
+	}
 
-  }
+	div[class*="col-md"]
+	{
+		display: inline-block;
+		float: none;
+	}
 
-  div[class*="col-md"]{
-    display: inline-block;
-    float:none;
-  }
-  .card{
-    background: #000000;
-    border: none;
-    border-radius: 0;
-   // @include transition(all, $standart-animaion-time);
-    -webkit-font-smoothing: subpixel-antialiased;
+	.card
+	{
+		z-index: 1;
+		background: #000;
+		border: none;
+		border-radius: 0;
+		-webkit-font-smoothing: subpixel-antialiased;
+		padding: 2rem;
+		padding-bottom: 0;
+		position: relative;
+		@include transition(all,.2s);
+		&:hover
+		{
+			box-shadow: 0 2px 10px 0 rgba(0,0,0,.16);
+			backface-visibility: hidden;
+			-webkit-filter: blur(0);
+			.card-img-left
+			{
+				transform: translateY(-4%);
+			}
+		}
 
-    @include transition(all,.2s);
-    &:hover{
-      //margin-top: -4px;
-      box-shadow:  0px 2px 10px 0px rgba(0,0,0,0.16);
-      //transform: scale(1.02) translateZ(0);
-      backface-visibility: hidden;
-      -webkit-filter: blur(0);
-     // zoom: 101%;
-      .card-img-left{
-        transform: translateY(-4%);
-      }
-    }
-    .card-block{
-      padding-top: 3rem;
-    }
-    margin-bottom: 3rem;
-    color:  white;
-    overflow: hidden;
-    .card-title{
-      font-size: 2.5rem;
-      position: relative;
-      &:after{
-        content: "";
-        position: absolute;
-        bottom: -.2rem;
-        left: 2px;
-        width: 2rem;
-        height: 1px;
-        background: #000000;
-        opacity: 0.2;
-      }
-    }
-    .card-block{
-      padding-left: 3rem;
-      padding-bottom: 3rem;
-      p{
-        color: inherit;
-        opacity: 0.9;
-        font-weight: 300;
-      }
-      .labels {
+		.card-age {
+			position: absolute;
+			top: 0.6rem;
+	    	left: 1.1rem;
+			color: black;
+			
+			font-weight: 300;
+			&-icon {
+				width: 1.1rem;
+				position: relative;
+				top: .2rem;
+				fill: black;
+				opacity: .5;
+			}
+			.age {
+				opacity: .7;
+			}
+			.yr {
+				opacity: .3;
+			}
+			
+			&.white {
+				color: white;
+				.card-age-icon {
+					fill: white;
+				}
+			}
+		}
+		
+		.card-block
+		{
+				flex: inherit;
+		}
+		margin-bottom: 3rem;
+		color: white;
+		overflow: hidden;
+		.card-title
+		{
+			font-size: 2.5rem;
+			position: relative;
+			&:after
+			{
+				content: "";
+				position: absolute;
+				bottom: -.2rem;
+				left: 2px;
+				width: 2rem;
+				height: 1px;
+				background: #000;
+				opacity: .2;
+			}
+		}
+		.card-block
+		{
+			padding-bottom: 2rem;
 
-      }
-      .label{
-        padding-right: 0.4rem;
-        display: inline-block;
-        &::before{
-          content: "#";
-          display: inline;
-          position: relative;
-          left: 0rem;
-          top: 0;
-        }
-      }
-    }
-    &-img{
+			p
+			{
+				color: inherit;
+				opacity: .9;
+				font-weight: 300;
+			}
 
-      @include transition(all,.3s,ease-in-out);
-      -webkit-transition-delay: .1s; /* Safari */
-      transition-delay: .1s;
-    }
+			.label
+			{
+				padding-right: .4rem;
+				display: inline-block;
+				&::before
+				{
+					content: "#";
+					display: inline;
+					position: relative;
+					left: 0rem;
+					top: 0;
+				}
+			}
+		}
+		&-link
+		{
+            
+			display: table;
+			color: $color-dark;
+			font-size: 1rem;
+			margin-top: .5rem;
+			//text-decoration: underline;
+            text-align: right;
+            border-bottom: 1px solid $color-primary;
+            //border-left: 3px solid $color-primary;
+            padding: 0 .4rem;
+            //margin: 0 auto;
+            font-weight: 300;
+			//transition: .5s all ease-out;
+			&-icon
+			{
+				width: 1rem;
+                fill: $color-secondary-dark;
+                opacity: .4;
+                margin-right: 8px;
+				position: relative;
+				top: .1rem;
+				transition: .5s all ease-out;
+			}
+            &:hover {
+                font-weight: bold;
+				//border-bottom: 3px solid $color-danger;
+				.card-link-icon
+				{
+					@include transform(translateX(.2rem));
+					opacity: .9;
+					//fill: $color-danger;
+				}
+				//color: $color-danger;
+            }
+		}
 
-    border: 1px solid $color-light-grey;
-    
+		&-img
+		{
+			@include transition(all,.3s,ease-in-out);
+			-webkit-transition-delay: .1s; /* Safari */
+			        transition-delay: .1s;
+			@include media-breakpoint-down(sm)
+			{
+				width: 40vw;
+				margin: 0 auto;
+			}
+		}
 
-    
-    &.first{
-      background: $color-light-grey;
-      //background: url("../img/small_steps.png");
-      border-color: darken($color-light-grey,4%);
-      color: $color-grey;
-      img{
-        position: relative;
-        top: 5.5rem;
-        @include media-breakpoint-down(sm) {
-          top:0;
-        }
-      }
-    }
+		border: 1px solid $color-light-grey;
+		@include media-breakpoint-down(sm)
+		{
+			.card-img-div {
+				text-align: center;
+			}
+		}
+		&.first
+		{
+			background: $color-light-grey;
+			//background: url("../img/small_steps.png");
+			border-color: darken($color-light-grey,4%);
+			color: $color-grey;
+			img
+			{
+				position: relative;
+				top: 5.5rem;
+				@include media-breakpoint-down(sm)
+				{
+					top: 0;
+				}
+			}
+		}
 
-    &.second{
-      background: $color-secondary;
-      border-color: darken($color-secondary,4%);
-      .label{
-        color: #5477A5;
-      }
-      img{
-        position: relative;
-        top: 1rem;
-      }
-    }
-    &.third{
-      background: lighten($color-danger,8%);
-      border-color: lighten($color-danger,6%);
-      img{
-        position: relative;
-        top: .3rem;
-      }
-    }
-    &.fourth{
-      background: darken($color-primary,3%);
-      border-color: darken($color-primary,5%);
-      color: white;
-      //background: url("../img/small_steps.png");
+		&.second
+		{
+			background: $color-secondary;
+			border-color: darken($color-secondary,4%);
+			.label
+			{
+				color: #5477A5;
+			}
+			.card-link {
+				color: $color-light-grey;
+			}
+			img
+			{
+				position: relative;
+				top: 1rem;
+			}
+			.card-link-link {
+				color: $color-light-grey;
+			}
+			.card-link-icon {
+				fill: $color-light-grey;
+			}
+		}
+		&.third
+		{
+			background: lighten($color-danger,8%);
+			border-color: lighten($color-danger,6%);
 
+			img
+			{
+				position: relative;
+				top: .3rem;
+			}
+		}
+		&.fourth
+		{
+			background: darken($color-primary,3%);
+			border-color: darken($color-primary,5%);
+			color: white;
+			//background: url("../img/small_steps.png");
+			.card-link {
+				border-bottom-color: $color-light-grey;
+				color: $color-secondary;
+			}
+			.card-img-div {
+				//height: 20rem;
+				overflow: hidden;
+				text-align: center;
+			}
+			.card-img {
+				width: 50%;
+				position: relative;
+				top: 1rem;
+			}
+		}
 
-    }
-
-    &.second,&.third{
-
-      .card-title{
-        &:after{
-          background: white;
-        }
-      }
-    }
-
-
-  }
-
-
-
-
+		&.second, &.third
+		{
+			.card-title
+			{
+				&:after
+				{
+					background: white;
+				}
+			}
+		}
+		
+		
+	}
 }
 
-.mini-section{
-  height: 40vh;
-  background-image: url("../../img/macbook-work-3.jpg");
-  background: {
-    size: cover;
-    position: center;
-  };
-  .container,.row{
-    height: 100%;
-  }
-  h3{
-    text-transform: uppercase;
-    color: $color-primary;
-    font-size: 3rem;
-    font-weight: 700;
-  }
-  margin: 0 auto;
-  color: white;
-  p{
-    color: white;
-  }
-  text-align: center;
-  .body{
-    margin: 0 auto;
-  }
+.mini-section
+{
+	height: 40vh;
+	background-image: url("../../img/macbook-work-3.jpg");
+	background: 
+	{
+		size: cover;
+		position: center;
+	};
+	.container, .row
+	{
+		height: 100%;
+	}
+	h3
+	{
+		text-transform: uppercase;
+		color: $color-primary;
+		font-size: 3rem;
+		font-weight: 700;
+	}
+	margin: 0 auto;
+	color: white;
+	p
+	{
+		color: white;
+	}
+	text-align: center;
+	.body
+	{
+		margin: 0 auto;
+	}
 }

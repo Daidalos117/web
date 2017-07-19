@@ -1,320 +1,327 @@
 $text-color: $color-light-grey;
 
-#contact{
-
-  //background-image: url("../img/computer_code.png");
-  //background-image: linear-gradient(120deg, $color-secondary-dark 100%, $color-secondary 0%);
-  //background-image: linear-gradient(-20deg, $color-danger  0%, $color-secondary 80%);
-  background: url("../img/use_your_illusion.png");
-  
-  //background: white;
-  //background-size: cover;
-  //background-blend-mode: multiply;
-  position: relative;
-  
- 
-  &:after {
-    //content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: rgba($color-secondary,.9);
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  h2{
-    color: $color-primary;
-    opacity: 1;
-    //podtrzeni nadpisu
-    &:after {
-          background-color: $color-danger;
-          @include media-breakpoint-down(sm) {
-              width: 100%;
-              left: 0;
-          }
-    }
-  }
-
-  .card{
-    margin: 0 auto;
-    background-color: rgba(255,255,255,.2);
-    background-color: rgba(0,0,0,.7);
-    padding: 2rem;
-    //box-shadow:  0px 2px 10px 0px rgba(255,255,255,255.16);
-  }
-  .content {
-    position: relative;
-    z-index: 1;
-    @include media-breakpoint-down(sm) {
-      padding: 0;
-    }
-  }
-  .form{
-    background: rgba($color-secondary, .85);
-    padding: 3rem;
-
-    @include media-breakpoint-down(sm) {
-      padding: 1.5rem;
-    }
-
-    .form-group{
-      position: relative;
-      //padding-top: 1rem;
-      label {
-        font-weight: 300;
-        opacity: .7;
-        font-size: 1.4rem;
-        transition: 0.3s all ease-out;
-        color: $text-color;
-        @include transform(translateY(140%));
-        &.focused {
-          font-size: 1rem;
-          color: #7AAEF2;
-          @include transform(translateY(60%));
-        }
-
-      }
+#contact {
+	background: url("../../img/galaxy.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
 
 
+	&:after {
+		background: rgba($color-secondary,.9);
+		//content: "";
+		display: block;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+	h2 {
+		color: $color-primary;
+		opacity: 1;
+		//podtrzeni nadpisu
+		&:after {
+			background-color: $color-danger;
 
-      .line{
-        height: 1px;
-        background-color: $color-primary;
-        opacity: .4;
-        margin: 0 auto;
-        //width: 100%;
-       // margin-left: 1.9rem ;
-      }
-    }
-    .form-control {
-      border: none;
-    }
+			@include media-breakpoint-down(sm) {
+				left: 0;
+				width: 100%;
+			}
+		}
+		.array{
+			background-color: $color-danger;
+		}
+	}
+	.typed-cursor {
+		color: $color-light-grey;
+	}
+	.card {
+		background-color: rgba(255,255,255,.2);
+		background-color: rgba(0,0,0,.7);
+		margin: 0 auto;
+		padding: 2rem;
+		//box-shadow:  0px 2px 10px 0px rgba(255,255,255,255.16);
+	}
+	.content {
+		position: relative;
+		z-index: 1;
+
+		@include media-breakpoint-down(sm) {
+			padding: 0;
+		}
+	}
+	.form {
+		background: rgba($color-secondary, .85);
+		padding: 3rem;
+
+		@include media-breakpoint-down(sm) {
+			padding: 1.5rem;
+		}
+
+		.form-group {
+			position: relative;
+			//padding-top: 1rem;
+			label {
+				color: $text-color;
+				font-size: 1.4rem;
+				font-weight: 300;
+				opacity: .7;
+				transition: .3s all ease-out;
+
+				@include transform(translateY(140%));
+				&.focused {
+					color: #7AAEF2;
+					font-size: 1rem;
+
+					@include transform(translateY(60%));
+				}
+			}
 
 
 
+			.line {
+				background-color: $color-primary;
+				height: 1px;
+				margin: 0 auto;
+				opacity: .4;
+				//width: 100%;
+				// margin-left: 1.9rem ;
+			}
+		}
+		.form-control {
+			border: none;
+		}
+	}
 
-    
-    
-    
-  }
-  
-  .line{
-    height: 1px;
-    background-color: $color-primary;
-    opacity: .4;
-    margin: 0 auto;
-    //width: 100%;
-   // margin-left: 1.9rem ;
-  }
-  input[type="text"],textarea{
-    background-color: transparent;
-    color: $color-secondary;
-   // letter-spacing: 1px;
-   // margin-left: 1rem;
-    font-weight: 300;
-    //font-style: italic;
-    border: transparent;
-    @include transition(all,.3s);
-    @include placeholder {
-      color: #eee;
-    }
-    @include media-breakpoint-down(sm) {
-      font-size: 1.1rem;
-    }
-    &:focus {
-      outline: none;
-      border-color: transparent;
-     // border-color: darken($color-primary,10%);
-      //border-width: 2px;
-    }
-    &:focus+.line{
-      opacity: 1;
-    }
-  }
-  
-  
-  
-  .contact-card {
-      position: relative;
-      background-color: white;
-      height: 30rem;
-      
-      overflow: hidden;
-      @include shadow-1;
-      @include media-breakpoint-down(sm) {
-          height: auto;
-      }
-      .mail-icon {
-          position: absolute;
-          left: -20%;
-          height: 65%;
-          top: 50%;
-          @include transform(translateY(-50%));
-      }
-      .background {
-          position: absolute;
-          right: 0;
-          height: 100%;
-          top: 0;
-          
-      }
-      > .row {
-/*          position: absolute;
-          left: 0;
-          top: 0;
-          width: 100%;
-          padding:0;*/
-          height: 100%;
-          
-      }
-      .left, .right {
-          padding: 3.2rem 4rem;
-          @include media-breakpoint-down(sm) {
-              padding: 3rem 2rem;
-              
-          }
-      }
-      .left {
-          font-family: $handwrited-font-family;
-          font-size: 1.3rem;
-          @include media-breakpoint-down(sm) {
-              //order: 2;
-              height: auto;
-              padding-bottom: 0;
-          }
-          h3 {
-              font-family: inherit;
-              font-weight: bold;
-              margin-bottom: 2rem
-          }
-          .form-control{
-              font-family: $default-font-family;
-          }
-          position: relative;
-          height: 100%;
-          &:after {
-              content: "";
-              position: absolute;
-              right: 0;
-              width: 1px;
-              height: 80%;
-              top: 50%;
-              @include transform(translateY(-50%));
-              background-color: rgba($color-dark, .2);
-          }
-          .label {
-              margin: 0;
-          }
-          .nameInput {
-              display: inline-block;
-              
-              .form-control {
-                  margin: 0;
-                  width: 100%;
-              }
-          }
-          .submitGroup {
-              text-align: right;
-              position: absolute;
-              bottom: 2rem;
-              right:2rem;
-                @include media-breakpoint-down(sm) {
-                     text-align: left;
-                     left: 2rem;
-                     position: relative;
-                     top: 0;
-                }
-          }
-          .btn {
-              border-radius: 100%;
-              background-color: $color-danger;
-              color: white;
-              font-size: 1.5rem;
-              height: 3.5rem;
-              width: 3.5rem;
-              font-family: $default-font-family;
-              outline: none;
-              .text {
-                  visibility: hidden;
-                  display: none;
-              }
-              transition: all .5s ease-in-out;
-              svg {
-                  width: 1.5rem;
-                  margin-left:-.2rem;
-                  margin-top: .4rem;
-                  path {
-                      transition: inherit;
-                  }
-              }
-              border: 2px solid transparent;
-              
-              
-              &:hover {
-                  //width: auto;
-                  //border-radius: 25px;
-                  .text {
-                      //display: block;
-                      //visibility: visible;
-                  }
-                  border: 2px solid $color-danger;
-                  background: white;
-                  svg path{
-                      fill: $color-danger;
-                  }
-              }
-          }
+	.line {
+		background-color: $color-primary;
+		height: 1px;
+		margin: 0 auto;
+		opacity: .4;
+		//width: 100%;
+		// margin-left: 1.9rem ;
+	}
+	input[type="text"], textarea {
+		background-color: transparent;
+		border: transparent;
+		color: $color-secondary;
+		// letter-spacing: 1px;
+		// margin-left: 1rem;
+		font-weight: 300;
+		//font-style: italic;
+		padding-bottom: .2rem;
 
-      }
-      .right {
-          position: relative;
-            @include media-breakpoint-down(sm) {
-                //order: 1;
-                padding-top: 0;
-            }
-          .contact-photo {
-              width: 40%;
-              margin: 0 auto;
-              display: block;
-              @include media-breakpoint-down(sm) {
-                  margin: 0;
-                  display: none;
-              }
-          }
-          .contacts {
-              text-align: right;
-              position: absolute;
-              right:3rem;
-              bottom: 6rem;
-              
-              p {
-                  font-size: 1.1rem;
-                  color: white;
-                  margin: .7rem;
-              }
-              @include media-breakpoint-down(sm) {
-                  position: relative;
-                  top: 0;
-                  right: 0;
-              }
+		@include media-breakpoint-down(sm) {
+			font-size: 1.1rem;
+		}
+		@include placeholder {
+			color: #7F8C8D;
+		}
+		@include transition(all,.3s);
+		&:focus {
+			border-color: transparent;
+			outline: none;
+			// border-color: darken($color-primary,10%);
+			//border-width: 2px;
+		}
+		&:focus + .line {
+			opacity: 1;
+		}
+	}
 
-          }
-          .phone-icon {
-              position: absolute;
-              bottom: 6rem;
-              right: 2rem;
-              opacity: .7;
-              width: 6rem;
-            @include media-breakpoint-down(sm) {
-                top: 1rem;
-                right: 1rem;
-                width: 25%;
-            }
-          }
-      }
-  }
-  
-  
 
+
+	.contact-card {
+		background-color: white;
+		height: 30rem;
+		overflow: hidden;
+		position: relative;
+
+		@include media-breakpoint-down(sm) {
+			.background {
+				display: none;
+			}
+			.background-mobile {
+				display: block;
+			}
+		}
+		@include media-breakpoint-down(sm) {
+			height: auto;
+		}
+		@include shadow-1;
+		.mail-icon {
+			height: 65%;
+			left: -20%;
+			position: absolute;
+			top: 50%;
+
+			@include media-breakpoint-down(sm) {
+				display: none;
+			}
+			@include transform(translateY(-50%));
+		}
+		.background, .background-mobile {
+			height: 100%;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		.background-mobile {
+			display: none;
+		}
+		> .row {
+			height: 100%;
+		}
+		.left, .right {
+			padding: 3.2rem 4rem;
+
+			@include media-breakpoint-down(sm) {
+				padding: 3rem 2rem;
+			}
+		}
+		.left {
+			font-family: $handwrited-font-family;
+			font-size: 1.3rem;
+			height: 100%;
+			position: relative;
+
+			@include media-breakpoint-down(sm) {
+				//order: 2;
+				height: auto;
+				padding-bottom: 0;
+			}
+			h3 {
+				font-family: inherit;
+				font-weight: bold;
+				margin-bottom: 2rem;
+			}
+			.form-control {
+				font-family: $default-font-family;
+			}
+			&:after {
+				background-color: rgba($color-dark, .2);
+				content: "";
+				height: 80%;
+				position: absolute;
+				right: 0;
+				top: 50%;
+				width: 1px;
+
+				@include transform(translateY(-50%));
+			}
+			.label {
+				margin: 0;
+			}
+			.nameInput {
+				display: inline-block;
+
+				.form-control {
+					margin: 0;
+					width: 100%;
+				}
+			}
+			.submitGroup {
+				bottom: 2rem;
+				position: absolute;
+				right: 2rem;
+				text-align: right;
+
+				@include media-breakpoint-down(sm) {
+					left: 2rem;
+					position: relative;
+					text-align: left;
+					top: 0;
+				}
+			}
+			.btn {
+				background-color: $color-danger;
+				border: 2px solid transparent;
+				border-radius: 100%;
+				color: white;
+				font-family: $default-font-family;
+				font-size: 1.5rem;
+				height: 3.5rem;
+				outline: none;
+				transition: all .5s ease-in-out;
+				width: 3.5rem;
+				.text {
+					display: none;
+					visibility: hidden;
+				}
+				svg {
+					margin-left: -.2rem;
+					margin-top: .4rem;
+					width: 1.5rem;
+					path {
+						transition: inherit;
+					}
+				}
+
+
+				&:hover {
+					background: white;
+					border: 2px solid $color-danger;
+					//width: auto;
+					//border-radius: 25px;
+					.text {
+						//display: block;
+						//visibility: visible;
+					}
+					svg path {
+						fill: $color-danger;
+					}
+				}
+			}
+		}
+		.right {
+			position: relative;
+
+			@include media-breakpoint-down(sm) {
+				//order: 1;
+				padding-top: 0;
+			}
+			.contact-photo {
+				display: block;
+				margin: 0 auto;
+				width: 40%;
+
+				@include media-breakpoint-down(sm) {
+					display: none;
+					margin: 0;
+				}
+			}
+			.contacts {
+				bottom: 6rem;
+				position: absolute;
+				right: 3rem;
+				text-align: right;
+
+				@include media-breakpoint-down(sm) {
+					position: relative;
+					right: 0;
+					top: 0;
+				}
+
+				p {
+					color: white;
+					font-size: 1.1rem;
+					margin: .7rem;
+				}
+			}
+			.phone-icon {
+				bottom: 6rem;
+				opacity: .7;
+				position: absolute;
+				right: 2rem;
+				width: 6rem;
+
+				@include media-breakpoint-down(sm) {
+					right: 1rem;
+					top: 1rem;
+					width: 25%;
+				}
+			}
+		}
+	}
 }

@@ -70,12 +70,12 @@ if (production) {
     ]);
 }
 
-
+console.log(__dirname);
 module.exports = {
     entry:  './src',
     output: {
-        path:           "builds",
-        publicPath:     production ? "./" :  "/builds/",
+        path:           "builds",//production ? "./" : "builds",
+        publicPath:     "/builds/",//production ? "."  :  "/builds/",
         filename:       production ? '[name]-[hash].js' : 'bundle.js',
         chunkFilename: '[name]-[chunkhash].js',
     },
@@ -99,11 +99,11 @@ module.exports = {
             },
             {
                 test:   /\.scss/,
-                loader: ExtractPlugin.extract('style', production ?  'css!sass?outputStyle=compressed' : 'css?sourceMap!sass?sourceMap'),
+                loader: ExtractPlugin.extract('style', 0 ?  'css!sass?outputStyle=compressed' : 'css?sourceMap!sass?sourceMap'),
             },
             {
                 test: /\.css$/,
-                loader: ExtractPlugin.extract('style', production ?  'css!sass?outputStyle=compressed' : 'css?sourceMap!sass?sourceMap')
+                loader: ExtractPlugin.extract('style', 0 ?  'css!sass?outputStyle=compressed' : 'css?sourceMap!sass?sourceMap')
             },
             {
                 test:   /\.html/,
@@ -131,7 +131,7 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|jpeg|gif|woff|woff2|ttf|eot)$/,
-                loader: 'file',
+                loader: 'file-loader?name=/img/[name].[ext]',
                 exclude: /node_modules/
             },
             {

@@ -1,14 +1,14 @@
 /** HEADER */
 header {
-  height: 90vh;
+ // height: 60rem;
   width: 100%;
   position: relative;
   overflow: hidden;
   background-color: $color-dark;
   transition: all 1s ease-in-out;
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-
-  
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  padding: 10rem 0 15rem 0;
   .background {
     position: absolute;
     width: 100%;
@@ -18,22 +18,27 @@ header {
     height: 100%;
   }
   transition: all 1s ease-out;
-  //-webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  
 
 
   .my-img {
     
-    position: relative;
-    top: -20%;
+    position: absolute;
+    bottom: -2rem;
     max-width: 600px;
-    
+    display: block;
+    right: 5%;
+    width: 25rem;
+    img, source {
+        max-width: 100%;
+    }
     @include media-breakpoint-down(sm) {
       //display: none;
       //position: absolute;
       //bottom: 0;
       width: 100vw;
-      top: -50%;
-      left: 36%;
+      bottom: 0%;
+      right: -40%;
     }
   }
 
@@ -60,20 +65,23 @@ header {
     span {
       font-weight: 300;
     }
+    &-div {
+        overflow: overflow;
+    }
   }
   h1 {
     font-size: $font-size-mega;
     @include media-breakpoint-down(sm) {
       font-size: 3.6rem;
     }
-    white-space: pre;
+    white-space: nowrap;
     display: inline-block;
     height: 4rem;
     z-index: 2;
     max-width: 100%;
     .name {
       color: $color-primary;
-
+      font-weight: 400;
       &.last {
         font-size: 3.8rem;
       }
@@ -98,6 +106,7 @@ header {
     z-index: 2;
     text-align: justify;
     width: 80%;
+
     a {
       color: white;
       font-weight: 700;
@@ -110,7 +119,7 @@ header {
       height: 2px;
       width: 30px;
       background-color: $color-danger;
-      opacity: .7;
+
     }
   }
   .btn-container {
@@ -120,7 +129,9 @@ header {
     margin-top: 2rem;
     margin-right: auto;
   }
-
+  .intro-text {
+      padding: 0;
+  }
 
 
 }

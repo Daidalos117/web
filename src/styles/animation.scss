@@ -44,26 +44,41 @@
 body, body.loaded {
   .animate {
     visibility: hidden;
-    opacity: 0;
+    //opacity: 0;
   }
 }
+
+@for $i from 1 through 4 {
+    .transition-delay-#{$i} {
+        transition-delay: #{$i}s !important;
+    }
+}
+
 
 body.loaded {
 
   .fadeInUp {
     transition: all 0.7s ease-out;
+    opacity: 0;
     @include transform(translate3d(0, 50px, 0));
+  }
+  .fadeInDown {
+    transition: all 0.7s ease-out;
+    opacity: 0;
+    @include transform(translate3d(0, -50px, 0));
   }
   .fadeInLeft {
     transition: all 1s ease-out;
+    opacity: 0;
     @include transform( translate3d(-50px, 0, 0));
   }
   .popUp {
+    //visibility: hidden;
     @include transform(scale(0));
     transition: all 0.7s ease-out;
     &.is-active {
       visibility: visible;
-      opacity: 1;
+      //opacity: 1;
       @include transform(scale(1));
       }
   }
@@ -78,7 +93,7 @@ body.loaded {
   }
 
 
-  .fadeInUp.is-active, .fadeInLeft.is-active {
+  .fadeInUp.is-active, .fadeInLeft.is-active , .fadeInDown.is-active {
     visibility: visible;
     opacity: 1;
     @include transform(translate3d(0, 0, 0));

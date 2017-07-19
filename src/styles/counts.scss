@@ -1,9 +1,13 @@
 #counts {
     background-color: $color-secondary;
     color: white;
-    
+    z-index:1;
     svg {
         fill: white;
+        opacity: .95;
+        * {
+            fill: white !important;
+        }
     }
     
     .column .row, {
@@ -20,12 +24,19 @@
         .inner {
             @include media-breakpoint-down(sm) {
                 display: inline-block;
+                .row {
+                    @include justify-content(center);
+                }
             }
+            
         }
     }
     
     .number {
         font-size: 1.2rem;
+        @include media-breakpoint-down(sm) {
+            font-size: 1.5rem;
+        }
     }
     .plus {
         display: inline-block;
@@ -42,7 +53,7 @@
         @include media-breakpoint-down(sm) {
             margin-lef: auto;
             margin-right: 1rem;
-            
+            width: 5rem;
         }
     }
     .heading {

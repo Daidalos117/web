@@ -72,7 +72,18 @@ $section-color: #BBC3CD;
 
     }
   }
-
+  .warning {
+      display: inline-block;
+      margin: 0 auto;
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      strong {
+          color: $color-danger
+      }
+      border: 3px solid $color-danger;
+      border-right: none;
+      border-left: none;
+  }
   .corner{
     //display: none;
     position: absolute;

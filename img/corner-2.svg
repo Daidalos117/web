@@ -1,9 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="146" height="146" viewBox="0 0 146 146">
-  <defs>
-    <linearGradient id="corner-2-a" x1="-11.917%" x2="38.105%" y1="64.758%" y2="108.34%">
-      <stop offset="0%" stop-color="#2D4059"/>
-      <stop offset="100%" stop-color="#537895"/>
-    </linearGradient>
-  </defs>
-  <path fill="url(#corner-2-a)" fill-rule="evenodd" d="M400.750661,143.750661 L381,124 L381,270 L527,270 L506.948389,249.948389 L400.750661,249.948389 L400.750661,143.750661 Z" transform="translate(-381 -124)"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="148px" height="147px" viewBox="0 0 148 147" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>corner-2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="15.5447346%" y1="100%" x2="-39.5787883%" y2="20.5174285%" id="linearGradient-1">
+            <stop stop-color="#2D4059" offset="0%"></stop>
+            <stop stop-color="#E84545" offset="100%"></stop>
+        </linearGradient>
+        <path d="M19.7506609,19.7506609 L0,0 L0,146 L146,146 L125.948389,125.948389 L19.7506609,125.948389 L19.7506609,19.7506609 Z" id="path-2"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="A4-Copy" transform="translate(-151.000000, -351.000000)">
+            <g id="corner-2" transform="translate(152.000000, 352.000000)">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-2"></use>
+                </mask>
+                <use id="Mask" stroke="#979797" fill="url(#linearGradient-1)" transform="translate(73.000000, 73.000000) scale(-1, -1) translate(-73.000000, -73.000000) " xlink:href="#path-2"></use>
+                <g id="lines" mask="url(#mask-3)" stroke="#19E0C3">
+                    <g transform="translate(102.678183, 57.402942) rotate(42.000000) translate(-102.678183, -57.402942) translate(-26.321817, -9.597058)">
+                        <rect id="Rectangle-4" x="2.5" y="0.5" width="255" height="1"></rect>
+                        <rect id="Rectangle-4-Copy" x="2.5" y="12.5" width="255" height="1"></rect>
+                        <rect id="Rectangle-4" x="2.5" y="24.5" width="255" height="1"></rect>
+                        <rect id="Rectangle-4-Copy" x="2.5" y="36.5" width="255" height="1"></rect>
+                        <rect id="Rectangle-4" x="2.5" y="49.5" width="255" height="1"></rect>
+                        <rect id="Rectangle-4-Copy" x="2.5" y="61.5" width="255" height="1"></rect>
+                        <rect id="Rectangle-4" x="2.5" y="73.5" width="255" height="1"></rect>
+                        <rect id="Rectangle-4-Copy" x="2.5" y="85.5" width="255" height="1"></rect>
+                        <rect id="Rectangle-4" x="2.5" y="97.5" width="255" height="1"></rect>
+                        <rect id="Rectangle-4-Copy" x="2.5" y="109.5" width="255" height="1"></rect>
+                        <rect id="Rectangle-4" x="2.5" y="121.5" width="255" height="1"></rect>
+                        <rect id="Rectangle-4-Copy" x="1.21442478" y="131.967911" width="255" height="1"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
 </svg>

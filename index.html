@@ -14,39 +14,51 @@
     <!-- Core CSS -->
     <link href="builds/bundle.css" rel="stylesheet">
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,700,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Caveat:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,700,900" rel="stylesheet" lazyload>
+    <link href="https://fonts.googleapis.com/css?family=Caveat:400,700&amp;subset=latin-ext" rel="stylesheet" lazyload>
+
+
 </head>
 
 <body >
-
-<nav class="navbar navbar-fixed-top" id="navbar-complete">
+    <!-- vertical lines -->
+    <div class="vertical-line-1 vertical-line"></div>
+    <div class="vertical-line-2 vertical-line"></div>
+    
+<nav class="navbar " id="navbar-complete">
     <div class="container">
-    <a class="navbar-brand" href="#home"><img src="img/logo.svg" alt="logo" class="inject-me logo"></a>
+        
 
-    <button class="navbar-toggler hidden-md-up" type="button"  >
-        <img src="img/hamburger-icon.svg" class="menu-icon inject-me">
-    </button>
+        <a class="navbar-brand" href="#home"><img src="img/logo.svg" alt="logo" class="inject-me logo"></a>
 
-    <div class="navbar-toggleable-xs" id="navbar-header">
-        <ul class="nav navbar-nav float-xs-right">
-            <li class="nav-item">
-                <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#about">Me</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#portfolio">Portfolio</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
-            </li>
-        </ul>
-    </div>
+        <button class="navbar-toggler hidden-md-up" type="button"  >
+            <img src="img/hamburger-icon.svg" class="menu-icon inject-me">
+        </button>
+
+        <div class="navbar-toggleable-xs inner-div" id="navbar-header">
+            <ul class="nav navbar-nav float-xs-right">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                
+            </ul>
+        </div>
+<!--        <a class="language czech" href="cz.html" data-toggle="tooltip" data-placement="bottom" title="Mluv Česky">
+            <img src="img/icons/flag-cz.svg" class="inject-me language-svg" />
+            CZ
+        </a>-->
+
     </div>
 </nav>
-
 
 
 
@@ -57,28 +69,23 @@
     <div class="content row ">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-md-6 content-div">
-                    <h3><span class="light">Hello</span>, I am</h3>
+                <div class="col-xs-8 col-md-12 content-div">
+                    <h3 class="animate fadeInDown" data-animate-delay="500">Hello,<span class="light"> I am</span></h3>
                     <h1 class="heading"></h1>
-                    <p class="animate fadeInLeft" data-animate="fadeInLeft">Delam design, webovky a aplikace. Jsem pocitacocej kouzelnik. Vice o mne
+                    <p class="animate fadeInLeft col-md-6 intro-text" data-animate="fadeInLeft" data-animate-delay="2000">
+I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic design</strong>  or make a <strong>mobile app</strong>. Sometimes I can make you a <strong>pancake</strong> too.
                     </p>
-                    <div class="btn-container">
 
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-6 text-md-center text-xs-right">
-                
-                    <picture  class="img-fluid my-img animate popUp"  data-animate="popUp">
-                        <source srcset="img/header/mobile.png, img/header/mobile2x.png 2x" media="(max-width: 768px)">
-                        <source srcset="img/header/desktop.png, img/header/desktop2x.png 2x">
-                        <img srcset="img/header/desktop.png, img/header/desktop2x.png 2x" alt="My default image">
-                    </picture>
                 </div>
 
             </div>
         </div>
     </div>
-
+    <picture  class="img-fluid my-img animate fadeInUp"  data-animate-delay="1000">
+        <source srcset="img/header/mobile.png, img/header/mobile2x.png 2x" media="(max-width: 768px)">
+        <source srcset="img/header/desktop.png, img/header/desktop2x.png 2x">
+        <img srcset="img/header/desktop.png, img/header/desktop2x.png 2x" alt="My default image">
+    </picture>
 </header>
 
 
@@ -91,42 +98,42 @@
         <div class="message-me">
             <a href="#contact" class="btn-circle"><img src="img/contact-icon.svg" alt="mail" class="inject-me contact-icon"></a>
         </div>
-        <img src="img/corner-2.svg" class="corner corner-1 inject-me">
-        <img src="img/corner-1.svg" class="corner corner-2 inject-me">
+        <!--<img src="img/corner-2.svg" class="corner corner-1 inject-me">-->
+        <!--<img src="img/corner-1.png" class="corner corner-2 ">-->
+        
         <div class="container">
             <div class="header-section">
-                <h2 class="primary">Human</h2>
+                <h2 class="primary dontType" >
+                    <div class="array array-top " > </div>
+                    <span class="animate popUp" data-animate-delay="2000">Human</span>
+                    <div class="array array-bottom animate fadeInDown" data-animate-delay="2300"> </div>
+                </h2>
                 <div class="line"></div>
                 <h3 class="secondary">Webdesigner</h3>
             </div>
             <div class="flex-items-md-center">
-                <div class="col-md-8 col-xs-12 offset-md-2 text-md-center">
+                <div class="col-md-10 col-xs-12 offset-md-1 text-center">
 
-                    <p class="animate fadeInUp">I am tech and scifi lover curently working as frontend developer.
-                        Coding and programming is part what I am and what I am good at.</p>
-
-                    <p class="animate fadeInUp" data-animate-delay="300">Let me help you with your project and you see. </p>
-                    <p>
-                        Hrani s pocitacem, vytvareni webovek a podobnych zalezitosti se venuji jiz pres 10 let, profesionalne jiz pres 3 roky a za tu dobu jsem pracoval pro velke klienty i pro male rodinne firmy.
-
-
+                    <p class="animate fadeInUp" data-animate-delay="2500">
+                        Ten years ago my story started. The first line of code and the ecstasy I felt was so overwhelming I couldn't stop it. <strong>Coding and programming is part of who&nbsp;I&nbsp;am</strong>. I become a <strong>superhero fighting against</strong>  all the <strong>boring templates</strong>.
                     </p>
 
+                    <p class="animate fadeInUp" data-animate-delay="3000">
+                        Since then I've been working on many projects for different kinds of clients. Big companies or small individuals.<strong>I'll take care of everybody who needs my help</strong> . 
+                    </p>
+                    <p class="animate fadeInUp"  data-animate-delay="3500">
+                        Currently I'm working as a front-end developer at Etnetera. When I'm not working or saving the world I also quite enjoy sci-fi movies or animate series like Adventure time.
+                    </p>
+                    <p  class="warning">
+                        <strong>Warning:</strong> Once I start coding I can't stop.
+                    </p>
+                    
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<div class="geometry-bkgrnd">
-    
-    <div class="home lvl-1">
-        <img src="img/home.svg" class="inject-me" />
-    </div>
-    <div class="oo lvl-2">
-        <img src="img/oo.svg" class="inject-me" />
-    </div>
-</div>
 
 
 <section id="counts">
@@ -137,7 +144,7 @@
                 <div class="inner">
                     <div class="row">
                         <div class="col-md-3 col-xs-5 icon-wrapper">
-                            <img src="img/003-coding.svg" class="inject-me icon" alt=""/>
+                            <img src="img/icons/002-coding.svg" class="inject-me icon" alt=""/>
                         </div>
                         <div class="col-md-9 col-xs-7 number-wrapper">
                             <span class="number" data-number="1258742"> </span> <span class="plus">+</span>
@@ -152,7 +159,7 @@
                 <div class="inner">
                     <div class="row">
                         <div class="col-md-3 col-xs-5 icon-wrapper">
-                            <img src="img/002-computer-screen.svg" class="inject-me icon" alt=""/>
+                            <img src="img/icons/003-computer-screen.svg" class="inject-me icon" alt=""/>
                         </div>
                         <div class="col-md-9 col-xs-7 number-wrapper">
                             <span class="number" data-number="158742"> </span> <span class="plus">+</span>
@@ -167,14 +174,14 @@
                 <div class="inner">
                     <div class="row">
                         <div class="col-md-3 col-xs-5 icon-wrapper">
-                            <img src="img/001-nose.svg" class="inject-me icon" alt=""/>
+                            <img src="img/icons/009-sleepy-worker-at-work.svg" class="inject-me icon" alt=""/>
                         </div>
                         <div class="col-md-9 col-xs-7 number-wrapper">
                             <span class="number" data-number="67143"></span> <span class="plus">+</span>
                             
                         </div>
                     </div>
-                    <h4 class="margin">Lines of coke</h4>
+                    <h4 class="margin">Sleeples nights</h4>
                 </div>
             </div>
         </div>
@@ -187,21 +194,16 @@
 
 <!-- Portfolio start -->
 <section id="portfolio">
-    <div class="geometry-bkgrnd">
-        <div class="triangle lvl-1">
-            <img src="img/triangle.svg" class="inject-me" />
-        </div>
-        <div class="rectangle lvl-3">
-            <img src="img/rectangle.svg" class="inject-me" />
-        </div>
-        <div class="ball lvl-2">
-            <img src="img/ball.svg" class="inject-me" />
-        </div>
-    </div>
+
 
     <div class="container">
         <div class="header-section">
-            <h2 class="primary">My works</h2>
+            
+            <h2 class="primary">
+                <div class="array array-top"> </div>
+                    <span>My works</span>
+                <div class="array array-bottom"> </div>
+            </h2>
             <div class="line"></div>
             <h3 class="secondary">My works</h3>
         </div>
@@ -214,10 +216,18 @@
                             <h4 class="card-title">LN Trenér</h4>
                             <p class="card-text">Want to be healthier? Why don't hire best personal trainer?</p>
                             <span class="label">Nette</span><span class="label">Bootstrap</span><span class="label">Sass</span>
+                            <a class="card-link" href="http://www.lntrener.cz/">
+                                <img src="img/icons/004-double-angle-pointing-to-right.svg" class="inject-me card-link-icon">
+                                Více
+                             </a>
                         </div>
-                        <div class="col-xs-12 col-md-6">
-                            <img class="card-img-left card-img img-fluid" src="img/ln_trener.png" alt="Card image cap">
+                        <div class="col-xs-12 col-md-6 card-img-div">
+                            <img class="card-img-left card-img img-fluid" srcset="img/portfolio/ln.png, img/portfolio/ln@2x.png 2x" src="img/portfolio/ln.png" alt="Ln">
                         </div>
+                    </div>
+                    <div class="card-age">
+                        <img src="img/icons/011-time.svg" class="inject-me card-age-icon" />
+                        <span class="age js-year-diff" data-year="2015" ></span> <span class="yr">yr</span>
                     </div>
                 </div>
             </div>
@@ -231,10 +241,18 @@
                             <div class="labels">
                                 <span class="label">Photoshop</span><span class="label">Nette</span><span class="label">Bootstrap</span>
                             </div>
+                            <a class="card-link" href="img/">
+                                <img src="img/icons/004-double-angle-pointing-to-right.svg" class="inject-me card-link-icon">
+                                Více
+                             </a>
                         </div>
-                        <div class="col-xs-10">
-                            <img class="card-img-left card-img img-fluid" src="img/caravanas2.png" alt="Card image cap">
+                        <div class="col-xs-10 card-img-div">
+                            <img class="card-img-left card-img img-fluid" srcset="img/portfolio/caravans.png, img/portfolio/caravans@2x.png 2x" src="img/portfolio/caravans.png" alt="caravans image">
                         </div>
+                    </div>
+                    <div class="card-age white">
+                        <img src="img/icons/011-time.svg" class="inject-me card-age-icon" />
+                        <span class="age js-year-diff" data-year="2016" ></span> <span class="yr">yr</span>
                     </div>
                 </div>
             </div>
@@ -246,10 +264,18 @@
                             <h4 class="card-title">Ten stories</h4>
                             <p class="card-text">Website for high school class friend of mine.</p>
                             <span class="label">Template</span><span class="label">LowBudget</span>
+                            <a class="card-link" href="http://deset.jsemroman.cz/">
+                                <img src="img/icons/004-double-angle-pointing-to-right.svg" class="inject-me card-link-icon">
+                                Více
+                             </a>
                         </div>
-                        <div class="col-xs-10">
-                            <img class="card-img-left card-img img-fluid" src="img/10_ref.png" alt="Card image cap">
+                        <div class="col-xs-10 card-img-div">
+                            <img class="card-img-left card-img img-fluid" srcset="img/portfolio/10.png, img/portfolio/10@2x.png 2x" src="img/portfolio/10.png" alt="10stories image">
                         </div>
+                    </div>
+                    <div class="card-age white">
+                        <img src="img/icons/011-time.svg" class="inject-me card-age-icon" />
+                        <span class="age js-year-diff" data-year="2013" ></span> <span class="yr">yr</span>
                     </div>
                 </div>
             </div>
@@ -260,10 +286,18 @@
                                 <h4 class="card-title">Healthy 9.</h4>
                                 <p class="card-text">Website for health project of Prague 9. </p>
                                 <span class="label">Bootstrap</span><span class="label">CMS</span>
+                                <a class="card-link" href="http://www.zdravadevitka.cz/">
+                                    <img src="img/icons/004-double-angle-pointing-to-right.svg" class="inject-me card-link-icon">
+                                    Více 
+                                </a>
                             </div>
-                            <div class="col-xs-10">
-                               <!-- <img class="card-img-left img-fluid" src="img/10_ref.png" alt="Card image cap">-->
+                            <div class="col-xs-10 card-img-div">
+                               <img class="card-img-left card-img img-fluid"  src="img/portfolio/original/zdrava@2x.png" alt="Healty 9">
                             </div>
+                        </div>
+                        <div class="card-age">
+                            <img src="img/icons/011-time.svg" class="inject-me card-age-icon" />
+                            <span class="age js-year-diff" data-year="2012" ></span> <span class="yr">yr</span>
                         </div>
                     </div>
             </div>
@@ -272,15 +306,11 @@
         
 
     </div>
-    <div class="geometry-bkgrnd">
-        <div class="potter lvl-2">
-            <img src="img/potter.svg" class="inject-me" />
-        </div>
-        <div class="rectangle-double lvl-1">
-            
-        </div>
 
-    </div>
+    <!-- vertical lines -->
+    <div class="vertical-line-1 vertical-line"></div>
+    <div class="vertical-line-2 vertical-line"></div>
+    
 </section>
 
 <section id="process">
@@ -293,18 +323,26 @@
                 <h3 class="2">Coding</h3>
                 <span class="arrow"></span>
                 <h3 class="3">Testing</h3>
+                <div class="texts">
+                    <p class="1 active">
+                        
+                        First I have to design your website to the smallest detail. There's no place for imperfections. Your web needs to be just like you- fabulous.
+
+                    </p>
+                    <p class="2">
+                        
+                        That's that part where the magic usually happens. Every piece of your design needs to be written in secret magic language. Don't worry I can handle it.
+
+                    </p>
+                    <p class="3">
+                        I will fight all those bugs without mercy, they won't have a chance to annoy you. Nobody will suffer anymore under my watch. 
+
+                    </p>
+                </div>
                 
-                <p class="1 active">
-                     "1Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                </p>
-                <p class="2">
-                     "2Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                </p>
-                <p class="3">
-                     "3Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                </p>
             </div>
             <div class="col-md-6 webdesign">
+                <span class="timer" id="timer"></span>
                 <img src="img/design.svg" class="inject-me webdesign-svg animate-svg design">
 
                 <img src="img/code.svg" class="inject-me webdesign-svg animate-svg is-hidden code">
@@ -320,24 +358,29 @@
 <section id="contact">
     <div class="container">
         <div class="header-section">
-            <h2 class="primary">Have question?</h2>
+            <h2 class="primary">
+                <div class="array array-top"> </div>
+                    <span>Have question?</span>
+                <div class="array array-bottom"> </div>
+            </h2>
             <div class="line"></div>
             <h3 class="secondary">Have question?</h3>
         </div>
-        <div class="col-md-12 contact-card col-lg-10 offset-lg-1">
+        <div class="col-md-12 contact-card col-lg-10 offset-lg-1 ">
             <img src="img/mail-icon.svg" class="inject-me mail-icon" alt="icon"/>
             <img src="img/contact-background2.svg" class="inject-me background" alt="background"/>
+            <img src="img/contact-background-mobile.svg" class="inject-me background-mobile" alt="background"/>
             
             <div class="row">
                 <div class="col-md-6 left">
                     <h3>Hello Roman,</h3>
-                    <form class="contactForm">
+                    <form class="contactForm" id="contactForm" >
                     <div class="form-group nameGroup">
 
                         <label for="" class="nameLabel ">get back to me at: </label>
                         <div class="nameInput">                    
-                            <input type="text" class="form-control " name="name" id="input-contact" placeholder="(email@yellowsquirell.com)">
-                            <input type="hidden" class="form-control " name="language" value="cz" >
+                            <input type="text" class="form-control " name="name" id="input-contact" placeholder="(email@yedsquirell.nut)">
+                            <input type="hidden" class="form-control " name="language" value="en" >
                             <div class="line animate contactLine"></div>
                         </div>
                     </div>
@@ -347,9 +390,14 @@
                         <div class="line animate contactLine"></div>
                     </div>
                     
+                    <div class="form-group captchaGroup">
+                        <label for="message">I am human: </label>
+                        
+                    </div>
+                    
                     
                     <div class="form-group submitGroup">
-                        <button type="submit" class="btn"><span class="text">Send</span><img src="img/sent-mail.svg" class="inject-me"/> </button>
+                        <button type="submit" class="btn" name="whatevs" form="contactForm"><span class="text">Send</span><img src="img/sent-mail.svg" class="inject-me"/> </button>
                     </div>
                     </form>
                 </div>
@@ -375,8 +423,76 @@
 
 
 <footer>
-    <p> Coded by me</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 footer-div">
+                <h6>Autors</h6>
+                <ul class="people-list">
+                    <li>
+                        <img src="img/icons/006-left-alignment.svg" class="icon"/>
+                        <a href="http://www.stylebrunch.cz/" class="link" data-toggle="tooltip" data-placement="top" title="Soul of this web / texts "> My lovely gf</a>
+                    </li>
+                    <li>
+                        <img src="img/icons/007-photo-camera.svg" class="icon"/>
+                        <a href="http://lukaszlatkovsky.cz" class="link" data-toggle="tooltip" data-placement="top" title="Úvodní fotografie"> Lukáš Zlatkovsky</a>
+                    </li>
+                    <li>
+                        <img src="img/icons/004-double-angle-pointing-to-right.svg" class="icon"/>
+                        <a href="http://www.flaticon.com/" class="link" data-toggle="tooltip" data-placement="top" title="Ikony, krom hamburgeru "> Flaticon</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="col-md-4 footer-div">
+                <p class="center-text">
+                    Designed, <strong>coded</strong> <br />with <img src="img/icons/005-like.svg" class="icon inject-me" data-placement="top" title="With keyboard actually "/> <strong>by me</strong>
+                </p>
+            </div>
+            <div class="col-md-4 footer-div">
+                
+            </div>
+
+        </div>
+    </div>
 </footer>
+
+
+<!-- paralax bg -->
+<div class="geometry-bkgrnd">
+    <div class="home lvl-1">
+        <img src="img/home.svg" class="inject-me" />
+    </div>
+    <div class="oo lvl-2">
+        <img src="img/oo.svg" class="inject-me" />
+    </div>
+    <div class="triangle lvl-1">
+        <img src="img/triangle.svg" class="inject-me" />
+    </div>
+    <div class="rectangle lvl-3">
+        <img src="img/rectangle.svg" class="inject-me" />
+    </div>
+    <div class="ball lvl-2">
+        <img src="img/ball.svg" class="inject-me" />
+    </div>
+    
+    <div class="star lvl-2">
+        <img src="img/star.svg" class="inject-me" />
+    </div>
+    <div class="polygon_3 lvl-1">
+        <img src="img/polygon_3.svg" class="inject-me" />
+    </div>
+    <div class="rectangle_4 lvl-1">
+        <img src="img/rectangle_4.svg" class="inject-me" />
+    </div>
+    <div class="polygon_2 lvl-2">
+        <img src="img/polygon_2.svg" class="inject-me" />
+    </div>
+
+    <div class="rectangle-double lvl-1">
+        
+    </div>
+
+</div>
 
 <img src="img/finn.png" class="finn-and-jake"/>
 
@@ -390,6 +506,11 @@
     </div>    
 </div>
 
+
+<a class="language-switch czech" href="cz.html" data-animation="false"  data-toggle="tooltip" data-placement="top" title="English, si?">
+    <img src="img/icons/flag-en.svg" class="inject-me language-svg" />
+    EN
+</a>
 
 <script src="builds/bundle.js"></script>
 
