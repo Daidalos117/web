@@ -12,7 +12,7 @@ styleLoaders:
   - style
   - css?sourceMap
   - sass?sourceMap
-  - resolve-url-loader?root='fucked'
+  - resolve-url-loader
 
 # Extract styles to stand-alone css file
 # Different settings for different environments can be used,

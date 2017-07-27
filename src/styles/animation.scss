@@ -1,102 +1,176 @@
 /* Ripple Out */
 @-webkit-keyframes hvr-ripple-out {
-  100% {
-    top: -12px;
-    right: -12px;
-    bottom: -12px;
-    left: -12px;
-    opacity: 0;
-  }
+	100% {
+		bottom: -12px;
+		left: -12px;
+		opacity: 0;
+		right: -12px;
+		top: -12px;
+	}
 }
 @keyframes hvr-ripple-out {
-  100% {
-    top: -12px;
-    right: -12px;
-    bottom: -12px;
-    left: -12px;
-    opacity: 0;
-  }
+	100% {
+		bottom: -12px;
+		left: -12px;
+		opacity: 0;
+		right: -12px;
+		top: -12px;
+	}
 }
 .hvr-ripple-out {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px $color-danger;
-  position: relative;
+	box-shadow: 0 0 1px $color-danger;
+	display: inline-block;
+	position: relative;
+	-webkit-transform: perspective(1px) translateZ(0);
+	        transform: perspective(1px) translateZ(0);
+	vertical-align: middle;
 }
 .hvr-ripple-out:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
+	bottom: 0;
+	content: "";
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
 }
 .hvr-ripple-out:hover:before, .hvr-ripple-out:focus:before, .hvr-ripple-out:active:before {
-  -webkit-animation-name: hvr-ripple-out;
-  animation-name: hvr-ripple-out;
+	-webkit-animation-name: hvr-ripple-out;
+	        animation-name: hvr-ripple-out;
 }
+
+@keyframes bounceInRight {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  from {
+    opacity: 0;
+    transform: translate3d(3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(-25px, 0, 0);
+  }
+
+  75% {
+    transform: translate3d(10px, 0, 0);
+  }
+
+  90% {
+    transform: translate3d(-5px, 0, 0);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+@keyframes pulse {
+  from {
+    @include transform(scale(1));
+  }
+	50% {
+		@include transform(scale(1.1));
+	}
+  to {
+    @include transform(scale(1));
+  }
+}
+
+
+/*.bounceInRight {
+	animation-name: bounceInRight;
+	animation-duration: 1s;
+}*/
 
 /* SlideInUp */
 body, body.loaded {
-  .animate {
-    visibility: hidden;
-    //opacity: 0;
-  }
+	.animate {
+		visibility: hidden;
+		//opacity: 0;
+	}
 }
 
 @for $i from 1 through 4 {
-    .transition-delay-#{$i} {
-        transition-delay: #{$i}s !important;
-    }
+	.transition-delay-#{$i} {
+		transition-delay: #{$i}s !important;
+	}
 }
 
 
+
+.fadeInUp {
+	opacity: 0;
+	transition: all .7s ease-out;
+
+	@include transform(translate3d(0, 50px, 0));
+}
+.fadeInDown {
+	opacity: 0;
+	transition: all .7s ease-out;
+
+	@include transform(translate3d(0, -50px, 0));
+}
+.fadeInLeft {
+	opacity: 0;
+	transition: all 1s ease-out;
+
+	@include transform( translate3d(-50px, 0, 0));
+}
+.fadeInRight {
+	opacity: 0;
+	transition: all 1s ease-out;
+
+	@include transform( translateX(50px));
+}
+.popUp {
+	transition: all .7s ease-out;
+	//visibility: hidden;
+
+	@include transform(scale(0));
+}
+.contactLine {
+	transition: width 1s cubic-bezier(.65, .05, .36, 1) .5s, opacity .5s ease-out ;
+	width: 0;
+}
 body.loaded {
+	.popUp.is-active {
+		visibility: visible;
+		//opacity: 1;
 
-  .fadeInUp {
-    transition: all 0.7s ease-out;
-    opacity: 0;
-    @include transform(translate3d(0, 50px, 0));
-  }
-  .fadeInDown {
-    transition: all 0.7s ease-out;
-    opacity: 0;
-    @include transform(translate3d(0, -50px, 0));
-  }
-  .fadeInLeft {
-    transition: all 1s ease-out;
-    opacity: 0;
-    @include transform( translate3d(-50px, 0, 0));
-  }
-  .popUp {
-    //visibility: hidden;
-    @include transform(scale(0));
-    transition: all 0.7s ease-out;
-    &.is-active {
-      visibility: visible;
-      //opacity: 1;
-      @include transform(scale(1));
-      }
-  }
+		@include transform(scale(1));
+	}
+	
+	.bounceInRight.is-active {
+		visibility: visible;
+		animation-duration: 1.5s;
+	  	animation-name: bounceInRight;
+	}
 
-  .contactLine {
-      transition: width 1s cubic-bezier(0.65, 0.05, 0.36, 1) .5s, opacity .5s ease-out ;
-      width: 0;
-      &.is-active {
-        visibility: visible;
-        width: 100%;
-      }
-  }
+	.pulse.is-active {
+		visibility: visible;
+		animation-duration: 1s;
+	  	animation-name: pulse;
+	}
 
 
-  .fadeInUp.is-active, .fadeInLeft.is-active , .fadeInDown.is-active {
-    visibility: visible;
-    opacity: 1;
-    @include transform(translate3d(0, 0, 0));
-  }
+	.contactLine.is-active {
+		visibility: visible;
+		width: 100%;
+	}
+	.contactLine.line5.is-active {
+		visibility: visible;
+		width: 5rem !important;
+	}
 
+
+	.fadeInUp.is-active, .fadeInLeft.is-active, .fadeInDown.is-active, .fadeInRight.is-active {
+		opacity: 1;
+		visibility: visible;
+
+		@include transform(translate3d(0, 0, 0));
+	}
 }

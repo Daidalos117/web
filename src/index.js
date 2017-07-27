@@ -29,11 +29,12 @@ window.onload = function () {
     setTimeout(function() {
         $("body").addClass("loaded");
         $(".background-image").addClass("animated fadeInUp");
+        
         $("header .heading").typed({
             strings: [ "<span class='name'>webdesigner</span>", /*"<span class='name'>superhero for your web</span>", */"<span class='name'>Roman</span>"],
             typeSpeed: 100,
             // time before typing starts
-            startDelay: 10,
+            startDelay: 100,
             // backspacing speed
             backSpeed: 10,
             contentType: 'html',
@@ -57,7 +58,8 @@ $(function(){
 
 
     /* Particles Js*/
-    particlesJS.load('particles', 'assets/particles.json', function () {});
+    particlesJS.load('particles', 'assets/header.json', function () {});
+    particlesJS.load('contact-bg', 'assets/contact.json', function () {});
     
     $( window ).resize(function() {
         /!* ParticlesJS *!/
@@ -106,8 +108,6 @@ $(function(){
         },1000)
     })
 
-
-
     //svg injection
     var mySVGsToInject = $('img.inject-me');
     SVGInjector(mySVGsToInject,{
@@ -118,6 +118,17 @@ $(function(){
     }, function () {
         inViewDesigns();
     });
+    
+    
+    //delay visibe elements maybe
+    var delay = 2000;
+    $.each($(".delay-me-maybe"), function (pos, el) {
+        if(inView.is(el)) {
+            $(el).data("animate-delay", delay);
+            delay += 200;
+            console.log(el, $(el).data());
+        }
+    })
 
 
     var firstPosition = -1;
@@ -146,7 +157,7 @@ $(function(){
         } 
     }
 
-
+    inView.offset(20);
     /* Animate elements */
     inView(".animate")
         .on('enter', function (el) {
@@ -191,17 +202,11 @@ $(function(){
             inView(".webdesign")
                 .on('enter', function (el) {
                     el = $(el).find(".animate-svg").get(0);
-                    
-
+                
                     function animate(el) {
-                        var seconds = 5;
+                        var seconds = 7;
                         animateSvg(el,seconds).then(function(m){
-        
-                            
                         });
-                        
-                        
-                        
                         setTimeout(function () {
                             svgCount++;
                             if (svgCount === 3) return false;
@@ -211,24 +216,13 @@ $(function(){
                             $(".svg-headings " + "."+(svgCount+1) ).addClass("active");
 
                             var svg = $(".webdesign").find("." + svgs[svgCount]).get(0);
-                            svg.classList.remove("is-hidden");
-                            console.log("el",svg);
-                            
-                            
-
-                                
+                            svg.classList.remove("is-hidden");    
                             animate(svg);
                         },seconds * 1000 );
                     }
                     animate(el);
                     //on vivus animation end
-
-
                 })
-
-                .on('exit', el => {
-            
-                });
         }
 
 
@@ -304,7 +298,7 @@ $(function(){
             //el.style.opacity = 0.5;
         });
     
-    
+    //animated headings
     $(".svg-headings h3").on("click", function(){
         stopAnimating = true;
         var className = $(this).attr("class");
@@ -354,14 +348,14 @@ $(function(){
    /**finn fidget */
    $("#about h2").on("click", function(){
        $(".finn-and-jake").addClass("is-shown");
-       var audio = new Audio('finn.mp3');
+       var audio = new Audio('assets/finn.mp3');
        audio.play();
    })
 
 
 
 
-
+   //message form
     $("#contactForm").eq(0).submit( function(e){
        e.preventDefault();
        var form = $(this).serialize();
@@ -380,7 +374,6 @@ $(function(){
             return response.text();
        }).then(function(text){
            body = JSON.parse(text);
-           console.log("thenBody",body,"thenText",text);
        }).catch(function(error){
            var lang = $(".actualLanguage").val();
            var cz = lang === "cz";
@@ -390,7 +383,6 @@ $(function(){
            body.message += error;
                  
       }).then(function() {
-          console.log("replybody", body,"class",body.class);
           var $alert = $("#alert");
           $alert.removeAttr("class");
           $alert.addClass("alert-" + body.class);
@@ -404,14 +396,13 @@ $(function(){
       
   })
   
+  //how old is project?
   $.each($(".js-year-diff"), function(index, value) {
       var value = $(value);
       var year = Number(value.data("year"));
       getYearDiff(year, value);
   })
-  
 
-  
    function getYearDiff(year, obj) {
        var date1 = new Date(year, 6, 17);
        var date2 = new Date();
@@ -419,7 +410,6 @@ $(function(){
        // diff is: Thu Jul 05 1973 04:00:00 GMT+0300 (EEST)
        var yrs = diff.getUTCFullYear() - 1970;
        obj.html(yrs);
-       console.log(obj, diff.getUTCFullYear() - 1970);
    }
 
    
@@ -436,6 +426,13 @@ $(function(){
 
   //Tooltip 
    var tooltip = $('[data-toggle="tooltip"]').tooltip();
-   console.log(tooltip) ; 
+
+   //collapse
+   $('.collapse').collapse();
+   $('.toggle-collapse').on("click", function(e){
+       e.preventDefault();
+       var toggle = $(this).data("toggle");
+       $(toggle).slideToggle(500);
+   })
 
 });

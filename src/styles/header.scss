@@ -96,10 +96,16 @@ header {
   span.typed-cursor {
     font-size: 4rem;
   }
+  .line { 
+    height: 2px;
+    width: 30px;
+    background-color: $color-danger;
+    margin: .5rem 0;
+  }
   p {
     position: relative;
     font-size: 1rem;
-    margin-top: 1rem;
+    //margin-top: 1rem;
     font-weight: 300;
     color: white;
     opacity: .95;
@@ -111,16 +117,7 @@ header {
       color: white;
       font-weight: 700;
     }
-    &:after {
-      content: "";
-      position: absolute;
-      top: -0.5rem;
-      left: 0;
-      height: 2px;
-      width: 30px;
-      background-color: $color-danger;
 
-    }
   }
   .btn-container {
     text-align: right;

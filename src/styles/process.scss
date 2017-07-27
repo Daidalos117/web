@@ -1,9 +1,11 @@
 #process
 {
     background: white;
+    overflow: hidden;
+    padding-bottom: 3rem;
     .svg-headings
     {
-        margin-top: 2rem;
+        //margin-top: 2rem;
         padding-top: 2rem;
         .texts {
             position: relative;
@@ -19,6 +21,7 @@
             position: absolute;
             opacity: 0;
             @include transform(translateY(5%));
+            z-index: 2;
             &.active
             {
                 //: block;
@@ -90,12 +93,12 @@
         height: 100%;
         position: absolute;
         right: 0;
-        bottom: -4rem;
+        bottom: -6rem;
     }
 
     .webdesign
     {
-        margin-top: 1rem;
+        margin-top: 3rem;
         text-align: center;
         //@include transform(translateY(30%));
 

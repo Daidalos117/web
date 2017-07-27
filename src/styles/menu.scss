@@ -101,38 +101,8 @@
 	.navbar-nav {
 		@include flex-direction(row);
 	}
-	.language {
-		color: white;
-		font-weight: 700;
-		opacity: .7;
-		padding: .3rem .5rem;
-		position: absolute;
-		right: 0rem;
-		text-align: center;
-		top: .25rem;
-		transition: .5s all ease-out;
 
-		@include media-breakpoint-down(sm) {
-			right: 5rem;
-			width: 3rem;
-		}
-		&:hover {
-			opacity: 1;
 
-			//@include transform(scale(1.1));
-		}
-		img {
-			max-width: 100%;
-		}
-
-		.language-svg {
-			display: block;
-		}
-	}
-
-	.navbar-toggler {
-		background-color: lightgray;
-	}
 	.navbar-brand {
 		color: white;
 		display: inline-block;
@@ -241,10 +211,10 @@
 				content: "";
 				height: 1.2rem;
 				margin-top: .4rem;
-				opacity: .5;
+				opacity: .6;
 				position: absolute;
 				right: -1.5rem;
-				width: 2px;
+				width: 1px;
 
 				@include transform(rotate(45deg));
 				@include media-breakpoint-down(sm) {

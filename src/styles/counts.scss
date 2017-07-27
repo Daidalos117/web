@@ -1,7 +1,7 @@
 #counts {
     background-color: $color-secondary;
     color: white;
-    z-index:1;
+    overflow-x: hidden;
     svg {
         fill: white;
         opacity: .95;

@@ -239,7 +239,7 @@
 			img
 			{
 				position: relative;
-				top: .3rem;
+				top: .8rem;
 			}
 		}
 		&.fourth
@@ -263,6 +263,10 @@
 				top: 1rem;
 			}
 		}
+		//same height
+		&.third, &.fourth {
+			height: 31rem;
+		}
 
 		&.second, &.third
 		{
@@ -275,6 +279,26 @@
 			}
 		}
 		
+		
+	}
+	.github {
+		font-size: 1.6rem;
+		padding: 2rem 1rem;
+		border: 3px solid white;
+		display: block;
+		color: $color-grey;
+		opacity: .9;
+		img {
+			width: 2rem;
+		}
+		transition: .5s all ease-out;
+		&:hover {
+			text-decoration: none;
+			@include transform(scale(1.05));
+			opacity: 1;
+		}
+		text-align: center;
+		margin: 3rem;
 		
 	}
 }

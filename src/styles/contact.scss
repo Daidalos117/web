@@ -1,12 +1,13 @@
 $text-color: $color-light-grey;
 
 #contact {
-	background: url("../../img/galaxy.jpg");
+	//background: url("../../img/galaxy.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
-
-
+	overflow-x: hidden;
+	//margin-bottom: 183px;
+	overflow: hidden;
 	&:after {
 		background: rgba($color-secondary,.9);
 		//content: "";
@@ -17,24 +18,33 @@ $text-color: $color-light-grey;
 		top: 0;
 		width: 100%;
 	}
+	>.background {
+		position: absolute;
+		width: 100%;
+		height: 101%;
+		left: 0;
+		top: 0;
+		//background-color: $color-dark;
+	}
+	
 	h2 {
-		color: $color-primary;
-		opacity: 1;
+		//color: $color-primary;
+
 		//podtrzeni nadpisu
 		&:after {
-			background-color: $color-danger;
+			//background-color: $color-danger;
 
 			@include media-breakpoint-down(sm) {
 				left: 0;
 				width: 100%;
 			}
 		}
-		.array{
-			background-color: $color-danger;
+		.array {
+			//background-color: $color-danger;
 		}
 	}
 	.typed-cursor {
-		color: $color-light-grey;
+		//color: $color-light-grey;
 	}
 	.card {
 		background-color: rgba(255,255,255,.2);
@@ -79,29 +89,20 @@ $text-color: $color-light-grey;
 			}
 
 
-
-			.line {
-				background-color: $color-primary;
-				height: 1px;
-				margin: 0 auto;
-				opacity: .4;
-				//width: 100%;
-				// margin-left: 1.9rem ;
-			}
 		}
 		.form-control {
 			border: none;
 		}
 	}
-
 	.line {
 		background-color: $color-primary;
 		height: 1px;
 		margin: 0 auto;
-		opacity: .4;
+		//opacity: .4;
 		//width: 100%;
 		// margin-left: 1.9rem ;
 	}
+	
 	input[type="text"], textarea {
 		background-color: transparent;
 		border: transparent;
@@ -111,6 +112,7 @@ $text-color: $color-light-grey;
 		font-weight: 300;
 		//font-style: italic;
 		padding-bottom: .2rem;
+		padding-left: 0;
 
 		@include media-breakpoint-down(sm) {
 			font-size: 1.1rem;
@@ -138,14 +140,7 @@ $text-color: $color-light-grey;
 		overflow: hidden;
 		position: relative;
 
-		@include media-breakpoint-down(sm) {
-			.background {
-				display: none;
-			}
-			.background-mobile {
-				display: block;
-			}
-		}
+
 		@include media-breakpoint-down(sm) {
 			height: auto;
 		}
@@ -170,11 +165,19 @@ $text-color: $color-light-grey;
 		.background-mobile {
 			display: none;
 		}
-		> .row {
+		@include media-breakpoint-down(sm) {
+			.background {
+				display: none;
+			}
+			.background-mobile {
+				display: block;
+			}
+		}
+		 > .row {
 			height: 100%;
 		}
 		.left, .right {
-			padding: 3.2rem 4rem;
+			padding: 3.2rem 3rem;
 
 			@include media-breakpoint-down(sm) {
 				padding: 3rem 2rem;
@@ -182,10 +185,10 @@ $text-color: $color-light-grey;
 		}
 		.left {
 			font-family: $handwrited-font-family;
-			font-size: 1.3rem;
+			font-size: 1.5rem;
 			height: 100%;
 			position: relative;
-
+			color: $color-secondary;
 			@include media-breakpoint-down(sm) {
 				//order: 2;
 				height: auto;
@@ -195,6 +198,7 @@ $text-color: $color-light-grey;
 				font-family: inherit;
 				font-weight: bold;
 				margin-bottom: 2rem;
+				font-size: 2.2rem;
 			}
 			.form-control {
 				font-family: $default-font-family;
@@ -283,7 +287,8 @@ $text-color: $color-light-grey;
 			}
 			.contact-photo {
 				display: block;
-				margin: 0 auto;
+				//margin: 0 auto;
+				float: right;
 				width: 40%;
 
 				@include media-breakpoint-down(sm) {
@@ -292,7 +297,7 @@ $text-color: $color-light-grey;
 				}
 			}
 			.contacts {
-				bottom: 6rem;
+				bottom: 3rem;
 				position: absolute;
 				right: 3rem;
 				text-align: right;
@@ -300,7 +305,7 @@ $text-color: $color-light-grey;
 				@include media-breakpoint-down(sm) {
 					position: relative;
 					right: 0;
-					top: 0;
+					top: 1rem;
 				}
 
 				p {
@@ -310,7 +315,7 @@ $text-color: $color-light-grey;
 				}
 			}
 			.phone-icon {
-				bottom: 6rem;
+				bottom: 2rem;
 				opacity: .7;
 				position: absolute;
 				right: 2rem;
