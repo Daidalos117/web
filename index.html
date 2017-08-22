@@ -4,25 +4,25 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <meta name="description" content="I can build you a web, do a graphic design or make a mobile app. I am real superhero for your web.">
     <meta name="author" content="Roman Rajchert">
     <link rel="icon" href="img/favicon2.ico">
-
-    <title>Webdesigner superhero</title>
+    <!-- Facebook meta -->
+    <meta property="og:url"                content="http://www.jsemroman.cz/srst/" />
+    <meta property="og:title"              content="Superhero for your web." />
+    <meta property="og:description"        content="I can build you a web, do a graphic design or make a mobile app. I am real superhero for your web." />
+    <meta property="og:image:width" content="1500" />
+    <meta property="og:image:height" content="788" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image" content="http://www.jsemroman.cz/srst/img/fb_eng.jpg" />
+    
+    <title>Webdesigner superhero.</title>
 
     <!-- Core CSS -->
     <link href="builds/bundle.css" rel="stylesheet">
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,700,900" rel="stylesheet" lazyload>
-    <link href="https://fonts.googleapis.com/css?family=Caveat:400,700&amp;subset=latin-ext" rel="stylesheet" lazyload>
-    
-    
-    <meta property="og:url"                content="http://www.jsemroman.cz" />
-    <meta property="og:title"              content="Superhero for your web." />
-    <meta property="og:description"        content="I can build you a web, do a graphic design or make a mobile app. I am real superhero for your web." />
-    <meta property="og:image"              content="img/fb_eng.jpg" />
-
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,700,900" rel="stylesheet" >
+    <link href="https://fonts.googleapis.com/css?family=Caveat:400,700&amp;subset=latin-ext" rel="stylesheet" >
     
 </head>
 
@@ -38,7 +38,7 @@
         <a class="navbar-brand" href="#home"><img src="img/logo.svg" alt="logo" class="inject-me logo"></a>
 
         <button class="navbar-toggler hidden-md-up" type="button"  >
-            <img src="img/hamburger-icon.svg" class="menu-icon inject-me">
+            <img src="img/hamburger-icon.svg" class="menu-icon inject-me" alt="menu-icon">
         </button>
 
         <div class="navbar-toggleable-xs inner-div" id="navbar-header">
@@ -72,20 +72,21 @@
 <header id="home">
     <div class="background" id="particles"></div>
 
-    <div class="content row ">
+    <div class="content ">
         <div class="container">
-            <div class="row">
-                <div class="col-xs-8 col-md-12 content-div">
+            
+                <div class="col-xs-12 col-md-12 content-div">
                     <h3 class="animate fadeInDown" data-animate-delay="500">Hello,<span class="light"> I am</span></h3>
-                    <h1 class="heading" contenteditable="true"></h1>
+                    <div class="overflowing-div">
+                        <h1 class="heading" >Webdesigner</h1>
+                    </div>
                     <div class="line animate fadeInUp" data-animate-delay="700"></div>
-                    <p class="animate fadeInLeft col-md-6 intro-text" data-animate="fadeInLeft" data-animate-delay="2000">
+                    <p class="animate fadeInLeft  col-md-6 intro-text " data-animate="fadeInLeft" data-animate-delay="2000">
 I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic design</strong>  or make a <strong>mobile app</strong>. Sometimes I can make you a <strong>pancake</strong> too.
                     </p>
-
+                    
                 </div>
 
-            </div>
         </div>
     </div>
     <picture  class="img-fluid my-img animate bounceInRight"  data-animate-delay="1000">
@@ -109,9 +110,8 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
         <div class="container">
             <div class="header-section">
                 <h2 class="primary dontType" >
-                    <div class="array array-top " > </div>
                     <span class="animate popUp delay-me-maybe" >Human</span>
-                    <div class="array array-bottom animate fadeInDown delay-me-maybe" > </div>
+                    <span class="array array-bottom animate fadeInDown delay-me-maybe" > </span>
                 </h2>
                 <div class="line"></div>
                 <h3 class="secondary">Webdesigner</h3>
@@ -159,10 +159,10 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
             <div class="col-md-4 column animate fadeInLeft" >
                 <div class="inner">
                     <div class="row">
-                        <div class="col-md-3 col-xs-5 icon-wrapper">
+                        <div class="col-md-3 col-xs-12 icon-wrapper">
                             <img src="img/icons/002-coding.svg" class="inject-me icon" alt=""/>
                         </div>
-                        <div class="col-md-9 col-xs-7 number-wrapper">
+                        <div class="col-md-9 col-xs-12 number-wrapper">
                             <span class="number" data-number="1258742"> </span> <span class="plus">+</span>
                         </div>
                     </div>
@@ -216,14 +216,15 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
         <div class="header-section">
             
             <h2 class="primary">
-                <div class="array array-top"> </div>
                     <span>My works</span>
-                <div class="array array-bottom"> </div>
+                <span class="array array-bottom"> </span>
             </h2>
             <div class="line"></div>
             <h3 class="secondary">My works</h3>
         </div>
-            <div class="col-md-8 card-work float-md-left animate fadeInUp" >
+        <div class="works">
+            
+            <div class="card-work animate fadeInUp" >
                 <div class="card first">
 
                     <div class="row">
@@ -233,7 +234,7 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
                             <p class="card-text">Want to be healthier? Why don't hire best personal trainer?</p>
                             <span class="label">Nette</span><span class="label">Bootstrap</span><span class="label">Sass</span>
                             <a class="card-link" href="http://www.lntrener.cz/" target="_blank">
-                                <img src="img/icons/004-double-angle-pointing-to-right.svg" class="inject-me card-link-icon">
+                                <img src="img/icons/004-double-angle-pointing-to-right.svg" class="inject-me card-link-icon" alt="right icon">
                                 Více
                              </a>
                         </div>
@@ -242,13 +243,13 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
                         </div>
                     </div>
                     <div class="card-age">
-                        <img src="img/icons/011-time.svg" class="inject-me card-age-icon" />
+                        <img src="img/icons/011-time.svg" class="inject-me card-age-icon" alt="time icon"/>
                         <span class="age js-year-diff" data-year="2015" ></span> <span class="yr">yr</span>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-4 card-work float-md-right animate fadeInUp">
+            <div class="card-work animate fadeInUp">
                 <div class="card second">
                     <div class="row">
                         <div class="card-block col-xs-12 ">
@@ -258,7 +259,7 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
                                 <span class="label">Photoshop</span><span class="label">Nette</span><span class="label">Bootstrap</span>
                             </div>
                             <a class="card-link" href="fullimage.php?img=caravans.jpg" target="_blank">
-                                <img src="img/icons/004-double-angle-pointing-to-right.svg" class="inject-me card-link-icon">
+                                <img src="img/icons/004-double-angle-pointing-to-right.svg" class="inject-me card-link-icon" alt="right icon">
                                 Více
                              </a>
                         </div>
@@ -267,35 +268,35 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
                         </div>
                     </div>
                     <div class="card-age white">
-                        <img src="img/icons/011-time.svg" class="inject-me card-age-icon" />
+                        <img src="img/icons/011-time.svg" class="inject-me card-age-icon" alt="time icon"/>
                         <span class="age js-year-diff" data-year="2016" ></span> <span class="yr">yr</span>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-4 card-work float-md-left animate fadeInUp">
+            <div class="card-work animate fadeInUp">
                 <div class="card third">
                     <div class="row">
                         <div class="card-block col-xs-11 ">
-                            <h4 class="card-title">Ten stories</h4>
-                            <p class="card-text">Website for high school class friend of mine.</p>
-                            <span class="label">Template</span><span class="label">LowBudget</span>
+                            <h4 class="card-title">Oznámkuj</h4>
+                            <p class="card-text">Diplome from superheroing doesn't exists yet, but I can try, right?</p>
+                            <span class="label">Laravel</span><span class="label">Bootstrap</span>
                             <a class="card-link" href="http://deset.jsemroman.cz/" target="_blank">
-                                <img src="img/icons/004-double-angle-pointing-to-right.svg" class="inject-me card-link-icon">
+                                <img src="img/icons/004-double-angle-pointing-to-right.svg" class="inject-me card-link-icon" alt="right icon">
                                 Více
                              </a>
                         </div>
                         <div class="col-xs-10 card-img-div">
-                            <img class="card-img-left card-img img-fluid" srcset="img/portfolio/10.png, img/portfolio/10@2x.png 2x" src="img/portfolio/10.png" alt="10stories image">
+                            <img class="card-img-left card-img img-fluid" srcset="img/portfolio/oznamkuj.png, img/portfolio/oznamkuj@2x.png 2x" src="img/portfolio/oznamkuj.png" alt="oznamkuj image">
                         </div>
                     </div>
                     <div class="card-age white">
-                        <img src="img/icons/011-time.svg" class="inject-me card-age-icon" />
-                        <span class="age js-year-diff" data-year="2013" ></span> <span class="yr">yr</span>
+                        <img src="img/icons/011-time.svg" class="inject-me card-age-icon" alt="time icon"/>
+                        <span class="age js-year-diff" data-year="2017" ></span> <span class="yr">yr</span>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 card-work animate fadeInUp">
+            <div class="card-work animate fadeInUp">
                     <div class="card fourth">
                         <div class="row">
                             <div class="card-block col-xs-11 ">
@@ -303,7 +304,7 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
                                 <p class="card-text">Website for health project of Prague 9. </p>
                                 <span class="label">Bootstrap</span><span class="label">CMS</span>
                                 <a class="card-link" href="http://www.zdravadevitka.cz/" target="_blank">
-                                    <img src="img/icons/004-double-angle-pointing-to-right.svg" class="inject-me card-link-icon">
+                                    <img src="img/icons/004-double-angle-pointing-to-right.svg" class="inject-me card-link-icon" alt="right icon">
                                     Více 
                                 </a>
                             </div>
@@ -312,15 +313,37 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
                             </div>
                         </div>
                         <div class="card-age">
-                            <img src="img/icons/011-time.svg" class="inject-me card-age-icon" />
+                            <img src="img/icons/011-time.svg" class="inject-me card-age-icon" alt="time icon" />
                             <span class="age js-year-diff" data-year="2012" ></span> <span class="yr">yr</span>
                         </div>
                     </div>
             </div>
-            
+            <div class="card-work animate fadeInUp">
+                <div class="card fifth">
+                    <div class="row">
+                        <div class="card-block col-xs-11 ">
+                            <h4 class="card-title">Ten stories</h4>
+                            <p class="card-text">Website for high school class friend of mine. Webpage doesnt have to be pricey.</p>
+                            <span class="label">Template</span><span class="label">LowBudget</span>
+                            <a class="card-link" href="http://deset.jsemroman.cz/" target="_blank">
+                                <img src="img/icons/004-double-angle-pointing-to-right.svg" class="inject-me card-link-icon" alt="right icon">
+                                Více
+                             </a>
+                        </div>
+                        <div class="col-xs-10 card-img-div">
+                            <img class="card-img-left card-img img-fluid" srcset="img/portfolio/10.png, img/portfolio/10@2x.png 2x" src="img/portfolio/10.png" alt="10stories image">
+                        </div>
+                    </div>
+                    <div class="card-age white">
+                        <img src="img/icons/011-time.svg" class="inject-me card-age-icon" alt="time icon"/>
+                        <span class="age js-year-diff" data-year="2013" ></span> <span class="yr">yr</span>
+                    </div>
+                </div>
+            </div>
 
             
         <div class="clearfix"></div>
+        </div>
             <a href="https://github.com/Daidalos117" class="github" target="_blank" data-toggle="tooltip" data-placement="top" title="You will find there even codes of this site.">
                 Checkout my <img src="img/GitHub-Mark-64px.png" alt="Github logo" />&nbsp;for more projects!
             </a>
@@ -366,10 +389,10 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
             </div>
             <div class="col-md-6 webdesign animate fadeInRight">
                 <span class="timer" id="timer"></span>
-                <img src="img/design.svg" class="inject-me webdesign-svg animate-svg design">
+                <img src="img/design.svg" class="inject-me webdesign-svg animate-svg design" alt="desing picture">
 
-                <img src="img/code.svg" class="inject-me webdesign-svg animate-svg is-hidden code">
-                <img src="img/test.svg" class="inject-me webdesign-svg animate-svg is-hidden test">
+                <img src="img/code.svg" class="inject-me webdesign-svg animate-svg is-hidden code" alt="code picture"> 
+                <img src="img/test.svg" class="inject-me webdesign-svg animate-svg is-hidden test" alt="test picture">
 
 
             </div>
@@ -383,9 +406,8 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
     <div class="container">
         <div class="header-section">
             <h2 class="primary">
-                <div class="array array-top"> </div>
                     <span>Questions?</span>
-                <div class="array array-bottom"> </div>
+                <span class="array array-bottom"> </span>
             </h2>
             <div class="line"></div>
             <h3 class="secondary">Have question?</h3>
@@ -401,7 +423,7 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
                     <form class="contactForm" id="contactForm" >
                     <div class="form-group nameGroup">
 
-                        <label for="" class="nameLabel ">get back to me at: </label>
+                        <label for="input-contact" class="nameLabel ">get back to me at: </label>
                         <div class="nameInput">                    
                             <input type="text" class="form-control " name="name" id="input-contact" placeholder="(email@yedsquirell.nut)">
                             <input type="hidden" class="form-control " name="language" value="en" >
@@ -410,20 +432,19 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
                     </div>
                     <div class="form-group messageGroup">
                         <label for="message">I just wanted to tell you:</label>
-                        <textarea type="text" class="form-control" name="message" id="message" rows="1" cols="1"></textarea>
+                        <textarea class="form-control" name="message" id="message" rows="1" cols="1"></textarea>
                         <div class="line animate contactLine" data-animate-delay="1000"></div>
                     </div>
-                    
-                    
+                
                     
                     <div class="form-group submitGroup">
-                        <button type="submit" class="btn" name="whatevs" form="contactForm"><span class="text">Send</span><img src="img/sent-mail.svg" class="inject-me"/> </button>
+                        <button type="submit" class="btn" name="whatevs" form="contactForm"><span class="text">Send</span><img src="img/sent-mail.svg" alt="send icon" class="inject-me"/> </button>
                     </div>
                     </form>
                 </div>
                 <div class="col-md-6 right">
                     <img src="img/contact-photo.png" class="contact-photo " alt="me">
-                    <img src="img/phone-icon.svg" class="inject-me phone-icon" />
+                    <img src="img/phone-icon.svg" class="inject-me phone-icon"  alt="phone icon"/>
                     <div class="contacts">
                         
                         <p class="name">Roman Rajchert</p>
@@ -449,15 +470,15 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
                 <h6>Autors</h6>
                 <ul class="people-list">
                     <li>
-                        <img src="img/icons/006-left-alignment.svg" class="icon"/>
+                        <img src="img/icons/006-left-alignment.svg" class="icon" alt="icon"/>
                         <a href="http://www.stylebrunch.cz/" class="link" data-toggle="tooltip" data-placement="top" title="Soul of this web / texts "> My lovely gf</a>
                     </li>
                     <li>
-                        <img src="img/icons/007-photo-camera.svg" class="icon"/>
+                        <img src="img/icons/007-photo-camera.svg" class="icon" alt="icon"/>
                         <a href="http://lukaszlatkovsky.cz" class="link" data-toggle="tooltip" data-placement="top" title="Úvodní fotografie"> Lukáš Zlatkovsky</a>
                     </li>
                     <li>
-                        <img src="img/icons/004-double-angle-pointing-to-right.svg" class="icon"/>
+                        <img src="img/icons/004-double-angle-pointing-to-right.svg" class="icon" alt="right icon"/>
                         <a href="http://www.flaticon.com/" class="link" data-toggle="tooltip" data-placement="top" title="Ikony, krom hamburgeru "> Flaticon</a>
                     </li>
 
@@ -465,7 +486,7 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
             </div>
             <div class="col-md-4 footer-div">
                 <p class="center-text">
-                    Designed, <strong>coded</strong> <br />with <img src="img/icons/005-like.svg" class="icon inject-me" data-placement="top" title="With keyboard actually "/> <strong>by me</strong>
+                    Designed, <strong>coded</strong> <br />with <img src="img/icons/005-like.svg" class="icon inject-me" data-placement="top" title="With keyboard actually " alt="icon"/> <strong>by me</strong>
                 </p>
             </div>
             <div class="col-md-4 footer-div">
@@ -480,41 +501,37 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
 <!-- paralax bg -->
 <div class="geometry-bkgrnd">
     <div class="home lvl-1">
-        <img src="img/home.svg" class="inject-me" />
+        <img src="img/home.svg" class="inject-me" alt="bg icon"/>
     </div>
     <div class="oo lvl-2">
-        <img src="img/oo.svg" class="inject-me" />
+        <img src="img/oo.svg" class="inject-me"  alt="bg icon"/>
     </div>
     <div class="triangle lvl-1">
-        <img src="img/triangle.svg" class="inject-me" />
+        <img src="img/triangle.svg" class="inject-me"  alt="bg icon"/>
     </div>
     <div class="rectangle lvl-3">
-        <img src="img/rectangle.svg" class="inject-me" />
+        <img src="img/rectangle.svg" class="inject-me"  alt="bg icon"/>
     </div>
     <div class="ball lvl-2">
-        <img src="img/ball.svg" class="inject-me" />
+        <img src="img/ball.svg" class="inject-me"  alt="bg icon"/>
     </div>
     
     <div class="star lvl-2">
-        <img src="img/star.svg" class="inject-me" />
+        <img src="img/star.svg" class="inject-me"  alt="bg icon"/>
     </div>
     <div class="polygon_3 lvl-1">
-        <img src="img/polygon_3.svg" class="inject-me" />
+        <img src="img/polygon_3.svg" class="inject-me"  alt="bg icon"/>
     </div>
     <div class="rectangle_4 lvl-1">
-        <img src="img/rectangle_4.svg" class="inject-me" />
+        <img src="img/rectangle_4.svg" class="inject-me"  alt="bg icon"/>
     </div>
     <div class="polygon_2 lvl-2">
-        <img src="img/polygon_2.svg" class="inject-me" />
-    </div>
-
-    <div class="rectangle-double lvl-1">
-        
+        <img src="img/polygon_2.svg" class="inject-me"  alt="bg icon"/>
     </div>
 
 </div>
 
-<img src="img/finn.png" class="finn-and-jake"/>
+<img src="img/finn.png" class="finn-and-jake"  alt="finn and jake"  style="display:none"/>
 
 <div class="container">
     <div class="alert" role="alert" id="alert">
@@ -528,7 +545,7 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
 
 
 <a class="language-switch czech" href="cz.html" data-animation="false"  data-toggle="tooltip" data-placement="top" title="English, si?">
-    <img src="img/icons/flag-en.svg" class="inject-me language-svg" />
+    <img src="img/icons/flag-en.svg" class="inject-me language-svg" alt="lang icon"/>
     EN
 </a>
 

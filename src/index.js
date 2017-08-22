@@ -22,7 +22,7 @@ import Expanding from 'expanding-textareas';
 import outdatedbrowser from 'outdatedbrowser';
 
 require("imports-loader?this=>window!./typed.min.js");
-require("imports-loader?this=>window!../node_modules/jquery.ns-autogrow/dist/jquery.ns-autogrow.min.js");
+
 
 
 window.onload = function () {
@@ -31,7 +31,7 @@ window.onload = function () {
         $(".background-image").addClass("animated fadeInUp");
         
         $("header .heading").typed({
-            strings: [ "<span class='name'>webdesigner</span>", /*"<span class='name'>superhero for your web</span>", */"<span class='name'>Roman</span>"],
+            strings: [ "<span class='name webdesigner'>webdesigner</span>", /*"<span class='name'>superhero for your web</span>", */"<span class='name'>Roman</span>"],
             typeSpeed: 100,
             // time before typing starts
             startDelay: 100,

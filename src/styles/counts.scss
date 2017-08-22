@@ -17,13 +17,15 @@
     }
     .column {
         @include media-breakpoint-down(sm) {
-            margin-top: 3rem;
+            margin-top: 1rem;
             text-align: center; 
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
+            
         }
         .inner {
             @include media-breakpoint-down(sm) {
                 display: inline-block;
+                max-width: 12rem;
                 .row {
                     @include justify-content(center);
                 }
@@ -58,7 +60,7 @@
     }
     .heading {
         @include media-breakpoint-down(sm) {
-            text-align: left;
+            text-align: center;
         }
     }
 
@@ -80,7 +82,7 @@
         @include align-items(flex-end);
         padding: 0;
         @include media-breakpoint-down(sm) {
-            display: inline-block;
+            //display: inline-block;
             float: left;
             width: auto;
             flex: none;

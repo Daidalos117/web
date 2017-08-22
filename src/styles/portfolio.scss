@@ -1,75 +1,114 @@
 
-#portfolio
-{
+#portfolio {
+	// background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+	background: linear-gradient(to top right, #EEE 55%,white 50%);
 	//background: url("../../img/geometric.svg");
 	background-size: contain;
-	// background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-
-	background: linear-gradient(to top right, #EEE 55%,white 50%);
-	h2
-	{
+	h2 {
 		position: relative;
 		z-index: 5;
 	}
 
-	.card-work
-	{
+	.card-work {
 		//padding-left: 0;
 		//padding-right: 0;
-		
-		@include media-breakpoint-down(sm)
-		{
-			padding: 0;
+
+		&:nth-child(1) {
+			grid-column: 1 / span 2;
+			grid-row: 1 / 3;
+			//margin-right: 2rem;
 		}
+		&:nth-child(2) {
+			grid-column: 3;
+			grid-row: 1 / 5;
+		}
+		&:nth-child(3) {
+			grid-column: 1;
+			grid-row: 3 / 8;
+			//margin-right: 2rem;
+		}
+
+		&:nth-child(4) {
+			grid-column: 2;
+			grid-row: 3 / 8;
+			//margin-right: 2rem;
+		}
+		&:nth-child(5) {
+			grid-column: 3;
+			grid-row: 5 / 9;
+		}
+		@include media-breakpoint-down(sm) {
+			grid-column: span 1 !important;
+			grid-row: span 1 !important;
+		}
+
 	}
 
-	.col-xs-10, .col-xs-8
-	{
+	.col-xs-10, .col-xs-8 {
 		margin: 0 auto;
 		/* Mask: */
 	}
 
-	div[class*="col-md"]
-	{
-		display: inline-block;
-		float: none;
+
+	.works {
+		//background: white;
+		//@include flexbox;
+		//@include flex-wrap(wrap);
+		display: grid;
+  		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+		grid-gap: 2rem;
+		@include media-breakpoint-down(md) {
+  			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		}
 	}
 
-	.card
-	{
-		z-index: 1;
+
+
+
+
+	.card {
 		background: #000;
 		border: none;
+		border: 1px solid $color-light-grey;
 		border-radius: 0;
-		-webkit-font-smoothing: subpixel-antialiased;
+		color: white;
+		overflow: hidden;
 		padding: 2rem;
 		padding-bottom: 0;
 		position: relative;
+		z-index: 1;
+
+		-webkit-font-smoothing: subpixel-antialiased;
 		@include transition(all,.2s);
-		&:hover
-		{
+		@include media-breakpoint-down(sm) {
+			.card-img-div {
+				text-align: center;
+			}
+		}
+
+		&:hover {
 			box-shadow: 0 2px 10px 0 rgba(0,0,0,.16);
+
 			backface-visibility: hidden;
 			-webkit-filter: blur(0);
-			.card-img-left
-			{
+			.card-img-left {
 				transform: translateY(-4%);
 			}
 		}
 
 		.card-age {
-			position: absolute;
-			top: 0.6rem;
-	    	left: 1.1rem;
 			color: black;
-			
 			font-weight: 300;
+			left: 1.1rem;
+			position: absolute;
+			top: .6rem;
 			&-icon {
-				width: 1.1rem;
+				opacity: .5;
 				position: relative;
 				top: .2rem;
+				width: 1.1rem;
+
 				fill: black;
-				opacity: .5;
 			}
 			.age {
 				opacity: .7;
@@ -77,7 +116,7 @@
 			.yr {
 				opacity: .3;
 			}
-			
+
 			&.white {
 				color: white;
 				.card-age-icon {
@@ -85,142 +124,117 @@
 				}
 			}
 		}
-		
-		.card-block
-		{
-				flex: inherit;
+
+		.card-block {
+			flex: inherit;
 		}
-		margin-bottom: 3rem;
-		color: white;
-		overflow: hidden;
-		.card-title
-		{
+		.card-title {
 			font-size: 2.5rem;
 			position: relative;
-			&:after
-			{
-				content: "";
-				position: absolute;
-				bottom: -.2rem;
-				left: 2px;
-				width: 2rem;
-				height: 1px;
+			&:after {
 				background: #000;
+				bottom: -.2rem;
+				content: "";
+				height: 1px;
+				left: 2px;
 				opacity: .2;
+				position: absolute;
+				width: 2rem;
 			}
 		}
-		.card-block
-		{
+		.card-block {
 			padding-bottom: 2rem;
 
-			p
-			{
+			p {
 				color: inherit;
-				opacity: .9;
 				font-weight: 300;
+				opacity: .9;
 			}
 
-			.label
-			{
-				padding-right: .4rem;
+			.label {
 				display: inline-block;
-				&::before
-				{
+				opacity: .95;
+				padding-right: .4rem;
+				&::before {
 					content: "#";
 					display: inline;
-					position: relative;
 					left: 0rem;
+					position: relative;
 					top: 0;
 				}
 			}
 		}
-		&-link
-		{
-            
-			display: table;
+		&-link {
+			border-bottom: 1px solid $color-primary;
 			color: $color-dark;
+			display: table;
 			font-size: 1rem;
+			//margin: 0 auto;
+			font-weight: 300;
 			margin-top: .5rem;
+			//border-left: 3px solid $color-primary;
+			padding: 0 .4rem;
 			//text-decoration: underline;
-            text-align: right;
-            border-bottom: 1px solid $color-primary;
-            //border-left: 3px solid $color-primary;
-            padding: 0 .4rem;
-            //margin: 0 auto;
-            font-weight: 300;
+			text-align: right;
 			//transition: .5s all ease-out;
-			&-icon
-			{
-				width: 1rem;
-                fill: $color-secondary-dark;
-                opacity: .4;
-                margin-right: 8px;
+			&-icon {
+				margin-right: 8px;
+				opacity: .4;
 				position: relative;
 				top: .1rem;
 				transition: .5s all ease-out;
+				width: 1rem;
+
+				fill: $color-secondary-dark;
 			}
-            &:hover {
-                font-weight: bold;
+			&:hover {
+				font-weight: bold;
 				//border-bottom: 3px solid $color-danger;
-				.card-link-icon
-				{
-					@include transform(translateX(.2rem));
+				.card-link-icon {
 					opacity: .9;
+
+					@include transform(translateX(.2rem));
 					//fill: $color-danger;
 				}
 				//color: $color-danger;
-            }
+			}
 		}
 
-		&-img
-		{
-			@include transition(all,.3s,ease-in-out);
+		&-img {
 			-webkit-transition-delay: .1s; /* Safari */
 			        transition-delay: .1s;
-			@include media-breakpoint-down(sm)
-			{
-				width: 40vw;
-				margin: 0 auto;
-			}
-		}
 
-		border: 1px solid $color-light-grey;
-		@include media-breakpoint-down(sm)
-		{
-			.card-img-div {
-				text-align: center;
+			@include transition(all,.3s,ease-in-out);
+			@include media-breakpoint-down(sm) {
+				margin: 0 auto;
+				width: 70vw;
 			}
 		}
-		&.first
-		{
+		&.first {
 			background: $color-light-grey;
 			//background: url("../img/small_steps.png");
 			border-color: darken($color-light-grey,4%);
 			color: $color-grey;
-			img
-			{
+			img {
 				position: relative;
 				top: 5.5rem;
-				@include media-breakpoint-down(sm)
-				{
+
+				@include media-breakpoint-down(sm) {
 					top: 0;
 				}
 			}
 		}
 
-		&.second
-		{
+		&.second {
 			background: $color-secondary;
 			border-color: darken($color-secondary,4%);
-			.label
-			{
-				color: #5477A5;
+			.label {
+				
 			}
 			.card-link {
 				color: $color-light-grey;
 			}
-			img
-			{
+			img {
 				position: relative;
 				top: 1rem;
 			}
@@ -231,19 +245,21 @@
 				fill: $color-light-grey;
 			}
 		}
-		&.third
-		{
-			background: lighten($color-danger,8%);
-			border-color: lighten($color-danger,6%);
-
-			img
-			{
+		&.third {
+			background: lighten($color-dark,3%);
+			border-color: lighten($color-dark,6%);
+			img {
 				position: relative;
-				top: .8rem;
+				top: 1.5rem;
+			}
+			.card-link {
+				color: white;
+			}
+			.card-link-icon {
+				fill: $color-light-grey;
 			}
 		}
-		&.fourth
-		{
+		&.fourth {
 			background: darken($color-primary,3%);
 			border-color: darken($color-primary,5%);
 			color: white;
@@ -258,80 +274,59 @@
 				text-align: center;
 			}
 			.card-img {
-				width: 50%;
 				position: relative;
 				top: 1rem;
+				width: 50%;
 			}
 		}
 		//same height
 		&.third, &.fourth {
 			height: 31rem;
 		}
+		&.fifth {
+			background: lighten($color-danger,8%);
+			border-color: lighten($color-danger,6%);
+			.card-link {
+				color: white;
+			}
+			.card-link-icon {
+				fill: $color-light-grey;
+			}
+			h4:after {
+				background-color: $color-light-grey;
+			}
+			img {
+				position: relative;
+				top: 0rem;
+			}
+		}
 
-		&.second, &.third
-		{
-			.card-title
-			{
-				&:after
-				{
+		&.second, &.third {
+			.card-title {
+				&:after {
 					background: white;
 				}
 			}
 		}
-		
-		
 	}
 	.github {
-		font-size: 1.6rem;
-		padding: 2rem 1rem;
 		border: 3px solid white;
-		display: block;
 		color: $color-grey;
+		display: block;
+		font-size: 1.6rem;
+		margin: 3rem;
 		opacity: .9;
+		padding: 2rem 1rem;
+		text-align: center;
+		transition: .5s all ease-out;
 		img {
 			width: 2rem;
 		}
-		transition: .5s all ease-out;
 		&:hover {
-			text-decoration: none;
-			@include transform(scale(1.05));
 			opacity: 1;
-		}
-		text-align: center;
-		margin: 3rem;
-		
-	}
-}
+			text-decoration: none;
 
-.mini-section
-{
-	height: 40vh;
-	background-image: url("../../img/macbook-work-3.jpg");
-	background: 
-	{
-		size: cover;
-		position: center;
-	};
-	.container, .row
-	{
-		height: 100%;
-	}
-	h3
-	{
-		text-transform: uppercase;
-		color: $color-primary;
-		font-size: 3rem;
-		font-weight: 700;
-	}
-	margin: 0 auto;
-	color: white;
-	p
-	{
-		color: white;
-	}
-	text-align: center;
-	.body
-	{
-		margin: 0 auto;
+			@include transform(scale(1.05));
+		}
 	}
 }

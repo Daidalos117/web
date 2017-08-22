@@ -12,7 +12,7 @@ ExpiresByType image/x-icon "access plus 1 year"
 ExpiresDefault "access plus 2 days"
 </IfModule>
 
-//presmerovani na bez .html
+
 Options +MultiViews
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-d

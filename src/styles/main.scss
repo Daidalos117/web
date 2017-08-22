@@ -96,6 +96,7 @@ section {
 				clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
 			}
 			.array {
+				display: block;
 				background-color: $color-primary;
 				bottom: 0;
 				height: .4rem;
@@ -275,7 +276,7 @@ svg {
 	}
 	.polygon_2 {
 		bottom: -7%;
-		left: 90vw;
+		left: 80vw;
 	}
 }
 
