@@ -1,4 +1,4 @@
-node_modules/
-.idea/vcs.xml
-.idea/
-psd/
+/node_modules/
+/.idea/vcs.xml
+/.idea/
+/psd/
