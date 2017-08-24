@@ -1,95 +1,102 @@
 #counts {
-    background-color: $color-secondary;
-    color: white;
-    overflow-x: hidden;
-    svg {
-        fill: white;
-        opacity: .95;
-        * {
-            fill: white !important;
-        }
-    }
-    
-    .column .row, {
-        margin: 0;
-        width: auto;
-        
-    }
-    .column {
-        @include media-breakpoint-down(sm) {
-            margin-top: 1rem;
-            text-align: center; 
-            margin-bottom: 1rem;
-            
-        }
-        .inner {
-            @include media-breakpoint-down(sm) {
-                display: inline-block;
-                max-width: 12rem;
-                .row {
-                    @include justify-content(center);
-                }
-            }
-            
-        }
-    }
-    
-    .number {
-        font-size: 1.2rem;
-        @include media-breakpoint-down(sm) {
-            font-size: 1.5rem;
-        }
-    }
-    .plus {
-        display: inline-block;
-        margin-left: 0.5rem;
-        opacity: .9;
-        font-size: .8rem;
-        margin-bottom: 0.3rem;
-        color: $color-primary;
-    }
-    .icon {
-        width: 3rem;
-        //margin: 0 auto;
-        display: block;
-        @include media-breakpoint-down(sm) {
-            margin-lef: auto;
-            margin-right: 1rem;
-            width: 5rem;
-        }
-    }
-    .heading {
-        @include media-breakpoint-down(sm) {
-            text-align: center;
-        }
-    }
+	background-color: $color-secondary;
+	color: white;
+	overflow-x: hidden;
+	svg {
+		opacity: .95;
 
-    .icon-wrapper {
-        @include flexbox();
-        @include align-items(center);
-        padding: 0;
-        @include media-breakpoint-down(sm) {
-                text-align: right;
-                @include align-items(flex-end);
-                display: inline-block;
-                width: auto;
-                float: left;
-                flex: none;
-        }
-    }
-    .number-wrapper {
-        @include flexbox();
-        @include align-items(flex-end);
-        padding: 0;
-        @include media-breakpoint-down(sm) {
-            //display: inline-block;
-            float: left;
-            width: auto;
-            flex: none;
-        }
-    }
-    .margin {
-        margin-top: .5rem;
-    }
-    
+		fill: white;
+		* {
+			fill: white !important;
+		}
+	}
+
+	.column .row {
+		margin: 0;
+		width: auto;
+	}
+	.column {
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 1rem;
+			margin-top: 1rem;
+			text-align: center;
+		}
+		.inner {
+			@include media-breakpoint-down(sm) {
+				display: inline-block;
+				//max-width: 12rem;
+				.row {
+					@include justify-content(center);
+				}
+			}
+		}
+	}
+
+	.number {
+		font-size: 1.2rem;
+
+		@include media-breakpoint-down(sm) {
+			font-size: 1.5rem;
+		}
+	}
+	.plus {
+		color: $color-primary;
+		display: inline-block;
+		font-size: .8rem;
+		margin-bottom: .3rem;
+		margin-left: .5rem;
+		opacity: .9;
+	}
+	.icon {
+		//margin: 0 auto;
+		display: block;
+		width: 3rem;
+
+		@include media-breakpoint-down(sm) {
+			margin-right: 1rem;
+			width: 5rem;
+
+			margin-lef: auto;
+		}
+	}
+	.heading {
+		@include media-breakpoint-down(sm) {
+			text-align: center;
+		}
+	}
+
+	.icon-wrapper {
+		padding: 0;
+
+		@include flexbox();
+		@include align-items(center);
+		@include media-breakpoint-down(sm) {
+			display: inline-block;
+			float: left;
+			text-align: right;
+			width: auto;
+
+			flex: none;
+			@include align-items(flex-end);
+		}
+	}
+	.number-wrapper {
+		padding: 0;
+
+		@include flexbox();
+		@include align-items(flex-end);
+		@include media-breakpoint-down(sm) {
+			display: block;
+			//float: left;
+			//width: auto;
+			margin: .2rem;
+			line-height: 1;
+			padding-top: 3%;
+			flex: none;
+		}
+	}
+	.margin {
+		//margin-top: .5rem;
+	}
+	
 }

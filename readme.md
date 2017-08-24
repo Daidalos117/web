@@ -1,11 +1,10 @@
-
 ## Portfolio page
 
-This is my personal website. I want to thank handy people who make this features and made my work much easier. 
+This is my personal website. I want to thank handy people who make features listed below and made my work much easier. 
 
 Created thanks to:
 * [Bootstrap 4 alpha](https://www.getbootstrap.com "Bootstrap") (HTML framework)
-* [jQuery 😏](https://jquery.com "Jquery") (JS framework)
+* [jQuery 😏](https://jquery.com "Jquery") (JS library)
 * [TypedJs](http://www.mattboldt.com/demos/typed-js/ "Typed JS") (Typing words)
 * [CountUp](https://inorganik.github.io/countUp.js/ "CountUp") (Counting numbers)
 * [ParticlesJs](http://vincentgarreau.com/particles.js/ "ParticlesJs") (Flying particles)
@@ -17,6 +16,9 @@ Created thanks to:
 * [Webpack](https://webpack.github.io "Webpack") (Building)
 * [Webpack Bootstrap Loader](https://github.com/shakacode/bootstrap-loader "Webpack Bootstrap loader") (Loading Bootstrap in webpack)
 * [Tether](http://tether.io "Tether") (I don't use it, Bootstrap do)
+* [Mockup](http://creativebooster.net "creativebooster") (Safari and Apple mockups)
+* [Flaticon](http://flaticon.com/ "Flaticon") (Few icons)
+* [Subtle patters](https://www.toptal.com/designers/subtlepatterns/ "Subtle patterns") (Patterns)
 * [Sketch](https://www.sketchapp.com "Sketch") (Design of webpage, icons etc.)
 * [Atom](https://atom.io "Atom") (Hackable editor)
 * [SASS](http://sass-lang.com "Sass") (I couldn't do anything without it)

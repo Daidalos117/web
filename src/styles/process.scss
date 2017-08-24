@@ -1,129 +1,114 @@
-#process
-{
-    background: white;
-    overflow: hidden;
-    padding-bottom: 3rem;
-    .svg-headings
-    {
-        //margin-top: 2rem;
-        padding-top: 2rem;
-        .texts {
-            position: relative;
-        }
+#process {
+	background: white;
+	overflow: hidden;
+	padding-bottom: 3rem;
+	.svg-headings {
+		padding-top: 2rem;
+		.texts {
+			position: relative;
+		}
 
-        p
-        {
-            //isplay: none;
-            visibility: hidden;
-            margin-top: 2rem;
-            text-align: left;
-            transition: .5s all ease-out;
-            position: absolute;
-            opacity: 0;
-            @include transform(translateY(5%));
-            z-index: 2;
-            &.active
-            {
-                //: block;
-                visibility: visible;
-                opacity: 1;
-                @include transform(translateY(0%));
-                @include media-breakpoint-down(sm)
-                {
-                    position: relative;
-                }
-            }
-            @include media-breakpoint-down(sm)
-            {
-                
-            }
-        }
-        h3
-        {
-            display: block;
-            color: $color-grey;
-            font-size: .8rem;
-            opacity: .3;
-            cursor: pointer;
-            transition: all .5s ease-in-out;
+		p {
+			margin-top: 2rem;
+			opacity: 0;
+			position: absolute;
+			text-align: left;
+			transition: .5s all ease-out;
+			//isplay: none;
+			visibility: hidden;
+			z-index: 2;
 
-            @include media-breakpoint-down(sm)
-            {
-                font-size: 1.2rem;
-            }
-            &:not(:last-child)::after
-            {
-                //content: " > ";
-            }
-            &.active
-            {
-                display: block;
-                padding-left: 1rem;
-                border-left: 5px solid $color-primary;
-                color: $color-secondary-dark;
-                font-size: 2.7rem;
-                opacity: 1;
+			@include transform(translateY(5%));
+			@include media-breakpoint-down(sm) {
+			}
+			&.active {
+				opacity: 1;
+				//: block;
+				visibility: visible;
 
-                @include media-breakpoint-down(sm)
-                {
-                    font-size: 2rem;
-                }
-            }
-        }
-    }
-    .timer {
-        position: absolute;
-        right: 0px;
-        top: 0;
-        color: $color-dark;
-        opacity: .4;
-        transition: .5s all ease-out;
-        &:after {
-            content: "s";
-            opacity: .3;
-        }
-    }
-    &::before
-    {
-        content: '';
-        width: 50%;
-        background-color: $color-light-grey;
-        //background: url("img/geometry2.png");
-        opacity: .7;
-        height: 100%;
-        position: absolute;
-        right: 0;
-        bottom: -6rem;
-    }
+				@include transform(translateY(0%));
+				@include media-breakpoint-down(sm) {
+					position: relative;
+				}
+			}
+		}
+		h3 {
+			color: $color-grey;
+			cursor: pointer;
+			display: block;
+			font-size: .8rem;
+			opacity: .3;
+			transition: all .5s ease-in-out;
 
-    .webdesign
-    {
-        margin-top: 3rem;
-        text-align: center;
-        //@include transform(translateY(30%));
+			@include media-breakpoint-down(sm) {
+				font-size: 1.2rem;
+			}
+			&:not(:last-child)::after {
+				//content: " > ";
+			}
+			&.active {
+				border-left: 5px solid $color-primary;
+				color: $color-secondary-dark;
+				display: block;
+				font-size: 2.7rem;
+				opacity: 1;
+				padding-left: 1rem;
 
-        &-svg
-        {
-            background-color: white;
-            position: relative;
-            right: -2rem;
-            margin-top: 2rem;
-            //max-width: 25rem;
-            width: 40vw;
-            height: auto;
-            transition: all .5 ease-in-out;
-            @include shadow-1;
-            @include media-breakpoint-down(sm)
-            {
-                width: 100%;
-                left: 0;
-            }
-            &.is-hidden
-            {
-                display: none;
-                visibility: hidden;
-                opacity: 0;
-            }
-        }
-    }
+				@include media-breakpoint-down(sm) {
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+	.timer {
+		color: $color-dark;
+		opacity: .4;
+		position: absolute;
+		right: 0;
+		top: 0;
+		transition: .5s all ease-out;
+		&:after {
+			content: "s";
+			opacity: .3;
+		}
+	}
+	&::before {
+		background-color: $color-light-grey;
+		bottom: -6rem;
+		content: "";
+		height: 100%;
+		//background: url("img/geometry2.png");
+		opacity: .7;
+		position: absolute;
+		right: 0;
+		width: 50%;
+	}
+
+	.webdesign {
+		margin-top: 3rem;
+		text-align: center;
+		//@include transform(translateY(30%));
+
+		&-svg {
+			background-color: white;
+			height: auto;
+			margin-top: 2rem;
+			position: relative;
+			right: -2rem;
+			transition: all .5 ease-in-out;
+			//max-width: 25rem;
+			width: 40vw;
+
+			@include shadow-1;
+			@include media-breakpoint-down(sm) {
+				left: 0;
+				width: 100%;
+			}
+			&.is-hidden {
+				display: none;
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+	}
 }

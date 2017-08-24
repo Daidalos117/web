@@ -9,12 +9,12 @@
     <link rel="icon" href="img/favicon2.ico">
     <!-- Facebook meta -->
     <meta property="og:url"                content="http://www.jsemroman.cz/srst/" />
-    <meta property="og:title"              content="Superhero for your web." />
+    <meta property="og:title"              content="Roman. Superhero for your web." />
     <meta property="og:description"        content="I can build you a web, do a graphic design or make a mobile app. I am real superhero for your web." />
     <meta property="og:image:width" content="1500" />
     <meta property="og:image:height" content="788" />
     <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:image" content="http://www.jsemroman.cz/srst/img/fb_eng.jpg" />
+    <meta property="og:image" content="http://www.jsemroman.cz/srst/img/fb_safari_eng.jpg" />
     
     <title>Webdesigner superhero.</title>
 
@@ -27,6 +27,13 @@
 </head>
 
 <body >
+    <div class="hidden" id="outdatedbrowsercontent">
+        <h3 class="heading"><strong>:(</strong>  Tvůj prohlížeč {brow_name} je už děda.</h3>
+        <p>
+            Udělej mi radost a <strong>stáhni si novou verzi</strong> třeba kliknutím sem. Jinak se tu bohužel moc nepokocháš a to by byla škoda.
+        </p>
+        <a{up_but}>AKTUALIZOVAT</a> 
+    </div>
     <!-- vertical lines -->
     <div class="vertical-line-1 vertical-line"></div>
     <div class="vertical-line-2 vertical-line"></div>
@@ -34,7 +41,6 @@
 <nav class="navbar " id="navbar-complete">
     <div class="container">
         
-
         <a class="navbar-brand" href="#home"><img src="img/logo.svg" alt="logo" class="inject-me logo"></a>
 
         <button class="navbar-toggler hidden-md-up" type="button"  >
@@ -58,14 +64,8 @@
                 
             </ul>
         </div>
-<!--        <a class="language czech" href="cz.html" data-toggle="tooltip" data-placement="bottom" title="Mluv Česky">
-            <img src="img/icons/flag-cz.svg" class="inject-me language-svg" />
-            CZ
-        </a>-->
-
     </div>
 </nav>
-
 
 
 <!-- Header -->
@@ -78,7 +78,11 @@
                 <div class="col-xs-12 col-md-12 content-div">
                     <h3 class="animate fadeInDown" data-animate-delay="500">Hello,<span class="light"> I am</span></h3>
                     <div class="overflowing-div">
-                        <h1 class="heading" >Webdesigner</h1>
+
+                        <h1 class="heading" >
+                            <span class="name hidden webdesigner">webdesigner</span>
+                            <span class="name hidden webdesigner">Roman</span>
+                        </h1>
                     </div>
                     <div class="line animate fadeInUp" data-animate-delay="700"></div>
                     <p class="animate fadeInLeft  col-md-6 intro-text " data-animate="fadeInLeft" data-animate-delay="2000">
@@ -89,7 +93,7 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
 
         </div>
     </div>
-    <picture  class="img-fluid my-img animate bounceInRight"  data-animate-delay="1000">
+    <picture  class="img-fluid my-img animate scaleIn"  data-animate-delay="1000">
         <source srcset="img/header/mobile.png, img/header/mobile2x.png 2x" media="(max-width: 768px)">
         <source srcset="img/header/desktop.png, img/header/desktop2x.png 2x">
         <img srcset="img/header/desktop.png, img/header/desktop2x.png 2x" alt="My default image">
@@ -97,7 +101,7 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
 </header>
 
 
-<!-- About me start -->
+<!-- About me -->
 <section id="about">
     <div class="background">
         
@@ -120,18 +124,18 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
                 <div class="col-md-10 col-xs-12 offset-md-1 text-center about-texts">
 
                     <p class="animate fadeInUp delay-me-maybe">
-                        Ten years ago my story started. The first line of code and the ecstasy I felt was so overwhelming I couldn't stop it. Coding and programming is part of who&nbsp;I&nbsp;am. I become a <strong>superhero fighting against</strong>  all the <strong>boring templates</strong>.
+                        Ten years ago my story started. The first line of code and the ecstasy I felt was so overwhelming I couldn"t stop it. Coding and programming is part of who&nbsp;I&nbsp;am. I become a <strong>superhero fighting against</strong>  all the <strong>boring templates</strong>.
                     </p>
                     <div class="animate contactLine line5 line delay-me-maybe" ></div>
                     <p class="animate fadeInUp delay-me-maybe" >
-                        Since then I've been working on many projects for different kinds of clients. Big companies or small individuals.<br /><strong>I'll take care of everybody who needs my help</strong>. 
+                        Since then I"ve been working on many projects for different kinds of clients. Big companies or small individuals.<br /><strong>I"ll take care of everybody who needs my help</strong>. 
                     </p>
                     <div class="animate contactLine line5 line" ></div>
                     <p class="animate fadeInUp delay-me-maybe"  >
-                        Currently I'm working as a front-end developer at Etnetera. When I'm not working or saving the world I also quite enjoy animate series like Adventure time or some good Banhmi.
+                        Currently I"m working as a front-end developer at Etnetera. When I"m not working or saving the world I also quite enjoy animate series like Adventure time or some good Banhmi.
                     </p>
                     <div class="animate contactLine line5 line delay-me-maybe"></div>
-                    <div class="more-info">
+                    <div class="more-info" hidden>
                         <a class="toggle-collapse" data-toggle="#collapse" href="" aria-expanded="false" aria-controls="collapse">
                             Not enough info?
                         </a>
@@ -141,7 +145,7 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
                     </div>
                     
                     <p  class="warning animate pulse">
-                        <strong>Warning:</strong> Once I start coding I can't stop.
+                        <strong>Warning:</strong> Once I start coding I can"t stop.
                     </p>
 
                 </div>
@@ -150,8 +154,7 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
     </div>
 </section>
 
-
-
+<!-- Counts of what I did -->
 <section id="counts">
     <div class="container">
         <div class="row">
@@ -163,7 +166,7 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
                             <img src="img/icons/002-coding.svg" class="inject-me icon" alt=""/>
                         </div>
                         <div class="col-md-9 col-xs-12 number-wrapper">
-                            <span class="number" data-number="1258742"> </span> <span class="plus">+</span>
+                            <span class="number" data-number="128742"> </span> <span class="plus">+</span>
                         </div>
                     </div>
                 
@@ -178,7 +181,7 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
                             <img src="img/icons/003-computer-screen.svg" class="inject-me icon" alt=""/>
                         </div>
                         <div class="col-md-9 col-xs-7 number-wrapper">
-                            <span class="number" data-number="158742"> </span> <span class="plus">+</span>
+                            <span class="number" data-number="8742"> </span> <span class="plus">+</span>
                             
                         </div>
                     </div>
@@ -193,7 +196,7 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
                             <img src="img/icons/009-sleepy-worker-at-work.svg" class="inject-me icon" alt=""/>
                         </div>
                         <div class="col-md-9 col-xs-7 number-wrapper">
-                            <span class="number" data-number="67143"></span> <span class="plus">+</span>
+                            <span class="number" data-number="1273"></span> <span class="plus">+</span>
                             
                         </div>
                     </div>
@@ -204,14 +207,8 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
     </div>
 </section>
 
-
-
-
-
 <!-- Portfolio start -->
 <section id="portfolio">
-
-
     <div class="container">
         <div class="header-section">
             
@@ -231,7 +228,7 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
 
                         <div class="card-block col-xs-12 col-md-6">
                             <h4 class="card-title">LN Trenér</h4>
-                            <p class="card-text">Want to be healthier? Why don't hire best personal trainer?</p>
+                            <p class="card-text">Superheroes need to be in shape, so I helped the best personal trainer to make him stand out.</p>
                             <span class="label">Nette</span><span class="label">Bootstrap</span><span class="label">Sass</span>
                             <a class="card-link" href="http://www.lntrener.cz/" target="_blank">
                                 <img src="img/icons/004-double-angle-pointing-to-right.svg" class="inject-me card-link-icon" alt="right icon">
@@ -279,9 +276,9 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
                     <div class="row">
                         <div class="card-block col-xs-11 ">
                             <h4 class="card-title">Oznámkuj</h4>
-                            <p class="card-text">Diplome from superheroing doesn't exists yet, but I can try, right?</p>
+                            <p class="card-text">Diplome from superheroing doesn"t exists yet, but I can try, right?</p>
                             <span class="label">Laravel</span><span class="label">Bootstrap</span>
-                            <a class="card-link" href="http://deset.jsemroman.cz/" target="_blank">
+                            <a class="card-link" href="http://oznamkuj.jsemroman.cz/" target="_blank">
                                 <img src="img/icons/004-double-angle-pointing-to-right.svg" class="inject-me card-link-icon" alt="right icon">
                                 Více
                              </a>
@@ -356,6 +353,7 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
     
 </section>
 
+<!-- Designing, coding, tesing -->
 <section id="process">
     <div class="container ">
         <div class="row">
@@ -372,17 +370,16 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
                 <div class="texts animate fadeInDown">
                     <p class="1 active">
                         
-                        First, I have to design your website to the <small>smallest</small> detail. There's no place for imp<small>e</small>rf<big>e</big>ctions. Your web needs to be just like <b>you- fabulous</b>.
+                        First, I have to design your website to the <small>smallest</small> detail. There's no place for imƥerfêctions. Your web needs to be just like <b>you- fabulous</b>.
 
                     </p>
                     <p class="2">
                         
-                        That's the part where the magic usually happens. Every piece of your design needs to be written in secret magic language. Don't worry I can handle it.
+                        That's the part, where the magic usually happens. Every piece of your design needs to be written in secret magic language. Don"t worry I can handle it.
 
                     </p>
                     <p class="3">
                         I will fight all those bugs without mercy, they won't have a chance to annoy you. Nobody will suffer anymore under my watch. 
-
                     </p>
                 </div>
                 
@@ -462,7 +459,7 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
 </section>
 
 
-
+<!-- Footer -->
 <footer>
     <div class="container">
         <div class="row">
@@ -481,6 +478,10 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
                         <img src="img/icons/004-double-angle-pointing-to-right.svg" class="icon" alt="right icon"/>
                         <a href="http://www.flaticon.com/" class="link" data-toggle="tooltip" data-placement="top" title="Ikony, krom hamburgeru "> Flaticon</a>
                     </li>
+                    <li>
+                        <img src="img/icons/004-double-angle-pointing-to-right.svg" class="icon" alt="right icon"/>
+                        <a href="https://github.com/daidalos117/web" class="link" data-toggle="tooltip" data-placement="top" title="Such amaze, much stuff"> More credits</a>
+                    </li>
 
                 </ul>
             </div>
@@ -498,7 +499,7 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
 </footer>
 
 
-<!-- paralax bg -->
+<!-- Paralax bg -->
 <div class="geometry-bkgrnd">
     <div class="home lvl-1">
         <img src="img/home.svg" class="inject-me" alt="bg icon"/>
@@ -531,8 +532,10 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
 
 </div>
 
+<!-- Finn and Jake -->
 <img src="img/finn.png" class="finn-and-jake"  alt="finn and jake"  style="display:none"/>
 
+<!-- Alert -->
 <div class="container">
     <div class="alert" role="alert" id="alert">
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -543,15 +546,14 @@ I can <strong>build</strong> you a <strong>web</strong>, do a <strong>graphic de
     </div>    
 </div>
 
-
+<!-- Language switch -->
 <a class="language-switch czech" href="cz.html" data-animation="false"  data-toggle="tooltip" data-placement="top" title="English, si?">
     <img src="img/icons/flag-en.svg" class="inject-me language-svg" alt="lang icon"/>
     EN
 </a>
 
+<!-- Javascript bundle -->
 <script src="builds/bundle.js"></script>
-
-
 
 
 </body>

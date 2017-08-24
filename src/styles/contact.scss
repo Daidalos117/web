@@ -4,10 +4,10 @@ $text-color: $color-light-grey;
 	//background: url("../../img/galaxy.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	position: relative;
-	overflow-x: hidden;
 	//margin-bottom: 183px;
 	overflow: hidden;
+	overflow-x: hidden;
+	position: relative;
 	&:after {
 		background: rgba($color-secondary,.9);
 		//content: "";
@@ -18,22 +18,21 @@ $text-color: $color-light-grey;
 		top: 0;
 		width: 100%;
 	}
-	>.background {
-		position: absolute;
-		width: 100%;
+	 > .background {
 		height: 101%;
 		left: 0;
+		position: absolute;
 		top: 0;
+		width: 100%;
 		//background-color: $color-dark;
 	}
-	
+
 	h2 {
 		//color: $color-primary;
 
 		//podtrzeni nadpisu
 		&:after {
 			//background-color: $color-danger;
-
 			@include media-breakpoint-down(sm) {
 				left: 0;
 				width: 100%;
@@ -87,8 +86,6 @@ $text-color: $color-light-grey;
 					@include transform(translateY(60%));
 				}
 			}
-
-
 		}
 		.form-control {
 			border: none;
@@ -102,7 +99,7 @@ $text-color: $color-light-grey;
 		//width: 100%;
 		// margin-left: 1.9rem ;
 	}
-	
+
 	input[type="text"], textarea {
 		background-color: transparent;
 		border: transparent;
@@ -140,11 +137,18 @@ $text-color: $color-light-grey;
 		overflow: hidden;
 		position: relative;
 
-
 		@include media-breakpoint-down(sm) {
 			height: auto;
 		}
 		@include shadow-1;
+		@include media-breakpoint-down(sm) {
+			.background {
+				display: none;
+			}
+			.background-mobile {
+				display: block;
+			}
+		}
 		.mail-icon {
 			height: 65%;
 			left: -20%;
@@ -161,18 +165,17 @@ $text-color: $color-light-grey;
 			position: absolute;
 			right: 0;
 			top: 0;
+			//opacity: .7;
 		}
 		.background-mobile {
 			display: none;
-		}
-		@include media-breakpoint-down(sm) {
-			.background {
-				display: none;
-			}
-			.background-mobile {
+			@include media-breakpoint-down(sm) {
 				display: block;
 			}
 		}
+		
+	
+		
 		 > .row {
 			height: 100%;
 		}
@@ -184,11 +187,12 @@ $text-color: $color-light-grey;
 			}
 		}
 		.left {
+			color: $color-secondary;
 			font-family: $handwrited-font-family;
 			font-size: 1.5rem;
 			height: 100%;
 			position: relative;
-			color: $color-secondary;
+
 			@include media-breakpoint-down(sm) {
 				//order: 2;
 				height: auto;
@@ -196,9 +200,9 @@ $text-color: $color-light-grey;
 			}
 			h3 {
 				font-family: inherit;
+				font-size: 2.2rem;
 				font-weight: bold;
 				margin-bottom: 2rem;
-				font-size: 2.2rem;
 			}
 			.form-control {
 				font-family: $default-font-family;
@@ -232,9 +236,10 @@ $text-color: $color-light-grey;
 				text-align: right;
 
 				@include media-breakpoint-down(sm) {
-					left: 2rem;
+					right: 1rem;
+					top: .5rem;
 					position: relative;
-					text-align: left;
+					text-align: right;
 					top: 0;
 				}
 			}

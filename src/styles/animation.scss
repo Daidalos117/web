@@ -41,43 +41,43 @@
 }
 
 @keyframes bounceInRight {
-  from, 60%, 75%, 90%, to {
-    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-  }
+	from, 60%, 75%, 90%, to {
+		animation-timing-function: cubic-bezier(.215, .610, .355, 1.000);
+	}
 
-  from {
-    opacity: 0;
-    transform: translate3d(3000px, 0, 0);
-  }
+	from {
+		opacity: 0;
+		transform: translate3d(3000px, 0, 0);
+	}
 
-  60% {
-    opacity: 1;
-    transform: translate3d(-25px, 0, 0);
-  }
+	60% {
+		opacity: 1;
+		transform: translate3d(-25px, 0, 0);
+	}
 
-  75% {
-    transform: translate3d(10px, 0, 0);
-  }
+	75% {
+		transform: translate3d(10px, 0, 0);
+	}
 
-  90% {
-    transform: translate3d(-5px, 0, 0);
-  }
+	90% {
+		transform: translate3d(-5px, 0, 0);
+	}
 
-  to {
-    transform: none;
-  }
+	to {
+		transform: none;
+	}
 }
 
 @keyframes pulse {
-  from {
-    @include transform(scale(1));
-  }
+	from {
+		@include transform(scale(1));
+	}
 	50% {
 		@include transform(scale(1.1));
 	}
-  to {
-    @include transform(scale(1));
-  }
+	to {
+		@include transform(scale(1));
+	}
 }
 
 
@@ -128,9 +128,23 @@ body, body.loaded {
 }
 .popUp {
 	transition: all .7s ease-out;
-	//visibility: hidden;
-
 	@include transform(scale(0));
+}
+.scaleIn {
+
+
+}
+@keyframes scaleIn {
+    from {
+		opacity: 0;
+		@include transform(scale(1.3));
+	}
+	50% {
+		opacity: 1;	
+	}
+    to {
+		@include transform(scale(1));
+	}
 }
 .contactLine {
 	transition: width 1s cubic-bezier(.65, .05, .36, 1) .5s, opacity .5s ease-out ;
@@ -143,17 +157,17 @@ body.loaded {
 
 		@include transform(scale(1));
 	}
-	
+
 	.bounceInRight.is-active {
-		visibility: visible;
 		animation-duration: 1.5s;
-	  	animation-name: bounceInRight;
+		animation-name: bounceInRight;
+		visibility: visible;
 	}
 
 	.pulse.is-active {
-		visibility: visible;
 		animation-duration: 1s;
-	  	animation-name: pulse;
+		animation-name: pulse;
+		visibility: visible;
 	}
 
 
@@ -165,7 +179,12 @@ body.loaded {
 		visibility: visible;
 		width: 5rem !important;
 	}
-
+	.scaleIn {
+	
+		visibility: visible;
+		animation-name: scaleIn;
+		animation-duration: 1.5s;
+	}
 
 	.fadeInUp.is-active, .fadeInLeft.is-active, .fadeInDown.is-active, .fadeInRight.is-active {
 		opacity: 1;

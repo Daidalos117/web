@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="577px" height="769px" viewBox="0 0 577 769" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+<svg width="576px" height="768px" viewBox="0 0 576 768" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
     <title>contact-background-mobile</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="copy-desktop" transform="translate(-268.000000, -2392.000000)">
+        <g id="copy-desktop" transform="translate(-269.000000, -2392.000000)">
             <g id="contact2" transform="translate(0.000000, 2392.000000)">
-                <g id="contact-background-mobile" transform="translate(240.000000, -307.000000)">
-                    <rect id="Rectangle-5" fill="#D8D8D8" opacity="0.299999982" transform="translate(336.909608, 526.175182) rotate(28.000000) translate(-336.909608, -526.175182) " x="90.2033742" y="404.589686" width="493.412469" height="243.170992"></rect>
-                    <rect id="modry-ctverec" fill="#4D606E" transform="translate(491.843263, 962.079227) rotate(-40.000000) translate(-491.843263, -962.079227) " x="27.4547624" y="751.764148" width="928.777002" height="420.630158"></rect>
-                    <rect id="zeleny" fill="#30E3CA" transform="translate(455.091064, 362.416312) rotate(-130.000000) translate(-455.091064, -362.416312) " x="181.834508" y="124.251102" width="546.513112" height="476.330419"></rect>
+                <g id="contact-background-mobile" transform="translate(241.000000, -307.307779)">
+                    <rect id="Rectangle-5" fill="#D8D8D8" opacity="0.299999982" transform="translate(335.909608, 525.988767) rotate(28.000000) translate(-335.909608, -525.988767) " x="89.2033742" y="404.677421" width="493.412469" height="242.622692"></rect>
+                    <rect id="modry-ctverec" fill="#4D606E" transform="translate(490.843263, 960.909939) rotate(-40.000000) translate(-490.843263, -960.909939) " x="26.4547624" y="751.069077" width="928.777002" height="419.681725"></rect>
+                    <rect id="zeleny" fill="#88F2E3" transform="translate(454.091064, 362.599139) rotate(-130.000000) translate(-454.091064, -362.599139) " x="180.834508" y="124.970942" width="546.513112" height="475.256394"></rect>
                 </g>
             </g>
         </g>

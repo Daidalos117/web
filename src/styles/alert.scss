@@ -1,32 +1,32 @@
 .alert {
-    position: fixed;
-    //display: 
-    visibility: hidden;
-    @include transform(translateY(100%));
-    bottom:0;
-    //left: 0;
-    width: inherit;
-    margin:0 auto;
-    padding: 1.8rem;
-    transition: 1s transform ease-out;
-    &.shown {
-        visibility: visible;
-        @include transform(translateY(0));
-    }
-    &.alert-danger {
-        background-color: $color-danger;
-        color: lighten($color-danger, 40%);
-        .warn::before {
-            content: "Ups :( ";
-        }
-    }
-    &.alert-success {
-        background-color: $color-primary;
-        color: lighten($color-primary, 40%);
-        .warn::before {
-            content: "Huray :)! ";
-            
-        }
-    }
+	bottom: 0;
+	margin: 0 auto;
+	padding: 1.8rem;
+	position: fixed;
+	transition: 1s transform ease-out;
+	//display: 
+	visibility: hidden;
+	//left: 0;
+	width: inherit;
 
+	@include transform(translateY(100%));
+	&.shown {
+		visibility: visible;
+
+		@include transform(translateY(0));
+	}
+	&.alert-danger {
+		background-color: $color-danger;
+		color: lighten($color-danger, 40%);
+		.warn::before {
+			content: "Ups :( ";
+		}
+	}
+	&.alert-success {
+		background-color: $color-primary;
+		color: lighten($color-primary, 40%);
+		.warn::before {
+			content: "Huray :)! ";
+		}
+	}
 }

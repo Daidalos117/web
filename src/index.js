@@ -2,13 +2,7 @@
  * Created by romanrajchert on 26.11.16.
  */
 
-
-
 import $ from 'jquery';
-//import TweenMax from 'gsap/src/uncompressed/TweenMax';
-//import ScrollMagic from 'scrollmagic';
-//import 'imports?define=>false!scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap';
-//import 'imports?define=>false!scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
 import 'bootstrap-loader';
 import 'tether';
 import 'particles.js';
@@ -19,19 +13,26 @@ import './BetterOnScroll';
 import Rellax from 'rellax';
 import CountUp from 'countup.js';
 import Expanding from 'expanding-textareas';
-import outdatedbrowser from 'outdatedbrowser';
-
+import browserUpdate from 'browser-update';
 require("imports-loader?this=>window!./typed.min.js");
 
 
 
 window.onload = function () {
+    $("body").addClass("loaded");
+    $(".background-image").addClass("animated fadeInUp");
     setTimeout(function() {
-        $("body").addClass("loaded");
-        $(".background-image").addClass("animated fadeInUp");
-        
-        $("header .heading").typed({
-            strings: [ "<span class='name webdesigner'>webdesigner</span>", /*"<span class='name'>superhero for your web</span>", */"<span class='name'>Roman</span>"],
+
+        var $heading = $("header .heading");
+        $heading.typed({
+            strings: (function(){
+                var elm = $heading.find(".name");
+                var texts = [];
+                $.each(elm,function(number, value) {            
+                    texts.push($(value)[0].outerHTML.toString().replace("hidden",""));    
+                })
+                return texts;
+            })(),
             typeSpeed: 100,
             // time before typing starts
             startDelay: 100,
@@ -41,7 +42,7 @@ window.onload = function () {
             backDelay: 1500,
         });
 
-    },500);
+    },1500);
 
 }
 
@@ -49,9 +50,19 @@ window.onload = function () {
 $(function(){
     var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
     
-    /* Typed */
+    var obcontent = $('#outdatedbrowsercontent').html();
+    /* outdatedbrowser */
+    var $buoop = {
+        vs:{i:11,f:-4,o:-4,s:10,c:50},
+        api:4,
+        test: true,   
+        text: obcontent,
+        noclose: true,          
+    }; 
+    browserUpdate($buoop);
     
-
+    
+    /* Typed */
 
     /* Scroll spy */
     $('body').scrollspy({ target: '#navbar-complete' });
@@ -98,7 +109,6 @@ $(function(){
 
     // clicked mobile menu
     $(".nav .nav-link").on("click", function () {
-        console.log("uu");
         $(".navbar-toggleable-xs").removeClass("is-opened");
         $(".navbar").find(".menu-icon").removeClass("is-opened");
         var $navitem = $(this).closest(".nav-item");
@@ -126,7 +136,6 @@ $(function(){
         if(inView.is(el)) {
             $(el).data("animate-delay", delay);
             delay += 200;
-            console.log(el, $(el).data());
         }
     })
 

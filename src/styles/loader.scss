@@ -1,80 +1,82 @@
-.loader{
-  background: $color-secondary;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  align-items: center;
-  margin: 0;
-  opacity: 0;
-  transition: all 2s ease;
-  p{
-    color: white;
-  }
-  .col{
-    margin: 0 auto;
-  }
+.loader {
+	background: $color-secondary;
+	height: 100%;
+	margin: 0;
+	opacity: 0;
+	position: fixed;
+	transition: all 2s ease;
+	width: 100%;
+	z-index: 0;
 
-  &.shown{
-    z-index: 10000;
-    opacity: 0.97;
-  }
-  /* Thanks to http://tobiasahlin.com/spinkit/ */
-  .spinner {
-    position: relative;
-    top: 50%;
-    margin: 100px auto;
-    width: 50px;
-    height: 40px;
-    text-align: center;
+	align-items: center;
+	p {
+		color: white;
+	}
+	.col {
+		margin: 0 auto;
+	}
 
-    font-size: 10px;
-  }
+	&.shown {
+		opacity: .97;
+		z-index: 10000;
+	}
+	/* Thanks to http://tobiasahlin.com/spinkit/ */
+	.spinner {
+		font-size: 10px;
+		height: 40px;
+		margin: 100px auto;
+		position: relative;
+		text-align: center;
+		top: 50%;
+		width: 50px;
+	}
 
-  .spinner > div {
-    background-color:  $color-primary;
-    opacity: .9;
-    height: 100%;
-    width: 6px;
-    display: inline-block;
+	.spinner > div {
+		-webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+		        animation: sk-stretchdelay 1.2s infinite ease-in-out;
+		background-color: $color-primary;
+		display: inline-block;
+		height: 100%;
+		opacity: .9;
+		width: 6px;
+	}
 
-    -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
-    animation: sk-stretchdelay 1.2s infinite ease-in-out;
-  }
+	.spinner .rect2 {
+		-webkit-animation-delay: -1.1s;
+		        animation-delay: -1.1s;
+	}
 
-  .spinner .rect2 {
-    -webkit-animation-delay: -1.1s;
-    animation-delay: -1.1s;
-  }
+	.spinner .rect3 {
+		-webkit-animation-delay: -1.0s;
+		        animation-delay: -1.0s;
+	}
 
-  .spinner .rect3 {
-    -webkit-animation-delay: -1.0s;
-    animation-delay: -1.0s;
-  }
+	.spinner .rect4 {
+		-webkit-animation-delay: -.9s;
+		        animation-delay: -.9s;
+	}
 
-  .spinner .rect4 {
-    -webkit-animation-delay: -0.9s;
-    animation-delay: -0.9s;
-  }
+	.spinner .rect5 {
+		-webkit-animation-delay: -.8s;
+		        animation-delay: -.8s;
+	}
 
-  .spinner .rect5 {
-    -webkit-animation-delay: -0.8s;
-    animation-delay: -0.8s;
-  }
+	@-webkit-keyframes sk-stretchdelay {
+		0%, 40%, 100% {
+			-webkit-transform: scaleY(.4);
+		}
+		20% {
+			-webkit-transform: scaleY(1.0);
+		}
+	}
 
-  @-webkit-keyframes sk-stretchdelay {
-    0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
-    20% { -webkit-transform: scaleY(1.0) }
-  }
-
-  @keyframes sk-stretchdelay {
-    0%, 40%, 100% {
-      transform: scaleY(0.4);
-      -webkit-transform: scaleY(0.4);
-    }  20% {
-         transform: scaleY(1.0);
-         -webkit-transform: scaleY(1.0);
-       }
-  }
-
+	@keyframes sk-stretchdelay {
+		0%, 40%, 100% {
+			-webkit-transform: scaleY(.4);
+			        transform: scaleY(.4);
+		}  20% {
+			-webkit-transform: scaleY(1.0);
+			        transform: scaleY(1.0);
+		}
+	}
 }

@@ -1,0 +1,10 @@
+.buorg {
+	//background-color: $color-danger !important;    
+	font: 17px $default-font-family !important;
+	.heading {
+		color: $color-danger !important;
+	}
+}
+.buorg div a, .buorg div a:visited {
+	background: $color-primary !important;
+}

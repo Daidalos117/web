@@ -1,28 +1,25 @@
 
 @include media-breakpoint-down(md) {
-  html{
-    font-size: $html-font-size-md;
-  }
+	html {
+		font-size: $html-font-size-md;
+	}
 }
 @include media-breakpoint-down(sm) {
-  html{
-    font-size: $html-font-size-sm;
-  }
+	html {
+		font-size: $html-font-size-sm;
+	}
 }
 @include media-breakpoint-down(xs) {
-  html{
-    font-size: $html-font-size-xs;
-  }
+	html {
+		font-size: $html-font-size-xs;
+	}
 }
 
 
 
-
-
 @include media-breakpoint-down(sm) {
-  header{
-    .btn-primary.btn{
-
-    }
-  }
+	header {
+		.btn-primary.btn {
+		}
+	}
 }

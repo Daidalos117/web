@@ -37,9 +37,7 @@
 					opacity: 0;
 					padding: 0 2rem;
 					position: relative;
-
 					transform: translateX(100%) translateY(-10%);
-	
 
 					@include align-items(center);
 					@include flexbox();
@@ -50,7 +48,6 @@
 					}
 					&.clicked {
 						transition: all .5s ease-in-out 1s, border 0s ease 0s;
-					
 					}
 
 

@@ -1,8 +1,6 @@
 
 #portfolio {
-	// background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 	background: linear-gradient(to top right, #EEE 55%,white 50%);
-	//background: url("../../img/geometric.svg");
 	background-size: contain;
 	h2 {
 		position: relative;
@@ -10,8 +8,10 @@
 	}
 
 	.card-work {
-		//padding-left: 0;
-		//padding-right: 0;
+		@include media-breakpoint-down(sm) {
+			grid-column: span 1 !important;
+			grid-row: span 1 !important;
+		}
 
 		&:nth-child(1) {
 			grid-column: 1 / span 2;
@@ -37,11 +37,6 @@
 			grid-column: 3;
 			grid-row: 5 / 9;
 		}
-		@include media-breakpoint-down(sm) {
-			grid-column: span 1 !important;
-			grid-row: span 1 !important;
-		}
-
 	}
 
 	.col-xs-10, .col-xs-8 {
@@ -55,10 +50,11 @@
 		//@include flexbox;
 		//@include flex-wrap(wrap);
 		display: grid;
-  		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
 		grid-gap: 2rem;
+		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 		@include media-breakpoint-down(md) {
-  			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 		}
 	}
 
@@ -228,9 +224,7 @@
 		&.second {
 			background: $color-secondary;
 			border-color: darken($color-secondary,4%);
-			.label {
-				
-			}
+
 			.card-link {
 				color: $color-light-grey;
 			}
