@@ -54,8 +54,9 @@ $(function(){
     /* outdatedbrowser */
     var $buoop = {
         vs:{i:11,f:-4,o:-4,s:10,c:50},
+        vs:{},
         api:4,
-        test: true,   
+        test: false,   
         text: obcontent,
         noclose: true,          
     }; 

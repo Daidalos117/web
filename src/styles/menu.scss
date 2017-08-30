@@ -105,12 +105,12 @@
 		display: inline-block;
 		opacity: .9;
 		position: relative;
-		width: 8rem;
+		width: 6rem;
 
 		@include flexbox;
 		@include align-items(center);
 		@include media-breakpoint-down(sm) {
-			width: 7rem;
+			width: 5rem;
 		}
 		@include transition(all, .5s, ease-in);
 		@include align-items(center);

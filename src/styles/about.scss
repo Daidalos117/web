@@ -20,7 +20,7 @@ $section-color: #BBC3CD;
 	.about-content {
 		background: white;
 		margin: 0 auto;
-		margin-top: -10rem;
+		margin-top: -9rem;
 		max-width: 80rem;
 		padding-bottom: 4rem;
 		padding-top: 2rem;
@@ -31,6 +31,9 @@ $section-color: #BBC3CD;
 		@include media-breakpoint-down(sm) {
 			margin-top: -6rem;
 			width: 90%;
+		}
+		@media (max-width: 768px) and (max-height: 440px)	{
+			margin-top: -4rem;
 		}
 	}
 	//background: url(../img/small_steps.png);

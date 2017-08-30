@@ -244,6 +244,9 @@ svg {
 	.home {
 		bottom: 75%;
 		left: calc(10vw - 2.5rem);
+		@include media-breakpoint-down(sm) {
+			bottom: 80%;
+		}
 	}
 	.oo {
 		bottom: 25%;
@@ -255,8 +258,10 @@ svg {
 		left: calc(10vw - 2.5rem);
 	}
 	.ball {
-		bottom: 30%;
-		left: 70vw;
+		bottom: -7%;
+		display: none;
+		visibility: hidden;
+		left: 90vw;
 	}
 	.rectangle {
 		bottom: 55%;
@@ -269,14 +274,20 @@ svg {
 	.polygon_3 {
 		bottom: 65%;
 		left: calc(85vw - 2.5rem);
+		@include media-breakpoint-down(sm) {
+			bottom: 70%;
+		}
 	}
 	.rectangle_4 {
 		bottom: 0;
 		left: 30vw;
+		@include media-breakpoint-down(sm) {
+		//	bottom: 80%;
+		}
 	}
 	.polygon_2 {
-		bottom: -7%;
-		left: 80vw;
+		bottom: 30%;
+		right: 85vw;
 	}
 }
 

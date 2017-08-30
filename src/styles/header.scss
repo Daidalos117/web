@@ -4,7 +4,7 @@ header {
 	overflow: hidden;
 	//padding: 10rem 0 15rem 0;
 	height: 95vh;
-	max-height: 40rem;
+	max-height: 44rem;
 	position: relative;
 	transition: all 1s ease-in-out;
 	transition: all 1s ease-out;
@@ -14,9 +14,9 @@ header {
 	-webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 	        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 			
-			
-	@include media-breakpoint-down(sm) {
-		
+
+	@media (max-width: 768px) and (max-height: 440px)	{
+		height: 105vh;
 	}
 	.background {
 		// background-image: linear-gradient(120deg, $color-dark 100%, #000 0%);
@@ -45,6 +45,10 @@ header {
 			//bottom: 0;
 			width: 100vw;
 		}
+		@media (max-width: 768px) and (max-height: 440px)	{
+			right: 0; 
+			width: 35vw;
+		}
 		img, source {
 			max-width: 100%;
 		}
@@ -71,6 +75,9 @@ header {
 		@include media-breakpoint-down(sm) {
 			font-size: 2.5rem;    top: 24%;
 		}
+		@media (max-width: 768px) and (max-height: 440px)	{
+			top: 19%;
+		}
 		span {
 			font-weight: 300;
 		}
@@ -82,8 +89,12 @@ header {
 			white-space: nowrap;
 		}
 		> .container {
-			@include media-breakpoint-down(sm) {
+			padding: 0;
+			.content-div {
 				padding: 0;
+			}
+			@include media-breakpoint-down(sm) {
+				padding: 0 .8rem;
 			}
 		}
 		.intro-text {
@@ -111,18 +122,20 @@ header {
 	}
 	h1 {
 		display: inline-block;
-		font-size: $font-size-mega;
-		height: 4rem;
+		font-size: 5rem;
+		height: 5rem;
 		max-width: 100%;
 		white-space: nowrap;
 		z-index: 2;
 
 		@include media-breakpoint-down(sm) {
+			height: 4rem;
+			margin-top: -1rem;
+			margin-bottom: 1.5rem;
 		}
 		.name {
 			color: $color-primary;
 			font-weight: 400;
-
 			@include media-breakpoint-down(sm) {
 				font-size: 3.6rem;
 				&.webdesigner {
@@ -143,6 +156,9 @@ header {
 	}
 	span.typed-cursor {
 		font-size: 4rem;
+		@include media-breakpoint-down(sm) {
+			font-size: 3.5rem;
+		}
 	}
 	.line {
 		background-color: $color-danger;
