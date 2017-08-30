@@ -292,14 +292,16 @@ svg {
 }
 
 .finn-and-jake {
-	bottom: -1rem;
+	bottom: 0;
 	position: fixed;
 	right: 5%;
 	transition: all 1s ease-out;
 	//display: none;
 	visibility: hidden;
 	width: 30vw;
-
+	@include media-breakpoint-down(sm) {
+		width: 70vw;
+	}
 	@include transform(translateY(100%));
 	&.is-shown {
 		//display: block;
