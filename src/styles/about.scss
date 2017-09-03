@@ -49,10 +49,6 @@ $section-color: #BBC3CD;
 		position: absolute;
 		width: 100%;
 	}
-
-	//background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-
-
 	.line {
 		//width: 5rem;
 		background: black;
@@ -62,7 +58,9 @@ $section-color: #BBC3CD;
 		margin-top: 1rem;
 		opacity: .15;
 	}
-
+	.etnetera {
+		color: #ff935f;
+	}
 	.warning {
 		border: 3px solid $color-danger;
 		border-left: none;

@@ -14,35 +14,52 @@ import Rellax from 'rellax';
 import CountUp from 'countup.js';
 import Expanding from 'expanding-textareas';
 import browserUpdate from 'browser-update';
-require("imports-loader?this=>window!./typed.min.js");
+//require("imports-loader?this=>window!./typed.min.js");
+import Typed from 'typed.js';
 
-
-
+var elmntsAnimateAfter = new Array;
 window.onload = function () {
     $("body").addClass("loaded");
     $(".background-image").addClass("animated fadeInUp");
+    
     setTimeout(function() {
-
         var $heading = $("header .heading");
-        $heading.typed({
+        var typed = new Typed("header .heading", {
+            //strings: strings,
             strings: (function(){
                 var elm = $heading.find(".name");
                 var texts = [];
+                //texts.push("");
                 $.each(elm,function(number, value) {            
                     texts.push($(value)[0].outerHTML.toString().replace("hidden",""));    
                 })
+                $heading.html("");
                 return texts;
             })(),
-            typeSpeed: 100,
+            typeSpeed: 70,
             // time before typing starts
             startDelay: 100,
             // backspacing speed
-            backSpeed: 10,
+            backSpeed: 100,
+            backDelay: 300,
             contentType: 'html',
-            backDelay: 1500,
-        });
 
-    },1500);
+            onComplete: () => {
+                $("header .line").addClass("is-active");
+                var delay = 800;
+                setTimeout(function(){
+                    $("header .intro-text").addClass("is-active");
+                },delay)
+                delay += 1000;
+                elmntsAnimateAfter.forEach(function(element){
+                    setTimeout(function(){
+                        $(element).addClass("is-active");
+                    },delay)
+                delay += 300;    
+                });
+            }
+        });
+    },0);
 
 }
 
@@ -50,11 +67,11 @@ window.onload = function () {
 $(function(){
     var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
     
-    var obcontent = $('#outdatedbrowsercontent').html();
+    
     /* outdatedbrowser */
+    var obcontent = $('#outdatedbrowsercontent').html();
     var $buoop = {
         vs:{i:11,f:-4,o:-4,s:10,c:50},
-        vs:{},
         api:4,
         test: false,   
         text: obcontent,
@@ -79,9 +96,7 @@ $(function(){
         });
     });
 
-    document.onload = function () {
-            //$("body").addClass("loaded");
-    }
+
 
     /* Smooth scroll */
     $('a[href*="#"]:not([href="#"])').click(function() {
@@ -91,8 +106,7 @@ $(function(){
             if (target.length) {
                 $('html, body').animate({
                     scrollTop: target.offset().top,
-
-                }, 1000, "swing");
+                }, 1500, "swing");
                 return false;
             }
         }
@@ -101,7 +115,7 @@ $(function(){
 
     // menu open
     $(".navbar-toggler").on("click", function () {
-        var height = $(".navbar").outerHeight();
+        var height = $(".navbar").outerHeight() - 1;
         $(".navbar-nav").css("height","calc(100% - "+ height +"px)");
         $(".navbar-toggleable-xs").toggleClass("is-opened");
         $(this).find(".menu-icon").toggleClass("is-opened");
@@ -130,17 +144,28 @@ $(function(){
         inViewDesigns();
     });
     
-    
+
     //delay visibe elements maybe
     var delay = 2000;
     $.each($(".delay-me-maybe"), function (pos, el) {
-        if(inView.is(el)) {
-            $(el).data("animate-delay", delay);
+        if(inView.is(el) && inView.is( $("header .heading")[0])) {
+            //$(el).data("animate-delay", delay);
+            elmntsAnimateAfter.push(el);
             delay += 200;
+        } else {
+            var classes = el.classList;
+            var array = Array.from(classes);
+
+            var classesString = "";
+            array.forEach(function(value) {
+                classesString += "." + value + "";
+            });
+            inView(classesString)
+                .on('enter', function (el) {
+                    $(el).addClass("is-active");
+                });
         }
     })
-
-
     var firstPosition = -1;
     // menu scroll
     $(window).scroll(function () {
@@ -151,6 +176,7 @@ $(function(){
     function menuScrolled() {
         var $navbar = $(".navbar");
         if ($navbar.offset().top > 50) {
+            
             $navbar.addClass("scrolled");
         } else {
             $navbar.removeClass("scrolled");
@@ -274,7 +300,8 @@ $(function(){
         var speed = speed || 0;
         var text = element.innerHTML;
         element.innerHTML = "";
-        $(element).typed({
+        
+        new Typed(element, {
             strings: [text],
             typeSpeed: speed,
             // time before typing starts
@@ -356,7 +383,7 @@ $(function(){
 
 
    /**finn fidget */
-   $("#about h2").on("click", function(){
+   $(".adventure-time").on("click", function(){
        $(".finn-and-jake").addClass("is-shown");
        var audio = new Audio('assets/finn.mp3');
        audio.play();
@@ -380,7 +407,6 @@ $(function(){
        };
        var body = {};
        fetch("contact.php", settings).then(function(response) {
-          
             return response.text();
        }).then(function(text){
            body = JSON.parse(text);
@@ -444,5 +470,38 @@ $(function(){
        var toggle = $(this).data("toggle");
        $(toggle).slideToggle(500);
    })
+   
+   
+   //draggable
+   $.fn.draggable = function() {
+  var $document = $(document)
+    , mouse = { update: function(e) {this.x = e.pageX; this.y = e.pageY;} };
+    
+  return this.each(function(){
+    var $elem = $(this);
+    $elem.bind('mousedown.drag', function(e) {
+      mouse.update(e);
+      if ( !/^(relative|absolute)$/.test($elem.css('position') ) ) {
+        $elem.css('position', 'relative');
+      }
+      $document.bind('mousemove.drag', function(e) {
+        $elem.css({
+          left: (parseInt($elem.css('left'))||0) + (e.pageX - mouse.x) + 'px',
+          top: (parseInt($elem.css('top'))||0) +  (e.pageY - mouse.y) + 'px'
+        });
+        mouse.update(e);
+        e.preventDefault();
+      });
+      $document.one('mouseup.drag', function(e) {
+        $document.unbind('mousemove.drag');
+      });
+      e.preventDefault();
+    });  
+  });
+}
+ $('.home').draggable();
+   
+   
+   
 
 });

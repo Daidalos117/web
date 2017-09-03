@@ -1,7 +1,8 @@
 ## Portfolio page
 
-This is my personal website. I want to thank handy people who make features listed below and made my work much easier. 
-
+This is my personal portfolio. I want to thank handy people who make features listed below and made my work much easier. 
+Check my process of making this website. [JPG](https://www.jsemroman.cz/making-of.jpg) (smaller) / [PDF](https://www.jsemroman.cz/making-of.pdf) 
+ 
 Created thanks to:
 * [Bootstrap 4 alpha](https://www.getbootstrap.com "Bootstrap") (HTML framework)
 * [jQuery 😏](https://jquery.com "Jquery") (JS library)

@@ -33,7 +33,12 @@ p {
 	font-size: 1rem;
 	font-weight: 400;
 }
-
+a {
+	&:active, &:focus {
+		text-decoration: underline;
+		outline: none !important;
+	}
+}
 
 .angle {
 	@include angle(after);
@@ -283,6 +288,7 @@ svg {
 		left: 30vw;
 		@include media-breakpoint-down(sm) {
 		//	bottom: 80%;
+			left: 75vw;	
 		}
 	}
 	.polygon_2 {
@@ -292,9 +298,9 @@ svg {
 }
 
 .finn-and-jake {
-	bottom: 0;
+	bottom: -.1rem;
 	position: fixed;
-	right: 5%;
+	left: 5%;
 	transition: all 1s ease-out;
 	//display: none;
 	visibility: hidden;
@@ -305,7 +311,7 @@ svg {
 	@include transform(translateY(100%));
 	&.is-shown {
 		//display: block;
-		visibility: visible;
+		visibility: visible !important;
 
 		@include transform(translateY(0%));
 	}

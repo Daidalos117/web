@@ -104,13 +104,13 @@ body, body.loaded {
 
 .fadeInUp {
 	opacity: 0;
-	transition: all .7s ease-out;
+	transition: all 1s ease-out;
 
 	@include transform(translate3d(0, 50px, 0));
 }
 .fadeInDown {
 	opacity: 0;
-	transition: all .7s ease-out;
+	transition: all 1s ease-out;
 
 	@include transform(translate3d(0, -50px, 0));
 }
@@ -127,7 +127,7 @@ body, body.loaded {
 	@include transform( translateX(50px));
 }
 .popUp {
-	transition: all .7s ease-out;
+	transition: all 1s ease-out;
 	@include transform(scale(0));
 }
 .scaleIn {

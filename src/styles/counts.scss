@@ -22,12 +22,18 @@
 			text-align: center;
 		}
 		.inner {
+			h4 {
+				margin-top: .4rem;
+			}
+			
+		
 			@include media-breakpoint-down(sm) {
 				display: inline-block;
 				//max-width: 12rem;
 				.row {
 					@include justify-content(center);
 				}
+
 			}
 		}
 	}
@@ -37,6 +43,7 @@
 
 		@include media-breakpoint-down(sm) {
 			font-size: 1.5rem;
+
 		}
 	}
 	.plus {
@@ -82,7 +89,7 @@
 	}
 	.number-wrapper {
 		padding: 0;
-
+		
 		@include flexbox();
 		@include align-items(flex-end);
 		@include media-breakpoint-down(sm) {
@@ -93,6 +100,7 @@
 			line-height: 1;
 			padding-top: 3%;
 			flex: none;
+			
 		}
 	}
 	.margin {

@@ -26,7 +26,9 @@ $text-color: $color-light-grey;
 		width: 100%;
 		//background-color: $color-dark;
 	}
-
+	.header-section {
+		margin-bottom: 6rem;
+	}
 	h2 {
 		&:after {
 			//background-color: $color-danger;
@@ -125,7 +127,9 @@ $text-color: $color-light-grey;
 			opacity: 1;
 		}
 	}
-
+	textarea {
+		margin-top: .5rem;
+	}
 
 
 	.contact-card {
@@ -212,7 +216,7 @@ $text-color: $color-light-grey;
 				content: "";
 				height: 80%;
 				position: absolute;
-				right: 0;
+				right: 1px;
 				top: 50%;
 				width: 1px;
 
@@ -294,7 +298,7 @@ $text-color: $color-light-grey;
 				display: block;
 
 				float: right;
-				width: 35%;
+				width: 8rem;
 
 				@include media-breakpoint-down(sm) {
 					display: none;
@@ -339,7 +343,10 @@ $text-color: $color-light-grey;
 					display: inline-block;
 					width: 1.5rem;
 					margin-left: 2rem;
-					transition: 1s all ease-out;
+					transition: .7s all ease-out;
+					img {
+						max-width: 100%;
+					}
 					&:hover {
 						@include transform(scale(1.1));
 						svg g{

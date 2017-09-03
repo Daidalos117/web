@@ -3,7 +3,7 @@
 .navbar {
 	background-color: transparent;
 	border-radius: 0rem;
-	padding: .7rem 0;
+	padding: 1rem 0;
 	position: fixed;
 	width: 100%;
 	z-index: 100;
@@ -130,8 +130,11 @@
 		//@include align-items(center);
 		//@include flexbox();
 		position: absolute;
-		right: 0;
+		right: .5rem;
 		width: 4rem;
+		padding: 0.35rem 0.85rem;
+	    top: -0.3rem;
+		transition: 1s all ease-out;
 		.menu-icon {
 			height: auto;
 			overflow: visible;
@@ -164,7 +167,7 @@
 	//scrolled navbar
 	&.scrolled {
 		background-color: $color-dark;
-		padding: .3rem 0;
+		padding: .7rem 0;
 
 		@include media-breakpoint-down(sm) {
 		}
@@ -175,6 +178,11 @@
 		}
 		.navbar-brand {
 			width: 6rem;
+		}
+		.navbar-toggler {
+			top: .1rem;
+			padding: 0.35rem 0.75rem;
+
 		}
 	}
 
