@@ -18,7 +18,7 @@ if(isset($_POST["message"]) and !empty($_POST["message"]) ) {
 
     $mail->SMTPDebug = 3;  
     
-    $mail->setFrom('zakaznik@jsemroman.cz', 'Mailer');
+    //$mail->setFrom('zakaznik@jsemroman.cz', 'Mailer');
     $mail->addAddress('rajchert.roman+jsemroman@gmail.com', 'Joe User');     // Add a recipient
     
     $mail->Subject = ($langBool) ? 'Nová zpráva z jsemroman.cz' : 'New message from you web';

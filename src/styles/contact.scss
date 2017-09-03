@@ -111,7 +111,7 @@ $text-color: $color-light-grey;
 		padding-left: 0;
 
 		@include media-breakpoint-down(sm) {
-			font-size: 1.1rem;
+			 font-size: 1.4rem;
 		}
 		@include placeholder {
 			color: #7F8C8D;

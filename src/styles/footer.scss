@@ -38,6 +38,9 @@ footer {
 		&.third {
 			text-align: right;
 			font-style: italic;
+			@include media-breakpoint-down(md) {
+				text-align: center;
+			}
 		}
 		@include media-breakpoint-down(sm) {
 			text-align: center;
@@ -51,6 +54,9 @@ footer {
 			width: 1.5rem;
 
 			fill: $color-danger;
+			path, g {
+				fill: inherit !important;
+			}
 		}
 	}
 }

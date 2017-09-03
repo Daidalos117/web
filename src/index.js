@@ -85,6 +85,11 @@ $(function(){
     /* Scroll spy */
     $('body').scrollspy({ target: '#navbar-complete' });
 
+    var lang = $(".actualLanguage").val();
+    var cz = lang === "cz";
+    $('.card-age').tooltip({
+        title: cz ? 'Takhle jsem starý' : 'I am this old.'
+    })  
 
     /* Particles Js*/
     particlesJS.load('particles', 'assets/header.json', function () {});
