@@ -33,9 +33,9 @@ p {
 	font-size: 1rem;
 	font-weight: 400;
 }
-a {
+a, button {
 	&:active, &:focus {
-		text-decoration: underline;
+		text-decoration: none !important;
 		outline: none !important;
 	}
 }
@@ -285,7 +285,7 @@ svg {
 	}
 	.rectangle_4 {
 		bottom: 0;
-		left: 30vw;
+		left: 48vw;
 		@include media-breakpoint-down(sm) {
 		//	bottom: 80%;
 			left: 75vw;	

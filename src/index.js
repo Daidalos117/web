@@ -414,6 +414,7 @@ $(function(){
        fetch("contact.php", settings).then(function(response) {
             return response.text();
        }).then(function(text){
+           console.log(text);
            body = JSON.parse(text);
        }).catch(function(error){
            var lang = $(".actualLanguage").val();

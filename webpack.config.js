@@ -75,7 +75,7 @@ module.exports = {
     entry:  './src',
     output: {
         path:           "builds",//production ? "./" : "builds",
-        publicPath:     "/builds/", //production ? "."  :  "/builds/",
+        publicPath:     ".", //production ? "."  :  "/builds/",
         filename:       production ? '[name]-[hash].js' : 'bundle.js',
         chunkFilename: '[name]-[chunkhash].js',
     },

@@ -73,7 +73,8 @@ header {
 		z-index: 3;
 
 		@include media-breakpoint-down(sm) {
-			font-size: 2.5rem;    top: 24%;
+			font-size: 2.5rem;    
+			top: 19%;
 		}
 		@media (max-width: 768px) and (max-height: 440px)	{
 			top: 19%;

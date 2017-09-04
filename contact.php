@@ -8,18 +8,21 @@ const M_S = "success";
 if(isset($_POST["message"]) and !empty($_POST["message"]) ) {
     
     $body = filter_var($_POST['message'], FILTER_SANITIZE_EMAIL); 
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL); 
     //$body = "Nová zpráva"; 
     $lang = $_POST["language"];
 
-    $langBool = $lang == "cz";
+    $langBool =  $lang == "cz";
     require 'phpmailer/PHPMailerAutoload.php';
 
     $mail = new PHPMailer;
 
     $mail->SMTPDebug = 3;  
     
+
+    $mail->AddReplyTo($email, 'Reply to name');
     //$mail->setFrom('zakaznik@jsemroman.cz', 'Mailer');
-    $mail->addAddress('rajchert.roman+jsemroman@gmail.com', 'Joe User');     // Add a recipient
+    $mail->addAddress('rajchert.roman+jsemroman@gmail.com', 'Roman Rajchert');     // Add a recipient
     
     $mail->Subject = ($langBool) ? 'Nová zpráva z jsemroman.cz' : 'New message from you web';
     $mail->Body    = $body;
