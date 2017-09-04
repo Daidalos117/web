@@ -1,7 +1,7 @@
 ## Portfolio page
 
 This is my personal portfolio. I want to thank handy people who make features listed below and made my work much easier.  
-Check my process of making this website. [JPG](http://www.jsemroman.cz/making-of.jpg) (3.3MB) / [PDF] (16MB)(http://www.jsemroman.cz/making-of.pdf) 
+Check my process of making this website. [JPG](http://www.jsemroman.cz/making-of.jpg) (3.3MB) / [PDF](http://www.jsemroman.cz/making-of.pdf)  (16MB)
  
 Created thanks to:
 * [Bootstrap 4 alpha](https://www.getbootstrap.com "Bootstrap") (HTML framework)
