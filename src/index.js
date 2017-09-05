@@ -388,7 +388,8 @@ $(function(){
 
 
    /**finn fidget */
-   $(".adventure-time").on("click", function(){
+   $(".adventure-time").on("click", function(e){
+       e.preventDefault();
        $(".finn-and-jake").addClass("is-shown");
        var audio = new Audio('assets/finn.mp3');
        audio.play();
@@ -457,6 +458,7 @@ $(function(){
    
    //expendable textarea
    new Expanding(document.querySelector('textarea'));
+   
    //analytics
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
