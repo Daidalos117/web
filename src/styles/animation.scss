@@ -193,3 +193,15 @@ body.loaded {
 		@include transform(translate3d(0, 0, 0));
 	}
 }
+
+@keyframes materialBackground {
+	0% {
+		visibility: visible;
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		@include transform(scale(3));
+		visibility: hidden;
+	}
+}

@@ -17,6 +17,7 @@ $section-color: #BBC3CD;
 	padding-bottom: 10rem;
 	padding-top: 0;
 	z-index: 0;
+
 	.about-content {
 		background: white;
 		margin: 0 auto;
@@ -42,6 +43,17 @@ $section-color: #BBC3CD;
 		text-decoration: underline;
 		&:hover {
 			font-weight: bold;
+		}
+	}
+	.language-switch {
+		position: absolute;
+		top: -2rem;
+		left: 1rem;
+		color: white;
+		text-decoration: none;
+		opacity: .9;
+		&:hover {
+			opacity: 1;
 		}
 	}
 	.more-info {

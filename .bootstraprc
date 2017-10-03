@@ -62,13 +62,13 @@ styles:
   images: true
   code: true
   grid: true
-  tables: true
-  forms: true
-  buttons: true
+  tables: false
+  forms: false
+  buttons: false
 
   # Components
   animation: true
-  dropdown: true
+  dropdown: false
   button-group: false
   input-group: true
   custom-forms: true
@@ -81,10 +81,10 @@ styles:
   alert: true
   progress: false
   media: true
-  list-group: true
+  list-group: false
   responsive-embed: true
   close: true
-  tags: true
+  tags: false
 
   # Components w/ JavaScript
   modal: false
@@ -98,10 +98,10 @@ styles:
 ### Bootstrap scripts
 scripts:
   alert: true
-  button: true
+  button: false
   carousel: false
-  collapse: true
-  dropdown: true
+  collapse: false
+  dropdown: false
   modal: false
   popover: false
   scrollspy: true

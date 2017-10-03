@@ -19,7 +19,6 @@ if(isset($_POST["message"]) and !empty($_POST["message"]) ) {
 
     $mail->SMTPDebug = 3;  
     
-
     $mail->AddReplyTo($email, 'Reply to name');
     //$mail->setFrom('zakaznik@jsemroman.cz', 'Mailer');
     $mail->addAddress('rajchert.roman+jsemroman@gmail.com', 'Roman Rajchert');     // Add a recipient

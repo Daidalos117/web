@@ -106,7 +106,8 @@
 		opacity: .9;
 		position: relative;
 		width: 6rem;
-
+    	padding-top: 0.45rem;
+		
 		@include flexbox;
 		@include align-items(center);
 		@include media-breakpoint-down(sm) {
@@ -177,7 +178,7 @@
 			padding: .3rem .5rem;
 		}
 		.navbar-brand {
-			width: 6rem;
+			width: 5rem;
 		}
 		.navbar-toggler {
 			top: .1rem;

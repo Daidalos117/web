@@ -107,9 +107,10 @@ $text-color: $color-light-grey;
 		// margin-left: 1rem;
 		font-weight: 300;
 		//font-style: italic;
-		padding-bottom: .2rem;
+		padding-bottom: .1rem;
 		padding-left: 0;
-
+		font-size: 1.3rem;
+		 
 		@include media-breakpoint-down(sm) {
 			 font-size: 1.4rem;
 		}
@@ -244,20 +245,11 @@ $text-color: $color-light-grey;
 					top: .5rem;
 					position: relative;
 					text-align: right;
-					top: 0;
+	
 				}
 			}
 			.btn {
-				background-color: $color-danger;
-				border: 2px solid transparent;
-				border-radius: 100%;
-				color: white;
-				font-family: $default-font-family;
-				font-size: 1.5rem;
-				height: 3.5rem;
-				outline: none;
-				transition: all .5s ease-in-out;
-				width: 3.5rem;
+			
 				.text {
 					display: none;
 					visibility: hidden;
@@ -271,20 +263,6 @@ $text-color: $color-light-grey;
 					}
 				}
 
-
-				&:hover {
-					background: white;
-					border: 2px solid $color-danger;
-					//width: auto;
-					//border-radius: 25px;
-					.text {
-						//display: block;
-						//visibility: visible;
-					}
-					svg path {
-						fill: $color-danger;
-					}
-				}
 			}
 		}
 		.right {

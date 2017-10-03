@@ -1,4 +1,4 @@
-html {
+	\html {
 	font-size: $html-font-size-lg;
 }
 html, body {
@@ -38,6 +38,9 @@ a, button {
 		text-decoration: none !important;
 		outline: none !important;
 	}
+}
+svg {
+	max-width: 100%;
 }
 
 .angle {
@@ -161,29 +164,56 @@ section {
 .btn {
 	@include transition(all,$standart-animaion-time);
 }
-.btn.btn-primary {
-	background-color: transparent;
-	border: 1px solid $color-danger;
-	border-radius: 0;
-	color: white ;
-	// border-radius: 30px;
-	font-weight: 300;
-	padding: .8rem 3rem;
-	// background-color: rgba($color-danger,1) ;
-	//background-color: lighten($color-danger, 0%);
-	position: relative;
-
+.btn.btn-circle {
+	background-color: $color-danger;
+	border: 2px solid transparent;
+	border-radius: 100%;
+	color: white;
+	font-family: $default-font-family;
+	font-size: 1.5rem;
+	height: 3.5rem;
+	outline: none;
+	transition: all .5s ease-in-out;
+	width: 3.5rem;
+	display: inline-block;
 	&:hover {
-		background-color: $color-danger;
+		background: white;
+		border: 2px solid $color-danger;
+		//width: auto;
+		//border-radius: 25px;
+		.text {
+			//display: block;
+			//visibility: visible;
+		}
+		svg path {
+			fill: $color-danger;
+		}
 	}
-	&:before {
-		//border: $color-danger solid 6px;
-		//border-radius: 30px;
-	}
+	.background {
+	   position: absolute;
+	   top: 0;
+	   left: 0;
+	   width: 100%;
+	   background-color: $color-danger;
+	   content: '';
+	   height: 100%;
+	   border-radius: 100%;
+	   transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+	   transition-delay: .3s;
+	   visibility: hidden;
+	   display: inline-block;
+   }
+   &.clicked {
+   	.background {
+   		animation: materialBackground .5s;
+   		animation-iteration-count: 1;
+   	}
+   }
 }
-svg {
-	max-width: 100%;
-}
+
+
+
+
 .animate {
 	visibility: hidden;
 	//opacity: 0;
@@ -321,42 +351,94 @@ svg {
 	border-radius: 0;
 }
 
-.language-switch {
-	background-color: $color-secondary;
-	border: 3px solid transparent;
-	border-radius: 100%;
-	bottom: 3rem;
-	color: white;
-	display: inline-block;
-	font-size: 1.2rem;
-	height: 4rem;
-	line-height: 1.4rem;
-	opacity: .9;
-	padding-top: .1rem;
+.message {
 	position: fixed;
-	right: 5rem;
-	text-align: center;
-	transition: all 1s cubic-bezier(.25, .46, .45, .94);
-	width: 4rem;
-	z-index: 10;
+	bottom: 3rem;
+	right: 4rem;
+	width: auto;
+	@include media-breakpoint-down(sm) {
+		   bottom: 1rem;
+		   right: 1rem;
+	}
+}
 
+.message-me {
+	position: relative;
+}
+
+.message-me-link {
+	padding-top: .9rem;
+	position: relative;
+	text-align: center;
+	width: 3.7rem;
+	z-index: 10;
+	transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+	visibility: hidden;
+	z-index: 100;
+
+	@include transform(scale(0));
+	
 	@include shadow-2();
+	
 	@include media-breakpoint-down(sm) {
 		bottom: 2rem;
 		right: 2rem;
 	}
+	
 	svg {
-		width: 2rem;
+		width: 1.4rem;
+		opacity: .95;
 	}
-	&.hidden {
-		visibility: hidden;
+	
+	&.visible {
+		@include transform(scale(1));
+		visibility: visible;
+	}
+}
 
-		@include transform(translateY(8rem));
+.message-bubble {
+	position: absolute;
+	bottom: 6.2rem;
+    right: -0.4rem;
+    width: 10rem;
+    padding-top: 1.1rem;
+    padding-left: 2rem;
+	visibility: hidden;
+	z-index: 10;
+	.text {
+		z-index: 2;
+		position: relative;
 	}
-	&:hover {
-		border: 3px solid $color-primary;
-		color: white;
-		opacity: 1;
-		text-decoration: none;
+	svg {
+		width:100%;
+		//@include shadow-1;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
+	}
+	
+	@include transform(scale(0));
+	transition: all .5s ease-in-out;
+	transform-origin: 130px 100px;
+	&.visible {
+		@include transform(scale(1));
+		visibility: visible;
+	}
+	&.en {
+		padding-top: 1.2rem;
+	    padding-left: 2.4rem;
+	    font-size: 1.1rem;
+		@include media-breakpoint-down(sm) {
+			padding-top: 1.3rem;
+    		padding-left: 2.4rem;
+    		width: 8rem;
+    		font-size: 1.1rem;
+		}
+	}
+	
+	@include media-breakpoint-down(sm) {
+		bottom: 8.2rem;
+		right: 1.6rem;
 	}
 }

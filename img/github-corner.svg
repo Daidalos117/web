@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="77px" height="77px" viewBox="0 0 77 77" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>github-corner</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect x="44" y="11" width="24" height="24" id="rect-1"></rect>
+    </defs>
+    <g id="web-a-grafika" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="copy-desktop" transform="translate(-829.000000, -5430.000000)">
+            <g id="github-corner" transform="translate(829.000000, 5430.000000)">
+                <polygon id="Rectangle-9" fill="#2E3837" transform="translate(38.500000, 38.500000) rotate(-270.000000) translate(-38.500000, -38.500000) " points="0 0 77 0 0 77"></polygon>
+                <g id="GitHub-Mark-64px">
+                    <image x="44" y="11" width="24" height="24" xlink:href="data:image/png;base64,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"></image>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#rect-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

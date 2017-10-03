@@ -102,6 +102,10 @@ Ten pravý superhrdina pro tvoje webovky. Vytvořím ti <strong>web design na m�
 <section id="about">
     <div class="background"></div>
     <div class="about-content">
+        <a class="language-switch czech" href="en.html" data-animation="false"  data-toggle="tooltip" data-placement="top" title="English, si?">
+            <!--<img src="img/icons/flag-en.svg" class="inject-me language-svg" alt="lang icon"/>-->
+            English.
+        </a>
         <div class="container">
             <div class="header-section">
                 <h2 class="primary dontType" >
@@ -124,7 +128,7 @@ Ten pravý superhrdina pro tvoje webovky. Vytvořím ti <strong>web design na m�
                         </p>
                     <div class="contactLine delay-me-maybe line5 line dmm6"></div>
                     <p class="fadeInUp delay-me-maybe dmm7">
-                        V současné době pracuji jako kodér v <span class="etnetera">&</span><a href="http://etnetera.cz">Etneteře</a>, kde měníme svět v lepší místo. Když zrovna nepracuji, nezachraňuji svět a nebo neobjevuji nové technologie, tak si také celkem užívám sci-fi a kreslené seriály jako je <a href="" class="adventure-time">Adventure time</a> nebo si rád zajdu na dobré <a href="http://www.banhmimakers.com">Banhmi</a>.
+                        V současné době pracuji jako kodér v <span class="etnetera">&</span><a href="http://etnetera.cz" target="_blank">Etneteře</a>, kde měníme svět v lepší místo. Když zrovna nepracuji, nezachraňuji svět a nebo neobjevuji nové technologie, tak si také celkem užívám sci-fi a kreslené seriály jako je <a href="" class="adventure-time">Adventure time</a> nebo si rád zajdu na dobré <a href="http://www.banhmimakers.com" target="_blank">Banhmi</a>.
                     </p>
                     <p  class="warning animate pulse">
                         <strong>Varování:</strong> Jakmile jednou začnu kódovat, nemůžu přestat.
@@ -311,7 +315,9 @@ Ten pravý superhrdina pro tvoje webovky. Vytvořím ti <strong>web design na m�
         <div class="clearfix"></div>
         </div>
             <a href="https://github.com/Daidalos117/web" class="github" target="_blank" >
-                Omrkni můj <br><img src="img/GitHub-Mark-64px.png" alt="Github logo" />&nbsp;<br>pro &lt; kódy &gt; téhle webovky a další projekty.
+                <img src="img/github-corner.png" class="github-corner" alt="Github logo" />
+                Omrkni můj 
+                <strong>Github</strong> pro &lt; kódy &gt; téhle webovky a další projekty.
             </a>
     </div>
     <!-- vertical lines -->
@@ -388,7 +394,7 @@ Ten pravý superhrdina pro tvoje webovky. Vytvořím ti <strong>web design na m�
                         <label for="input-contact" class="nameLabel ">ozvi se mi zpět na: </label>
                         <div class="nameInput">                    
                             <input type="text" class="form-control " name="email" id="input-contact" placeholder="(žlutý@banan.cz)">
-                            <input type="hidden" class="form-control " name="language" value="cz" >
+                            <input type="hidden" class="form-control " name="actualLanguage" value="cz" >
                             <div class="line animate contactLine" data-animate-delay="500"> </div>
                         </div>
                     </div>
@@ -399,7 +405,10 @@ Ten pravý superhrdina pro tvoje webovky. Vytvořím ti <strong>web design na m�
                     </div>
                 
                     <div class="form-group submitGroup">
-                        <button type="submit" class="btn" name="whatevs" form="contactForm"><span class="text">Poslat</span><img src="img/sent-mail.svg" alt="send icon" class="inject-me"/> </button>
+                        <button type="submit" class="btn btn-circle" name="whatevs" form="contactForm">
+                            <span class="background"></span>
+                            <span class="text">Poslat</span><img src="img/sent-mail.svg" alt="send icon" class="inject-me"/> 
+                        </button>
                     </div>
                     </form>
                 </div>
@@ -407,7 +416,6 @@ Ten pravý superhrdina pro tvoje webovky. Vytvořím ti <strong>web design na m�
                     <img src="img/contact-photo.png" class="contact-photo " alt="me">
                     <img src="img/phone-icon.svg" class="inject-me phone-icon"  alt="phone icon"/>
                     <div class="contacts">
-                        
                         <div class="social-icons">
                             <a href="https://www.linkedin.com/in/roman-rajchert-45263758/" target="_blank" class="icon fb-icon">
                                 <img src="img/linkedin-logo.png" class="icon-img" alt="linkedin"/>
@@ -516,11 +524,18 @@ Ten pravý superhrdina pro tvoje webovky. Vytvořím ti <strong>web design na m�
     </div>    
 </div>
 
-<!-- Language switch -->
-<a class="language-switch czech" href="en.html" data-animation="false"  data-toggle="tooltip" data-placement="top" title="English, si?">
-    <img src="img/icons/flag-en.svg" class="inject-me language-svg" alt="lang icon"/>
-    EN
-</a>
+<!--  message me -->
+<div class="message">
+    <div class="message-bubble">
+        <img src="img/message-bubble.svg" class="inject-me" alt="message-icon"/>
+        <span class="text">Pokecáme?</span>
+    </div>
+    <a class="message-me-link btn btn-circle" href="#contact">
+        <span class="background"></span>
+        <img src="img/icons/close-envelope.svg" class="inject-me" alt="message-icon"/>
+    </a>
+</div>
+
 
 <!-- Javascript bundle -->
 <script src="builds/bundle.js"></script>

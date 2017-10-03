@@ -18,10 +18,15 @@ import browserUpdate from 'browser-update';
 import Typed from 'typed.js';
 
 var elmntsAnimateAfter = new Array;
+
+
+
+
+
 window.onload = function () {
     $("body").addClass("loaded");
     $(".background-image").addClass("animated fadeInUp");
-    
+    window.scrollTo( 0, 0 );
     setTimeout(function() {
         var $heading = $("header .heading");
         var typed = new Typed("header .heading", {
@@ -57,15 +62,24 @@ window.onload = function () {
                     },delay)
                 delay += 300;    
                 });
+                
+                //zobrazime tlacitko napiste mi
+                setTimeout(function() {
+                    $(".message-me-link").addClass("visible");
+                }, delay + 500);
+                
+                //zobrazime bublinu
+                setTimeout(function() {
+                    $(".message-bubble").addClass("visible");
+                }, delay + 1000);
+                
+                //blublinu schovame
+                setTimeout(function() {
+                    $(".message-bubble").removeClass("visible");
+                }, delay + 10000);
             }
         });
-    },0);
-
-}
-
-
-$(function(){
-    var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    },1000);
     
     
     /* outdatedbrowser */
@@ -75,11 +89,27 @@ $(function(){
         api:4,
         test: false,   
         text: obcontent,
-        noclose: true,          
+        noclose: true,    
+        onshow: function(infos){
+
+            ga('send', {
+              hitType: 'event',
+              eventCategory: 'browserUpdate',
+              eventAction: 'show',
+              eventLabel: 'browserUpdate'
+            });
+        },         
     }; 
     browserUpdate($buoop);
     
     
+}
+
+
+$(function(){
+    var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    
+    window.scrollTo( 0, 0 );
     /* Typed */
 
     /* Scroll spy */
@@ -101,7 +131,14 @@ $(function(){
         });
     });
 
-
+    //klik na bublinu
+    $(".btn-circle").click(function() {
+        console.log($(this), "clicked");
+        $(this).addClass("clicked");
+        setTimeout(() => {
+            $(this).removeClass("clicked");
+        }, 500)
+    })
 
     /* Smooth scroll */
     $('a[href*="#"]:not([href="#"])').click(function() {
@@ -112,8 +149,15 @@ $(function(){
                 $('html, body').animate({
                     scrollTop: target.offset().top,
                 }, 1500, "swing");
+                ga('send', {
+                  hitType: 'event',
+                  eventCategory: 'menu',
+                  eventAction: 'click',
+                  target: target
+                });
                 return false;
             }
+
         }
     });
 
@@ -175,7 +219,7 @@ $(function(){
     // menu scroll
     $(window).scroll(function () {
         menuScrolled();
-        languageScrolled();
+        //anguageScrolled();
     });
     menuScrolled();
     function menuScrolled() {
@@ -374,18 +418,6 @@ $(function(){
         speed: -1
     });
 
-    //contact form labels
-    $("form.contactForm input, form.contactForm textarea").on("focus", function(){
-      if($(this).val() === ""){
-        $(this).siblings("label").addClass("focused");
-      }
-    });
-    $("form.contactForm input, form.contactForm textarea").on("focusout", function(){
-      if($(this).val() === ""){
-        $(this).siblings("label").removeClass("focused");
-      }
-    });
-
 
    /**finn fidget */
    $(".adventure-time").on("click", function(e){
@@ -393,9 +425,18 @@ $(function(){
        $(".finn-and-jake").addClass("is-shown");
        var audio = new Audio('assets/finn.mp3');
        audio.play();
+       ga('send', {
+         hitType: 'event',
+         eventCategory: 'finn-and-jake',
+         eventAction: 'show'
+       });
    })
 
-
+   inView("#contact")
+       .on('enter', function (el) {
+           $(".message-me-link").removeClass("visible");
+           $(".message-bubble").removeClass("visible");
+       });
 
 
    //message form
@@ -424,6 +465,12 @@ $(function(){
            body.message = "";
            body.message += cz ? 'Něco se pokazilo.' : 'Something went wrong';
            body.message += error;
+           ga('send', {
+             hitType: 'event',
+             eventCategory: 'message',
+             eventAction: 'error',
+             error: error
+           });
                  
       }).then(function() {
           var $alert = $("#alert");
@@ -434,6 +481,13 @@ $(function(){
           setTimeout(function(){
               $alert.removeClass("shown");
           },10000);
+          ga('send', {
+            hitType: 'event',
+            eventCategory: 'message',
+            eventAction: 'send',
+            email: $(this).find("#input-contact").val()
+          });
+          
       })
 
       
@@ -471,14 +525,14 @@ $(function(){
   //Tooltip 
    var tooltip = $('[data-toggle="tooltip"]').tooltip();
 
-   //collapse
+/*   //collapse
    $('.collapse').collapse();
    $('.toggle-collapse').on("click", function(e){
        e.preventDefault();
        var toggle = $(this).data("toggle");
        $(toggle).slideToggle(500);
    })
-   
+   */
    
    //draggable
    $.fn.draggable = function() {
@@ -507,7 +561,7 @@ $(function(){
     });  
   });
 }
- $('.home').draggable();
+ $('.geometry-bkgrnd > div').draggable();
    
    
    

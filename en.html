@@ -102,6 +102,9 @@ I can build you a responsive <strong>web</strong>, do a <strong>graphic design</
 <section id="about">
     <div class="background"></div>
     <div class="about-content">
+        <a class="language-switch czech" href="en.html" data-animation="false"  data-toggle="tooltip" data-placement="top" title="Česky, da?">
+            Česky.
+        </a>
         <div class="container">
             <div class="header-section">
                 <h2 class="primary dontType" >
@@ -123,7 +126,7 @@ I can build you a responsive <strong>web</strong>, do a <strong>graphic design</
                     </p>
                     <div class="contactLine delay-me-maybe line5 line dmm6"></div>
                     <p class="fadeInUp delay-me-maybe dmm7">
-                        Currently I'm working as a front-end developer at <span class="etnetera">&</span><a href="http://etnetera.cz">Etnetera</a>, where we are making world a better place. When I'm not working or saving the world I also quite enjoy animate series like <a href="" class="adventure-time">Adventure time</a> or good <a href="http://www.banhmimakers.com">Banhmi</a>.
+                        Currently I'm working as a front-end developer at <span class="etnetera">&</span><a href="http://etnetera.cz" target="_blank">Etnetera</a>, where we are making world a better place. When I'm not working or saving the world I also quite enjoy animate series like <a href="" class="adventure-time">Adventure time</a> or good <a href="http://www.banhmimakers.com" target="_blank">Banhmi</a>.
                     </p>
                     <p  class="warning animate pulse">
                         <strong>Warning:</strong> Once I start coding I can't stop.
@@ -310,7 +313,9 @@ I can build you a responsive <strong>web</strong>, do a <strong>graphic design</
         <div class="clearfix"></div>
         </div>
             <a href="https://github.com/Daidalos117/web" class="github" target="_blank" >
-                Checkout my <br><img src="img/GitHub-Mark-64px.png" alt="Github logo" />&nbsp;<br>for &lt; codes &gt; of this page and more projects.
+                <img src="img/github-corner.png" class="github-corner" alt="Github logo" />
+                Checkout my 
+                <strong>Github</strong>&nbsp;for &lt; codes &gt; of this page and more projects.
             </a>
     </div>
     <!-- vertical lines -->
@@ -341,7 +346,7 @@ I can build you a responsive <strong>web</strong>, do a <strong>graphic design</
                     </p>
                     <p class="2">
                         
-                        That's the part, where the magic usually happens. Every piece of your design needs to be written in secret magic language. Don"t worry I can handle it.
+                        That's the part, where the magic usually happens. Every piece of your design needs to be written in secret magic language. Don't worry I can handle it.
 
                     </p>
                     <p class="3">
@@ -388,7 +393,7 @@ I can build you a responsive <strong>web</strong>, do a <strong>graphic design</
                         <label for="input-contact" class="nameLabel ">get back to me at: </label>
                         <div class="nameInput">                    
                             <input type="text" class="form-control " name="email" id="input-contact" placeholder="(yellow@banana.com)">
-                            <input type="hidden" class="form-control " name="language" value="en" >
+                            <input type="hidden" class="form-control " name="actualLanguage" value="en" >
                             <div class="line animate contactLine" data-animate-delay="500"> </div>
                         </div>
                     </div>
@@ -399,7 +404,10 @@ I can build you a responsive <strong>web</strong>, do a <strong>graphic design</
                     </div>
                 
                     <div class="form-group submitGroup">
-                        <button type="submit" class="btn" name="whatevs" form="contactForm"><span class="text">Send</span><img src="img/sent-mail.svg" alt="send icon" class="inject-me"/> </button>
+                        <button type="submit" class="btn btn-circle" name="whatevs" form="contactForm">
+                            <span class="background"></span>
+                            <span class="text">Send</span><img src="img/sent-mail.svg" alt="send icon" class="inject-me"/>
+                         </button>
                     </div>
                     </form>
                 </div>
@@ -516,11 +524,18 @@ I can build you a responsive <strong>web</strong>, do a <strong>graphic design</
     </div>    
 </div>
 
-<!-- Language switch -->
-<a class="language-switch czech" href="index.html" data-animation="false"  data-toggle="tooltip" data-placement="top" title="Česky, si?">
-    <img src="img/icons/flag-cz.svg" class="inject-me language-svg" alt="lang icon"/>
-    CZ
-</a>
+<!--  message me -->
+<div class="message">
+    <div class="message-bubble en">
+        <img src="img/message-bubble-en.svg" class="inject-me" alt="message-icon"/>
+        <span class="text">Chat?</span>
+    </div>
+    <a class="message-me-link btn btn-circle" href="#contact">
+        <span class="background"></span>
+        <img src="img/icons/close-envelope.svg" class="inject-me" alt="message-icon"/>
+    </a>
+</div>
+
 
 <!-- Javascript bundle -->
 <script src="builds/bundle.js"></script>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="90px" height="52px" viewBox="0 0 90 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>message-bubble</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="web-a-grafika" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="copy-desktop" transform="translate(-871.000000, -4753.000000)" stroke="#30E3CA" fill="#FFFFFF">
+            <g id="bublina" transform="translate(872.000000, 4753.000000)">
+                <path d="M23.2867301,0.666668303 L64.7132699,0.666668303 L64.7132699,0.666668303 C77.5741758,0.666668303 88,11.0924925 88,23.9533984 L88,26.8952531 L88,26.8952531 C88,38.1314176 78.891289,47.2401286 67.6551246,47.2401286 L67.6551246,47.2401286 L65.1138444,51.4666675 L59.4352597,47.2401286 L23.2867301,47.2401286 L23.2867301,47.2401286 C10.4258242,47.2401286 8.15344605e-14,36.8143044 0,23.9533984 L0,23.9533984 L0,23.9533984 C-1.57500673e-15,11.0924925 10.4258242,0.666668303 23.2867301,0.666668303 Z" id="message-bubble"></path>
+            </g>
+        </g>
+    </g>
+</svg>

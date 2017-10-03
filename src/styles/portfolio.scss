@@ -303,19 +303,28 @@
 		color: $color-grey;
 		display: block;
 		font-size: 1.6rem;
-		margin: 3rem;
+		width: 90%;
+		margin: 0 auto;
 		opacity: .9;
 		padding: 2rem 1rem;
 		text-align: center;
 		transition: .5s all ease-out;
-		img {
-			width: 2rem;
+	  	margin-top: 3rem;
+		position: relative;
+		.github-corner {
+			width: 5rem;
+			position: absolute;
+			right: 1px;
+			top: 1px;
+			z-index: 0;
 		}
+		
 		&:hover {
 			opacity: 1;
 			text-decoration: none;
 
 			@include transform(scale(1.05));
 		}
+		opacity: 1;
 	}
 }
