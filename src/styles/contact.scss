@@ -109,7 +109,7 @@ $text-color: $color-light-grey;
 		//font-style: italic;
 		padding-bottom: .1rem;
 		padding-left: 0;
-		font-size: 1.3rem;
+		font-size: 1.2rem;
 		 
 		@include media-breakpoint-down(sm) {
 			 font-size: 1.4rem;
@@ -247,6 +247,9 @@ $text-color: $color-light-grey;
 					text-align: right;
 	
 				}
+			}
+			.messageGroup {
+				margin-top: 0.7rem;
 			}
 			.btn {
 			
