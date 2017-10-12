@@ -153,7 +153,7 @@ $(function(){
                   hitType: 'event',
                   eventCategory: 'menu',
                   eventAction: 'click',
-                  target: target
+                  eventLabel: target
                 });
                 return false;
             }
